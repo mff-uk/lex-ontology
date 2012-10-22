@@ -1,0 +1,155 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix opmo:   <http://openprovenance.org/model/opmo#>.
+@prefix cc: <http://creativecommons.org/ns#>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix lex:        <http://purl.org/lex#> .
+@prefix lexdt:        <http://purl.org/lex/datatypes#> .
+@prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
+@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+
+@prefix r: <http://legislation.opendata.cz/id/>
+@prefix p: <http://legislation.opendata.cz/doc/>
+
+########## WORK 2005/203
+#the source of law - act
+r:cz/act/2005/203
+	a lex:SourceOfLaw ;
+	%metadata
+	lexm:countryOfIssue "cz"^^lexdt:countryCode ;
+	lexm:sourceOfLawType lexsoltypes:Act ;
+	lexm:yearOfIssue "2005"^^xsd:gYear ;
+	lexm:number "203"
+	lexm:issuer lexissuertypes:Parliament ;
+	dcterms:issued "2005-05-03"^^xsd:date ;
+	dcterms:valid "2005-05-27"^^xsd:date ;
+	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2005-203> ;
+	
+	%last and original expression
+	lex:origExpression p:cz/act/2005/203/version/cz/2005-05-27 ;
+	lex:lastExpression p:cz/act/2005/203/version/cz/2009-12-31 ;
+
+
+#sample sections (do not contain any text!)
+r:cz/act/2005/203/section/2/1/d
+	a lex:SourceOfLawSection ;
+	lex:enclosingSection r:cz/act/2005/203/section/2/1 ;
+	lex:belongsTo r:cz/act/2005/203 .
+
+r:cz/act/2005/203/section/2/1
+	a lex:SourceOfLawSection ;
+	lex:enclosingSection r:cz/act/2005/203/section/2 ;
+	lex:belongsTo r:cz/act/2005/203 .
+	
+r:cz/act/2005/203/section/2
+	a lex:SourceOfLawSection ;
+	lex:belongsTo r:cz/act/2005/203 .
+	
+
+r:cz/act/2005/203/section/4/3
+	a lex:SourceOfLawSection ;
+	lex:enclosingSection r:cz/act/2005/203/section/4 ;
+	lex:belongsTo r:cz/act/2005/203 .
+	
+r:cz/act/2005/203/section/4
+	a lex:SourceOfLawSection ;
+	lex:belongsTo r:cz/act/2005/203 .
+	
+########### EXPRESSIONS
+## First expression
+p:cz/act/2005/203/version/cz/2005-05-27
+	a lex:SourceOfLawExpression ;
+	foaf:primaryTopic r:cz/act/2005/203 ;
+	frbr:realizationOf r:cz/act/2005/203 ;
+	
+	%metadata
+	dcterms:valid "2005-05-27"^^xsd:date ;
+	lexm:languageOfExpression "cz"^^lexdt:countryCode ;
+	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2005-203/zneni-20050527> .
+
+## its sections (sample)	
+p:cz/act/2005/203/version/cz/2005-05-27/section/2/1/d
+	a lex:SourceOfLawExpressionSection ;
+	lex:enclosingSection p:cz/act/2005/203/version/cz/2005-05-27/section/2/1 ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2/1/d ;
+	
+	% content TODO notes 1a) It differs from p:cz/act/2005/203/version/cz/2009-12-31/section/2/1/d
+	dcterms:description "za zranìní nebo znásilnìní pøíslušníkem nìkteré z okupaèních armád nebo civilní osobou zdržující se na území Èeskoslovenska v souvislosti s pobytem okupaèních armád nebyla odškodnìna podle jiného právního pøedpisu1)."@cs
+	
+p:cz/act/2005/203/version/cz/2005-05-27/section/2/1
+	a lex:SourceOfLawExpressionSection ;
+	lex:enclosingSection p:cz/act/2005/203/version/cz/2005-05-27/section/2 ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2/1 ;
+	
+	dcterms:description "Osobou oprávnìnou podle tohoto zákona je fyzická osoba, která:"@cs
+	
+p:cz/act/2005/203/version/cz/2005-05-27/section/2
+	a lex:SourceOfLawExpressionSection ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2 .
+
+	
+p:cz/act/2005/203/version/cz/2005-05-27/section/4
+	a lex:SourceOfLawExpressionSection ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/4 .
+	
+%indicate it is part of another expression
+	
+########### EXPRESSIONS
+## Second expression
+p:cz/act/2005/203/version/cz/2009-12-31
+	a lex:SourceOfLawExpression ;
+	foaf:primaryTopic r:cz/act/2005/203 ;
+	frbr:realizationOf r:cz/act/2005/203 ;
+		
+	%metadata
+	dcterms:valid "2009-12-31"^^xsd:date ;
+	lexm:languageOfExpression "cz"^^lexdt:countryCode ;
+	prov:wasRevisionOf p:cz/act/2005/203/version/cz/2005-05-27 ;
+	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2005-203/zneni-20091231> .
+	
+
+## its sections (sample)	
+p:cz/act/2005/203/version/cz/2009-12-31/section/2/1/d
+	a lex:SourceOfLawExpressionSection ;
+	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/2/1 ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2/1/d ;
+	
+	% content TODO notes 1a)
+	dcterms:description "za zranìní nebo znásilnìní pøíslušníkem nìkteré z okupaèních armád nebo civilní osobou zdržující se na území Èeskoslovenska v souvislosti s pobytem okupaèních armád nebyla odškodnìna podle jiného právního pøedpisu1) nebo na základì usnesení vlády1a) penìžní èástkou stejnou, jako je èástka uvedená v § 4 odst. 2, anebo vyšší."@cs
+	
+p:cz/act/2005/203/version/cz/2009-12-31/section/2/1
+	a lex:SourceOfLawExpressionSection ;
+	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/2 ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2/1 ;
+	
+	dcterms:description "Osobou oprávnìnou podle tohoto zákona je fyzická osoba, která:"@cs
+	
+p:cz/act/2005/203/version/cz/2009-12-31/section/2
+	a lex:SourceOfLawExpressionSection ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/2 .
+	
+# This section is not in the first expression
+p:cz/act/2005/203/version/cz/2009-12-31/section/4/3
+	a lex:SourceOfLawExpressionSection ;
+	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/4 ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/4/3 ;
+	
+	dcterms:description "Výše nároku stanovená v odstavcích 1 a 2 se sníží o èástku, která byla oprávnìné osobì v souladu s úèelem uvedeným v § 1 pøed vyplacením nároku poskytnuta jako odškodnìní na základì jiných právních pøedpisù1) nebo na základì usnesení vlády1a)."@cs
+	
+p:cz/act/2005/203/version/cz/2009-12-31/section/4
+	a lex:SourceOfLawExpressionSection ;
+	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
+	foaf:primaryTopic r:cz/act/2005/203/section/4 .
+
+%indicate it is part of another expression

@@ -1,0 +1,99 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix schema: <http://prov4j.org/w3p/schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix vann:     <http://purl.org/vocab/vann/> .
+
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix opmo:   <http://openprovenance.org/model/opmo#>.
+@prefix cc: <http://creativecommons.org/ns#>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+
+# --- Own namespaces ------------------------------------------
+
+@prefix lex:        <http://purl.org/lex#> .
+@prefix lexm:        <http://purl.org/lex/meta#> .
+@prefix lexdt:        <http://purl.org/lex/datatypes#> .
+@prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
+@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+
+# --- Ontology metadata ---------------------------------------
+
+w3p: a owl:Ontology ;
+  dcterms:title "Lex metadata ontology"@en ;
+  dcterms:description "Lex metadata ontology."@en ;
+  dcterms:modified "2012-10-21"^^xsd:date ;
+  vann:preferredNamespaceUri "http://purl.org/lex/metadata#" ;
+  vann:preferredNamespacePrefix "lexm" ;
+  dcterms:creator <http://purl.org/knap#me>;
+  rdfs:seeAlso <http://prefix.cc/lexm> ;
+  dcterms:rights <http://creativecommons.org/licenses/by/3.0/cz/> .
+
+
+################
+## Metadata
+################
+	
+# source of law type - Act, Notice, Judgment - relevant for lex:SourceOfLaw
+lexm:sourceOfLawType a owl:FunctionalProperty ;
+	rdfs:label "Typ právního zdroje"@cs, "Source of law type"@en ;
+	rdfs:comment "Source of law type"@en ;
+	rdfs:domain lex:SourceOfLaw ;
+	rdfs:range skos:Concept, [
+		a owl:Restriction ;
+		owl:onProperty skos:inScheme ;
+		owl:hasValue lexsoltypes:
+	] .
+
+# country of issue - relevant for lex:SourceOfLaw
+# 2 znaky dle ISO 3166, e.g. cz
+lexm:countryOfIssue a owl:FunctionalProperty;
+	rdfs:label "Zemì vydání právního zdroje"@cs, "Source of law issuer country"@en ;
+	rdfs:domain lex:SourceOfLaw ;
+	rdfs:range lexdt:countryCode .
+
+# year of issue, e.g. 2005 - relevant for lex:SourceOfLaw
+lexm:yearOfIssue a owl:FunctionalProperty;
+	rdfs:label "Rok vydání"@cs, "Year of issue"@en ;
+	rdfs:domain lex:SourceOfLaw ;
+	rdfs:range xsd:gYear .
+	
+# number, e.g. 203 - relevant for lex:SourceOfLaw
+lexm:number a owl:FunctionalProperty;
+	rdfs:label "Èíslo"@cs, "Identification number"@en ;
+	rdfs:comment "Identification number of the source of law"@en ;
+	rdfs:domain lex:SourceOfLaw ;
+	rdfs:range rdfs:Literal .
+	
+# who issued the source of law - relevant for lex:SourceOfLaw
+# TODO pravnici doplnit
+lexm:issuer a owl:FunctionalProperty ;
+	rdfs:label "Vydavatel"@cs, "Issuer"@en ;
+	rdfs:domain lex:SourceOfLaw ;
+	rdfs:range skos:Concept, [
+		a owl:Restriction ;
+		owl:onProperty skos:inScheme ;
+		owl:hasValue lexissuertypes:
+	] .
+
+# kdy vydano - relevant for lex:SourceOfLaw
+# dcterms:issued
+# od kdy plati - - relevant for lex:SourceOfLaw and lex:SourceOfLawExpression
+# dcterms:valid 
+
+# language of expression lex:SourceOfLaw
+# TODO range 2 znaky dle ISO 3166, e.g. cz
+lexm:languageOfExpression a owl:FunctionalProperty;
+	rdfs:label "Jazyk znìní"@cs, "Language of the expression"@en ;
+	rdfs:domain lex:SourceOfLawExpression ;
+	rdfs:range lexdt:countryCode . 
+
+
+
+
+
+
