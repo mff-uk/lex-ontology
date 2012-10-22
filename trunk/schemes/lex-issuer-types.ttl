@@ -1,0 +1,27 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> . 
+
+@prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
+  
+####### Concept scheme of issuers types
+
+lexissuertypes: a skos:ConceptScheme ; 
+  skos:hasTopConcept lexissuertypes:Parliament, lexissuertypes:SupremeCourt,  ;
+  rdfs:label "Concept scheme for description of issuers types "@en ;
+  .
+
+lexissuertypes:Parliament a skos:Concept ;
+  skos:inScheme lexissuertypes: ;
+  skos:prefLabel "Parlament"@cs, "Parliament"@en ;
+  skos:definition "Parliament"@en ;
+  skos:topConceptOf lexissuertypes: 
+  .
+
+lexissuertypes:SupremeCourt a skos:Concept ;
+  skos:inScheme lexissuertypes: ;
+  skos:prefLabel "Vyhláška"@cs, "Supreme court"@en ;
+  skos:definition "Supreme court"@en ;
+  skos:topConceptOf lexissuertypes: 
+  .
+
