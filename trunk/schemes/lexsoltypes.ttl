@@ -1,0 +1,35 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> . 
+
+@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+  
+####### Concept scheme of source of law types
+
+lexsoltypes: a skos:ConceptScheme ; 
+  skos:hasTopConcept lexsoltypes:Act, lexsoltypes:Notice,
+    lexsoltypes:Judgment ;
+  rdfs:label "Concept scheme for description of source of law types "@en ;
+  .
+
+lexsoltypes:Act a skos:Concept ;
+  skos:inScheme lexsoltypes: ;
+  skos:prefLabel "Zákon"@cs, "Act"@en ;
+  skos:definition "Act"@en ;
+  skos:topConceptOf lexsoltypes: 
+  .
+
+lexsoltypes:Notice a skos:Concept ;
+  skos:inScheme lexsoltypes: ;
+  skos:prefLabel "Vyhláška"@cs, "Notice"@en ;
+  skos:definition "Notice"@en ;
+  skos:topConceptOf lexsoltypes: 
+
+  
+lexsoltypes:Judgment a skos:Concept ;
+  skos:inScheme lexsoltypes: ;
+  skos:prefLabel "Rozhodnutí soudu"@cs, "Judgment"@en ;
+  skos:definition "Judgment"@en ;
+  skos:topConceptOf lexsoltypes: 
+  .
+

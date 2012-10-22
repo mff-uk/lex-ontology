@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+        <xsd:simpleType name="countryCode" id="countryCode">
+				<!-- The token should adhere to ISO 3166 -->
+                <xsd:restriction base="xsd:token">
+						 <xsd:pattern value="[a-z][a-z]"/>
+                </xsd:restriction>
+        </xsd:simpleType>
+</xsd:schema>
+
