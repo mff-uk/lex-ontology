@@ -23,7 +23,7 @@
 
 # --- Ontology metadata ---------------------------------------
 
-w3p: a owl:Ontology ;
+lex: a owl:Ontology ;
   dcterms:title "Lex ontology"@en ;
   dcterms:description "Lex ontology."@en ;
   dcterms:modified "2012-10-21"^^xsd:date ;
@@ -41,16 +41,20 @@ w3p: a owl:Ontology ;
 # Defines the particular source of law classes for Work, Expression, Manifestation
 lex:SourceOfLaw a owl:Class ;
 	rdfs:label "Právní zdroj"@cs, "Source of law"@en ;
-	rdfs:comment "Právní zdroj - zákon, vyhláška, judikáty"@cs ;
-    rdfs:comment "A class representing source of law."@en ;
+	rdfs:comment "Tøída reprezentující právní zdroj (zákon, vyhláška, judikát)"@cs ;
+  rdfs:comment "A class representing a source of law (law, notice, case law)."@en ;
 	rdfs:subClassOf frbr:Work .
+	
 lex:SourceOfLawExpression a owl:Class ;
 	rdfs:label "Znìní právního zdroje"@cs, "Source of law expression"@en ;
-    rdfs:comment "A class representing expression of the source of law"@en ;
+	rdfs:comment "Tøída reprezentující znìní právního zdroje. Každý právní zdroj mùže mít nìkolik znìní. Napø. zákon mùže mít pùvodní znìní a potom nìkolik novelizovaná znìní."@cs ;
+  rdfs:comment "A class representing expression of the source of law. A source of law may have several expressions. E.g., a law may have its original expression and then several revised expressions."@en ;
 	rdfs:subClassOf frbr:Expression .
+	
 lex:SourceOfLawManifestation a owl:Class ;
-	rdfs:label "Reprezentace znìní právního zdroje "@cs, "Act"@en ;
-    rdfs:comment "A class representing manifestation of source of law."@en ;
+	rdfs:label "Materializovaná forma znìní právního zdroje "@cs, "Manifestation of a source of law expression"@en ;
+	rdfs:comment "Tøída reprezentující znìní právního zdroje materializované v podobì nìjakého konkrétního dokumentu v konkrétním formátu (napø. PDF)."@cs ;
+  rdfs:comment "A class representing source of law materialized in a form of a concrete document in a concrete format (e.g., PDF)."@en ;
 	rdfs:subClassOf frbr:Manifestation .
 
 # Defines sections
@@ -182,7 +186,7 @@ lex:enclosingSection a owl:ObjectProperty;
 	rdfs:label "patøí do sekce"@cs, "Enclosing section"@en ;
 	rdfs:comment "A section points the section to which it belongs"@en ;
 	rdfs:domain lex:SourceOfLawSectionInGeneral;
-	rdfs:range lex:SourceOfLawSectionInGeneral;
+	rdfs:range lex:SourceOfLawSectionInGeneral.
 	
 	
 	
