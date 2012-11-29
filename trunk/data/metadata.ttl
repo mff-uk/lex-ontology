@@ -1,0 +1,37 @@
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix gr:       <http://purl.org/goodrelations/v1#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms:     <http://www.w3.org/ns/adms#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s:        <http://schema.org/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix court:    <http://linked.opendata.cz/resource/court/cs#> . 
+@prefix owl:      <http://www.w3.org/2002/07/owl#> . 
+
+#Own namespaces
+@prefix court-kinds: <http://purl.org/lex/court-kinds#> . 
+
+<http://linked.opendata.cz/resource/dataset/court/cs> a prov:Entity, void:Dataset;
+   dcterms:description "Data o soudech ČR, jejich kontakty a zkratky"@cs;
+   void:exampleResource <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4> ;
+   void:exampleResource <http://linked.opendata.cz/resource/court/cs/ústavní-soud> ;
+   void:sparqlEndpoint <http://linked.opendata.cz/sparql> ;
+
+# vocabulary – A vocabulary that is used in the dataset.
+   void:vocabulary dcterms:, gr:, rdf:, xsd:, adms:, rdfs:, s:, skos:, court:, owl:, court-kinds: ;
+
+# Data Dump – An RDF dump, partial or complete, of a void:Dataset.
+   void:dataDump <http://linked.opendata.cz/dump/soudy.zip> ;
+
+# URI space – A URI that is a common string prefix of all the entity URIs in a void:Dataset.
+   void:uriSpace "http://linked.opendata.cz/resource/court/cs/" ;  
+   dcterms:creator <http://purl.org/klimek#me> ;
+   dcterms:created "2012-11-29"^^xsd:date ;
+   dcterms:source <http://www.statnisprava.cz/> ,
+                  <http://iuridictum.pecina.cz/w/Soudn%C3%AD_rejst%C5%99%C3%ADk>
+   .
+  
