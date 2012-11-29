@@ -1,0 +1,52 @@
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> . 
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+
+#Own namespaces
+@prefix court-kinds:  <http://purl.org/lex/court-kinds#> .
+
+####### Concept scheme of types of courts in the Czech Republic
+
+court-kinds: a skos:ConceptScheme, owl:Ontology;
+  rdfs:label "Schéma konceptů pro druhy soudů České republiky"@cs ,
+    "Concept scheme for types of courts of the Czech Republic"@en ;
+  skos:hasTopConcept court-kinds:Constitutional, court-kinds:Supreme
+  .
+
+court-kinds:higherCourt a owl:FunctionalProperty ;
+  skos:prefLabel "Vyšší typ soudu"@cs ;
+  rdfs:domain skos:Concept ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy court-kinds: 
+  .  
+
+court-kinds:Constitutional a skos:Concept, owl:Class;
+  skos:inScheme court-kinds: ;
+  skos:prefLabel "Ústavní soud"@cs, "Constitutional Court"@en ;
+  skos:topConceptOf court-kinds:
+  .
+  
+court-kinds:Supreme a skos:Concept, owl:Class ;
+  skos:inScheme court-kinds: ;
+  skos:prefLabel "Nejvyšší soud"@cs, "Supreme Court"@en ;
+  skos:topConceptOf court-kinds:
+  .
+  
+court-kinds:Superior a skos:Concept, owl:Class ;
+  skos:inScheme court-kinds: ;
+  skos:prefLabel "Vrchní soud"@cs, "Superior Court"@en ;
+  court-kinds:higherCourt court-kinds:Supreme ;
+  .
+
+court-kinds:Regional a skos:Concept, owl:Class ;
+  skos:inScheme court-kinds: ;
+  skos:prefLabel "Krajský soud"@cs, "Regional Court"@en ;
+  court-kinds:higherCourt court-kinds:Superior ;
+  .
+
+court-kinds:District a skos:Concept, owl:Class ;
+  skos:inScheme court-kinds: ;
+  skos:prefLabel "Okresní soud"@cs, "District Court"@en ;
+  court-kinds:higherCourt court-kinds:Regional 
+  .

@@ -1,0 +1,39 @@
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> . 
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+
+#Own namespaces
+@prefix law-kinds:  <http://purl.org/lex/law-kinds#> .
+
+####### Concept scheme of types of laws in the domain of courts in the Czech Republic
+
+law-kinds: a skos:ConceptScheme ;
+  rdfs:label "Schéma konceptů pro druhy zákonú v doméně soudů České republiky"@cs ,
+    "Concept scheme for types of laws in the domain of courts of the Czech Republic"@en ;
+  skos:hasTopConcept law-kinds:ČSFR, law-kinds:ČSR, law-kinds:ČSSR, law-kinds:SSR
+  .
+
+law-kinds:ČSFR a skos:Concept, owl:Class;
+  skos:inScheme law-kinds: ;
+  skos:topConceptOf law-kinds: ;
+  skos:prefLabel "Zákon ČSFR"@cs 
+  .
+
+law-kinds:ČSR a skos:Concept, owl:Class;
+  skos:inScheme law-kinds: ;
+  skos:topConceptOf law-kinds: ;
+  skos:prefLabel "Zákon ČSR"@cs 
+  .
+  
+law-kinds:ČSSR a skos:Concept, owl:Class;
+  skos:inScheme law-kinds: ;
+  skos:topConceptOf law-kinds: ;
+  skos:prefLabel "Zákon ČSSR"@cs 
+  .
+  
+law-kinds:SSR a skos:Concept, owl:Class;
+  skos:inScheme law-kinds: ;
+  skos:topConceptOf law-kinds: ;
+  skos:prefLabel "Zákon SSR"@cs
+  .
