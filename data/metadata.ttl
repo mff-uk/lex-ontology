@@ -17,6 +17,7 @@
 
 <http://linked.opendata.cz/resource/dataset/court/cs> a prov:Entity, void:Dataset;
    dcterms:description "Data o soudech ČR, jejich kontakty a zkratky"@cs;
+   dcterms:description "Dataset about Czech courts including contacts and abbreviations"@en;
    void:exampleResource <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4> ;
    void:exampleResource <http://linked.opendata.cz/resource/court/cs/ústavní-soud> ;
    void:sparqlEndpoint <http://linked.opendata.cz/sparql> ;
