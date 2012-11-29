@@ -15,6 +15,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Brně"@cs ;
+   dcterms:identifier "KSBR"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/postal-address/1> ;
 	 s:telephone "+420546511111"^^xsd:string ;
@@ -41,6 +42,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Brně - pobočka v Jihlavě"@cs ;
+   dcterms:identifier "KSJI"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/postal-address/1> ;
 	 s:telephone "+420567563311"^^xsd:string ;
@@ -67,6 +69,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Brně - pobočka ve Zlíně"@cs ;
+   dcterms:identifier "KSZL"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/postal-address/1> ;
 	 s:telephone "+420577171111"^^xsd:string ;
@@ -118,6 +121,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Českých Budějovicích"@cs ;
+   dcterms:identifier "KSČB"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/postal-address/1> ;
 	 s:telephone "+420389018111"^^xsd:string ;
@@ -144,6 +148,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Českých Budějovicích - pobočka v Táboře"@cs ;
+   dcterms:identifier "KSTB"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/postal-address/1> ;
 	 s:telephone "+420381205411"^^xsd:string ;
@@ -170,6 +175,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Hradci Králové"@cs ;
+   dcterms:identifier "KSHK"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/postal-address/1> ;
 	 s:telephone "+420498016111"^^xsd:string ;
@@ -196,6 +202,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Hradci Králové - pobočka v Pardubicích"@cs ;
+   dcterms:identifier "KSPA"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/postal-address/1> ;
 	 s:telephone "+420467000111"^^xsd:string ;
@@ -222,6 +229,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Ostravě"@cs ;
+   dcterms:identifier "KSOS"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/postal-address/1> ;
 	 s:telephone "+420596153111"^^xsd:string ;
@@ -248,6 +256,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Ostravě - pobočka v Olomouci"@cs ;
+   dcterms:identifier "KSOL"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/postal-address/1> ;
 	 s:telephone "+420587402111"^^xsd:string ;
@@ -274,6 +283,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Plzni"@cs ;
+   dcterms:identifier "KSPL"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/postal-address/1> ;
 	 s:telephone "+420377868888"^^xsd:string ;
@@ -300,6 +310,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Plzni - pobočka v Karlových Varech"@cs ;
+   dcterms:identifier "KSKV"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/postal-address/1> ;
 	 s:telephone "+420377868802"^^xsd:string ;
@@ -325,6 +336,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Praze"@cs ;
+   dcterms:identifier "KSPH"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/postal-address/1> ;
 	 s:telephone "+420257005111"^^xsd:string ;
@@ -351,6 +363,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Ústí nad Labem"@cs ;
+   dcterms:identifier "KSUL"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/postal-address/1> ;
 	 s:telephone "+420477047111"^^xsd:string ;
@@ -377,6 +390,7 @@
 <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Krajský soud v Ústí nad Labem - pobočka v Liberci"@cs ;
+   dcterms:identifier "KSLB"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/postal-address/1> ;
 	 s:telephone "+420485238111"^^xsd:string ;
@@ -403,6 +417,7 @@
 <http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze>
 	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Městský soud v Praze"@cs ;
+   dcterms:identifier "MSPH"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/postal-address/1> ;
 	 s:telephone "+420221931111"^^xsd:string ;
@@ -428,6 +443,7 @@
 <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud>
 	 a court-kinds:Supreme, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Nejvyšší soud"@cs ;
+   dcterms:identifier "NSČR"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/postal-address/1> ;
 	 s:telephone "+420541593111"^^xsd:string ;
@@ -480,6 +496,7 @@
 <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci>
 	 a court-kinds:Superior, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Vrchní soud v Olomouci"@cs ;
+   dcterms:identifier "VSOL"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/postal-address/1> ;
 	 s:telephone "+420585532111"^^xsd:string ;
@@ -506,6 +523,7 @@
 <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze>
 	 a court-kinds:Superior, gr:BusinessEntity, s:Organization ;
 	 dcterms:title "Vrchní soud v Praze"@cs ;
+   dcterms:identifier "VSPH"^^xsd:string ;
 	 adms:identifier <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/identifier/1> ;
 	 s:address <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/postal-address/1> ;
 	 s:telephone "+420261196111"^^xsd:string ;
