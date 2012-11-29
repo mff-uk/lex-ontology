@@ -1,0 +1,609 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> . 
+
+#Own namespaces
+@prefix agenda:  <http://purl.org/lex/agenda-soudu#> .
+
+####### Concept scheme of types of agenda of courts in the Czech Republic
+
+agenda:stupeň a owl:FunctionalProperty ;
+  rdfs:label "Stupeň řízení" ;
+  rdfs:comment "Může být první nebo druhý stupeň" ;
+  rdfs:domain skos:Concept, [
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue agenda: 
+    ] ;
+  rdfs:range xsd:integer
+  .
+
+agenda: a skos:ConceptScheme;
+  rdfs:label "Schéma konceptů pro druhy agendy soudů České republiky"@cs ,
+    "Concept scheme for types of agenda of courts of the Czech Republic"@en ;
+  skos:hasTopConcept 
+    agenda:Trestní-a-disciplinární-agenda, 
+    agenda:Občanskoprávní-agenda, 
+    agenda:Obchodněprávní-agenda,    
+    agenda:Správní-soudnictví,
+    agenda:Evidenční-agenda,
+    agenda:Zvláštní-druhy-řízení    
+  .
+
+agenda:Trestní-a-disciplinární-agenda a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Trestní a disciplinární agenda"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:T a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "T" ;
+  skos:prefLabel "Trestní věci v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda
+  .
+
+agenda:To a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "To" ;
+  skos:prefLabel "Odvolací řízení v trestních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:T 
+  .
+
+agenda:Tdo a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Tdo" ;
+  skos:prefLabel "Řízení o dovoláních v trestních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:T 
+  .
+
+agenda:Tz a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Tz" ;
+  skos:prefLabel "Řízení o stížnostech pro porušení zákona"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:T 
+  .
+
+agenda:Tmo a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Tmo" ;
+  skos:prefLabel "Odvolací řízení v trestních věcech u mladistvých"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:T 
+  .
+
+agenda:Tm a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Tm" ;
+  skos:prefLabel "Trestní věci mladistvých v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:PP a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "PP" ;
+  skos:prefLabel "Řízení o podmíněném propuštění"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Rt a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Rt" ;
+  skos:prefLabel "Rehabilitační řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Rto a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Rto" ;
+  skos:prefLabel "Rehabilitační řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:NTr a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "NTr" ;
+  skos:prefLabel "Rehabilitační řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Torz a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Torz" ;
+  skos:prefLabel "Rehabilitační řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Td a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Td" ;
+  skos:prefLabel "Dožádání v trestních věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Nt a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Nt" ;
+  skos:prefLabel "Ostatní řízení v trestních věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Ntm a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ntm" ;
+  skos:prefLabel "Ostatní řízení v trestních věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Ntr a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ntr" ;
+  skos:prefLabel "Ostatní řízení v trestních věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Ds a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ds" ;
+  skos:prefLabel "Kárná řízení v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+agenda:Dso a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Dso" ;
+  skos:prefLabel "Odvolací řízení v kárných věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Trestní-a-disciplinární-agenda 
+  .
+
+
+agenda:Občanskoprávní-agenda a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Občanskoprávní agenda"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:C a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "C" ;
+  skos:prefLabel "Sporné občanskoprávní věci v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Co a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Co" ;
+  skos:prefLabel "Odvolací řízení v občanskoprávních věcech (sporných i nesporných)"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:C 
+  .
+
+agenda:Cdo a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cdo" ;
+  skos:prefLabel "Dovolání v občanskoprávních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:C 
+  .
+
+agenda:Cz a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cz" ;
+  skos:prefLabel "Dřívější stížnost pro porušení zákona v občanskoprávních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:C 
+  .
+
+agenda:Ro a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ro" ;
+  skos:prefLabel "Řízení o vydání platebního rozkazu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:E a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "E" ;
+  skos:prefLabel "Soudní výkon rozhodnutí"@cs ;
+  rdfs:comment "Nikoli exekuce – ty jsou vedeny v rejstříku Nc"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:P a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "P" ;
+  skos:prefLabel "Věci týkající se péče o dítě (pečovatelské věci) v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:D a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "D" ;
+  skos:prefLabel "Dědická řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Nd a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Nd" ;
+  skos:prefLabel "Dědická řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:U a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "U" ;
+  skos:prefLabel "Řízení o umoření listin"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:L a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "L" ;
+  skos:prefLabel "Řízení o přípustnosti držení v ústavu zdravotnické péče"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Sd a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Sd" ;
+  skos:prefLabel "Řízení o soudních úschovách"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Cd a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cd" ;
+  skos:prefLabel "Dožádání v občanskoprávních věcech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Ncu a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ncu" ;
+  skos:prefLabel "Řízení o uznání cizozemských rozhodnutí"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+agenda:Nc a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Nc" ;
+  skos:prefLabel "Ostatní občanskoprávní věci, včetně nesporných řízení a rozhodnutí o nařízení exekuce"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Občanskoprávní-agenda 
+  .
+
+
+agenda:Obchodněprávní-agenda a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Obchodněprávní agenda:"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:Cm a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cm" ;
+  skos:prefLabel "Obchodní věci v I. stupni"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Obchodněprávní-agenda 
+  .
+
+agenda:Cmo a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cmo" ;
+  skos:prefLabel "Řízení o odvolání v obchodních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:Cm 
+  .
+
+agenda:Odo a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Odo" ;
+  skos:prefLabel "Řízení o dovolání v obchodních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:Cm 
+  .
+
+agenda:Sm a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Sm" ;
+  skos:prefLabel "Řízení o vydání směnečného platebního rozkazu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Obchodněprávní-agenda 
+  .
+
+agenda:K a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "K" ;
+  skos:prefLabel "Řízení o prohlášení konkursu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Obchodněprávní-agenda 
+  .
+
+agenda:Ko a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ko" ;
+  skos:prefLabel "Řízení o odvolání v konkursních věcech"@cs ;
+  agenda:stupeň "2"^^xsd:integer ; 
+  skos:broader agenda:K 
+  .
+
+agenda:Kv a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Kv" ;
+  skos:prefLabel "Řízení o povolení vyrovnání na žádost věřitelů"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Obchodněprávní-agenda 
+  .
+
+
+agenda:Správní-soudnictví a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Správní soudnictví:"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:Ca a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ca" ;
+  skos:prefLabel "správní věci (řízení o správních žalobách)"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:A a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "A" ;
+  skos:prefLabel "správní věci (řízení o správních žalobách)"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Cad a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cad" ;
+  skos:prefLabel "Důchodové věci"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Az a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Az" ;
+  skos:prefLabel "asylové věci"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:As a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "As" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Ads a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ads" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Afs a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Afs" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Ans a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Ans" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Aps a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Aps" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Azs a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Azs" ;
+  skos:prefLabel "Řízení o kasačních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Obn a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Obn" ;
+  skos:prefLabel "Řízení o povolení obnovy řízení"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Pst a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Pst" ;
+  skos:prefLabel "Řízení ve věcech politických stran a hnutí"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Vol a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Vol" ;
+  skos:prefLabel "Řízení o volebních stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Komp a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Komp" ;
+  skos:prefLabel "Řízení o kompetenčních sporech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Konf a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Konf" ;
+  skos:prefLabel "Řízení o kompetenčních sporech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Na a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Na" ;
+  skos:prefLabel "Ostatní agenda Nejvyššího správního soudu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Nad a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Nad" ;
+  skos:prefLabel "Ostatní agenda Nejvyššího správního soudu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+agenda:Nao a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Nao" ;
+  skos:prefLabel "Ostatní agenda Nejvyššího správního soudu"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Správní-soudnictví 
+  .
+
+
+agenda:Evidenční-agenda a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Evidenční agenda"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:N a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "N" ;
+  skos:prefLabel "Nadační rejstřík"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Evidenční-agenda 
+  .
+
+agenda:O a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "O" ;
+  skos:prefLabel "Rejstřík obecně prospěšných společností"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Evidenční-agenda 
+  .
+
+agenda:F a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "F" ;
+  skos:prefLabel "Všeobecný rejstřík"@cs ;
+  rdfs:comment "používá se např. pro obchodní rejstřík, jenž je však veden zvláštní, netypickou methodou na počítači"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Evidenční-agenda 
+  .
+
+
+agenda:Zvláštní-druhy-řízení a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:prefLabel "Zvláštní druhy řízení"@cs ;
+  skos:topConceptOf agenda:
+  .
+
+agenda:S a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "S" ;
+  skos:prefLabel "Řízení o stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:St a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "St" ;
+  skos:prefLabel "Řízení o stížnostech"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:UL a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "UL" ;
+  skos:prefLabel "Řízení o návrzích na určení lhůty"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:Aprk a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Aprk" ;
+  skos:prefLabel "Řízení o návrzích na určení lhůty"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:Aprn a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Aprn" ;
+  skos:prefLabel "Řízení o návrzích na určení lhůty"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:Cul a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "Cul" ;
+  skos:prefLabel "Řízení o návrzích na určení lhůty"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .
+
+agenda:ÚS a skos:Concept ;
+  skos:inScheme agenda: ;
+  skos:notation "ÚS" ;
+  skos:prefLabel "Řízení před Ústavním soudem"@cs ;
+  agenda:stupeň "1"^^xsd:integer ; 
+  skos:broader agenda:Zvláštní-druhy-řízení
+  .

@@ -1,0 +1,78 @@
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> . 
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
+
+#Own namespaces
+@prefix doc-kinds:  <http://purl.org/lex/document-kinds#> .
+
+####### Concept scheme of types of documents in the domain of courts in the Czech Republic
+
+doc-kinds: a skos:ConceptScheme ;
+  rdfs:label "Schéma konceptů pro druhy dokumentů v doméně soudů České republiky"@cs ,
+    "Concept scheme for types of documents in the domain of courts of the Czech Republic"@en ;
+  skos:hasTopConcept doc-kinds:Ústava
+  .
+
+doc-kinds:Ústava a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Ústava"@cs, "Constitution"@en ;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Zákon a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Zákon"@cs, "Law"@en ;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Vyhláška a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:topConceptOf doc-kinds:
+  skos:prefLabel "Vyhláška"@cs, "Public notice"@en ;
+  .
+doc-kinds:Stanovisko-pléna a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Stanovisko pléna"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Rozhodnutí-pléna a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Rozhodnutí pléna"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Nález a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Nález"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Usnesení a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Usnesení"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Sdělení a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Sdělení"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+
+doc-kinds:Rozhodnutí a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Rozhodnutí"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+
+doc-kinds:Cenový-výměr a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Cenový výměr"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Nařízení-vlády a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Nařízení vlády"@cs;
+  skos:topConceptOf doc-kinds:
+  .
+doc-kinds:Rozsudek a skos:Concept, owl:Class;
+  skos:inScheme doc-kinds: ;
+  skos:prefLabel "Rozsudek"@cs;
+  skos:topConceptOf doc-kinds:
+  .

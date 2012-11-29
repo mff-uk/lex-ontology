@@ -1,0 +1,3000 @@
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix gr:       <http://purl.org/goodrelations/v1#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms:     <http://www.w3.org/ns/adms#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s:        <http://schema.org/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix court:    <http://linked.opendata.cz/resource/court/cs#> . 
+@prefix owl:      <http://www.w3.org/2002/07/owl#> . 
+
+#Own namespaces
+@prefix court-kinds: <http://purl.org/lex/court-kinds#> . 
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Brně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/postal-address/1> ;
+	 s:telephone "+420546511111"^^xsd:string ;
+	 s:faxNumber "+420546513362"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.brn.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?j=26&o=16&k=310> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215724"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Rooseveltova 648/16"@cs ;
+	 s:postalCode "60195"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Brně - pobočka v Jihlavě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/postal-address/1> ;
+	 s:telephone "+420567563311"^^xsd:string ;
+	 s:faxNumber "+420567563301"^^xsd:string ;
+	 s:email <mailto:posta@ksoud.jia.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=16&j=26&k=310> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215724"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-v-jihlavě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "tř. Legionářů 9a"@cs ;
+	 s:postalCode "58726"@cs ;
+	 s:addressLocality "Jihlava"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Brně - pobočka ve Zlíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/postal-address/1> ;
+	 s:telephone "+420577171111"^^xsd:string ;
+	 s:faxNumber "+420577172201"^^xsd:string ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=16&j=26&k=310> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215724"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně---pobočka-ve-zlíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dlouhé Díly 351"@cs ;
+	 s:postalCode "76302"@cs ;
+	 s:addressLocality "Zlín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně-(pracoviště-husova-15)>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Brně (pracoviště Husova 15)"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně-(pracoviště-husova-15)/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně-(pracoviště-husova-15)/postal-address/1> ;
+	 s:telephone "+420546511111"^^xsd:string ;
+	 s:faxNumber "+420546529368"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.brn.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=16&j=26&k=310> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně-(pracoviště-husova-15)/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215724"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-brně-(pracoviště-husova-15)/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Husova 15"@cs ;
+	 s:postalCode "60195"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Českých Budějovicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/postal-address/1> ;
+	 s:telephone "+420389018111"^^xsd:string ;
+	 s:faxNumber "+420386354309"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.cbu.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=17&j=27&k=319> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215686"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Zátkovo nábřeží 10/2"@cs ;
+	 s:postalCode "37084"@cs ;
+	 s:addressLocality "České Budějovice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Českých Budějovicích - pobočka v Táboře"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/postal-address/1> ;
+	 s:telephone "+420381205411"^^xsd:string ;
+	 s:faxNumber "+420381234240"^^xsd:string ;
+	 s:email <mailto:podatelna.pobocka@ksoud.cbu.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=17&j=27&k=319> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215686"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-českých-budějovicích---pobočka-v-táboře/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "tř. kpt. Jaroše 1851"@cs ;
+	 s:postalCode "39003"@cs ;
+	 s:addressLocality "Tábor"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Hradci Králové"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/postal-address/1> ;
+	 s:telephone "+420498016111"^^xsd:string ;
+	 s:faxNumber "+420495514021"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.hrk.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=18&j=28&k=328&d=312191> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215716"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Československé armády 218/57"@cs ;
+	 s:postalCode "50208"@cs ;
+	 s:addressLocality "Hradec Králové"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Hradci Králové - pobočka v Pardubicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/postal-address/1> ;
+	 s:telephone "+420467000111"^^xsd:string ;
+	 s:faxNumber "+420466535196"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.pce.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=18&j=28&k=328&d=312191> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215716"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-hradci-králové---pobočka-v-pardubicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Sukova tř. 1556"@cs ;
+	 s:postalCode "53050"@cs ;
+	 s:addressLocality "Pardubice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Ostravě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/postal-address/1> ;
+	 s:telephone "+420596153111"^^xsd:string ;
+	 s:faxNumber "+420596120981"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.ova.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=19&j=29&k=337> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215732"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Havlíčkovo nábřeží 1835/34"@cs ;
+	 s:postalCode "72881"@cs ;
+	 s:addressLocality "Ostrava"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Ostravě - pobočka v Olomouci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/postal-address/1> ;
+	 s:telephone "+420587402111"^^xsd:string ;
+	 s:faxNumber "+420587402869"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.olc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=19&j=29&k=337> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215732"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ostravě---pobočka-v-olomouci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Studentská 7"@cs ;
+	 s:postalCode "77111"@cs ;
+	 s:addressLocality "Olomouc"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Plzni"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/postal-address/1> ;
+	 s:telephone "+420377868888"^^xsd:string ;
+	 s:faxNumber "+420377868000"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.plz.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=20&j=30&k=346> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215694"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Veleslavínova 21/40"@cs ;
+	 s:postalCode "30617"@cs ;
+	 s:addressLocality "Plzeň"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Plzni - pobočka v Karlových Varech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/postal-address/1> ;
+	 s:telephone "+420377868802"^^xsd:string ;
+	 s:faxNumber "+420353169204"^^xsd:string ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=20&j=30&k=346> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215694"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-plzni---pobočka-v-karlových-varech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Moskevská 17"@cs ;
+	 s:postalCode "36033"@cs ;
+	 s:addressLocality "Karlovy Vary"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Praze"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/postal-address/1> ;
+	 s:telephone "+420257005111"^^xsd:string ;
+	 s:faxNumber "+420257321528"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.pha.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=21&j=31&k=355&d=8945> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215678"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-praze/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "náměstí Kinských 234/5"@cs ;
+	 s:postalCode "15075"@cs ;
+	 s:addressLocality "Praha 5"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Ústí nad Labem"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/postal-address/1> ;
+	 s:telephone "+420477047111"^^xsd:string ;
+	 s:faxNumber "+420475530488"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.unl.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?j=32&o=22&k=364> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215708"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Národního odboje 1274/26"@cs ;
+	 s:postalCode "40092"@cs ;
+	 s:addressLocality "Ústí nad Labem"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Krajský soud v Ústí nad Labem - pobočka v Liberci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/postal-address/1> ;
+	 s:telephone "+420485238111"^^xsd:string ;
+	 s:faxNumber "+420485238320"^^xsd:string ;
+	 s:email <mailto:podatelna@ksoud.lbc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?j=32&o=22&k=364> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215708"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/krajský-soud-v-ústí-nad-labem---pobočka-v-liberci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "U Soudu 540/3"@cs ;
+	 s:postalCode "46072"@cs ;
+	 s:addressLocality "Liberec"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze>
+	 a court-kinds:Regional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Městský soud v Praze"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/postal-address/1> ;
+	 s:telephone "+420221931111"^^xsd:string ;
+	 s:faxNumber "+420224947049"^^xsd:string ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=26&j=36&k=421> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215660"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-praze/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Spálená 6/2"@cs ;
+	 s:postalCode "11216"@cs ;
+	 s:addressLocality "Praha 2"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-soud>
+	 a court-kinds:Supreme, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Nejvyšší soud"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/postal-address/1> ;
+	 s:telephone "+420541593111"^^xsd:string ;
+	 s:faxNumber "+420541213493"^^xsd:string ;
+	 s:email <mailto:podatelna@nsoud.cz> ;
+	 s:url <http://www.nsoud.cz> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "48510190"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-soud/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Burešova 571/20"@cs ;
+	 s:postalCode "65737"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud>
+	 a court-kinds:Supreme, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Nejvyšší správní soud"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud/postal-address/1> ;
+	 s:telephone "+420542532311"^^xsd:string ;
+	 s:faxNumber "+420542532361"^^xsd:string ;
+	 s:email <mailto:podatelna@nssoud.cz> ;
+	 s:url <http://www.nssoud.cz> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "75003716"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Moravské náměstí 6"@cs ;
+	 s:postalCode "65740"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci>
+	 a court-kinds:Superior, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Vrchní soud v Olomouci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/postal-address/1> ;
+	 s:telephone "+420585532111"^^xsd:string ;
+	 s:faxNumber "+420585532370"^^xsd:string ;
+	 s:email <mailto:podatelna@vsoud.olc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=206&j=216&k=2055> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "64124533"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-olomouci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Masarykova třída 609/1"@cs ;
+	 s:postalCode "77111"@cs ;
+	 s:addressLocality "Olomouc"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze>
+	 a court-kinds:Superior, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Vrchní soud v Praze"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/postal-address/1> ;
+	 s:telephone "+420261196111"^^xsd:string ;
+	 s:faxNumber "+420261196441"^^xsd:string ;
+	 s:email <mailto:podatelna@vsoud.pha.justice.cz> ;
+	 s:url <http://www.justice.cz/vspha> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215651"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/vrchní-soud-v-praze/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nám. Hrdinů 1300/11"@cs ;
+	 s:postalCode "14000"@cs ;
+	 s:addressLocality "Praha 4"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-1>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 1"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-1/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-1/postal-address/1> ;
+	 s:telephone "+420221093111"^^xsd:string ;
+	 s:faxNumber "+420224221499"^^xsd:string ;
+	 s:email <mailto:osoud.pha1@osoud.pha1.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=166&j=176&k=1691> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-1/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024384"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-1/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Ovocný trh 14"@cs ;
+	 s:postalCode "11294"@cs ;
+	 s:addressLocality "Praha 1"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-10>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 10"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-10/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-10/postal-address/1> ;
+	 s:telephone "+420251441111"^^xsd:string ;
+	 s:faxNumber "+420272659172"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pha10.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=167&j=177&k=1700> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-10/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024473"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-10/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "ul. 28. pluku 1553/29b"@cs ;
+	 s:postalCode "10083"@cs ;
+	 s:addressLocality "Praha 10"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-2>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 2"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-2/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-2/postal-address/1> ;
+	 s:telephone "+420221510111"^^xsd:string ;
+	 s:faxNumber "+420224262193"^^xsd:string ;
+	 s:email <mailto:osoud.pha2@osoud.pha2.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=168&j=178&k=1709> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-2/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024392"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-2/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Francouzská 19"@cs ;
+	 s:postalCode "12000"@cs ;
+	 s:addressLocality "Praha 2"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-3>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 3"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-3/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-3/postal-address/1> ;
+	 s:telephone "+420221477311"^^xsd:string ;
+	 s:faxNumber "+420221477242"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pha3.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=169&j=179&k=1718> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-3/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024406"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-3/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Jagellonská 1734/5"@cs ;
+	 s:postalCode "13005"@cs ;
+	 s:addressLocality "Praha 3"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 4"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4/postal-address/1> ;
+	 s:telephone "+420251447704"^^xsd:string ;
+	 s:faxNumber "+420251441777"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pha4.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=170&j=180&k=1727> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024414"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "ul. 28. pluku 1533/29b"@cs ;
+	 s:postalCode "10000"@cs ;
+	 s:addressLocality "Praha 10"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-5>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 5"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-5/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-5/postal-address/1> ;
+	 s:telephone "+420257005111"^^xsd:string ;
+	 s:faxNumber "+420257321534"^^xsd:string ;
+	 s:email <mailto:osoud.pha5@osoud.pha5.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=171&j=181&k=1736> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-5/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024422"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-5/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "nám. Kinských 5"@cs ;
+	 s:postalCode "15000"@cs ;
+	 s:addressLocality "Praha 5"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 6"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6/postal-address/1> ;
+	 s:telephone "+420224321272"^^xsd:string ;
+	 s:faxNumber "+420224319159"^^xsd:string ;
+	 s:email <mailto:posta@osoud.pha6.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=172&j=182&k=1745> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024431"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Čkalova 18"@cs ;
+	 s:postalCode "16054"@cs ;
+	 s:addressLocality "Praha 6"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6---dislokované-pracoviště>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 6 - Dislokované pracoviště"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6---dislokované-pracoviště/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6---dislokované-pracoviště/postal-address/1> ;
+	 s:telephone "+420222867111"^^xsd:string ;
+	 s:faxNumber "+420233325359"^^xsd:string ;
+	 s:email <mailto:posta@osoud.pha6.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=172&j=182&k=1745> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6---dislokované-pracoviště/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00215660"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-6---dislokované-pracoviště/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Legerova 7"@cs ;
+	 s:postalCode "12000"@cs ;
+	 s:addressLocality "Praha 2"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-7>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 7"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-7/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-7/postal-address/1> ;
+	 s:telephone "+420221093111"^^xsd:string ;
+	 s:faxNumber "+420224233218"^^xsd:string ;
+	 s:email <mailto:osoud.pha7@osoud.pha7.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=173&j=183&k=1754> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-7/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024449"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-7/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Ovocný trh 14"@cs ;
+	 s:postalCode "11296"@cs ;
+	 s:addressLocality "Praha 1"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-8>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 8"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-8/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-8/postal-address/1> ;
+	 s:telephone "+420251447708"^^xsd:string ;
+	 s:faxNumber "+420251442036"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pha8.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=174&j=184&k=1763> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-8/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024457"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-8/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "ul. 28.pluku 1533/29b"@cs ;
+	 s:postalCode "10000"@cs ;
+	 s:addressLocality "Praha 10"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-9>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Obvodní soud pro Prahu 9"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-9/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-9/postal-address/1> ;
+	 s:telephone "+420251447709"^^xsd:string ;
+	 s:faxNumber "+420251443401"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pha9.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=175&j=185&k=1772> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-9/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024465"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-9/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "ul.28. pluku 1533/29b"@cs ;
+	 s:postalCode "10083"@cs ;
+	 s:addressLocality "Praha 10"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-východ>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Praha-východ"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-východ/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-východ/postal-address/1> ;
+	 s:telephone "+420221729311"^^xsd:string ;
+	 s:faxNumber "+420222325571"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.phav.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=176&j=186&k=1781> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-východ/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024571"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-východ/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Na Poříčí 1044/20"@cs ;
+	 s:postalCode "11297"@cs ;
+	 s:addressLocality "Praha 1"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-západ>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Praha-západ"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-západ/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-západ/postal-address/1> ;
+	 s:telephone "+420257199244"^^xsd:string ;
+	 s:faxNumber "+420257533487"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.phaz.justice.cz> ;
+	 s:url <http://www.justice.cz/osphaz> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-západ/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024589"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-praha-západ/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Karmelitská 19"@cs ;
+	 s:postalCode "11815"@cs ;
+	 s:addressLocality "Praha 1"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českém-krumlově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Českém Krumlově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českém-krumlově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českém-krumlově/postal-address/1> ;
+	 s:telephone "+420380706111"^^xsd:string ;
+	 s:faxNumber "+420380715023"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.ckr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=124&j=134&k=1313> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českém-krumlově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024635"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českém-krumlově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Linecká 284"@cs ;
+	 s:postalCode "38120"@cs ;
+	 s:addressLocality "Český Krumlov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Českých Budějovicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích/postal-address/1> ;
+	 s:telephone "+420386112111"^^xsd:string ;
+	 s:faxNumber "+420386356443"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.cbu.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=123&j=133&k=1304> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024627"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Lidická 20"@cs ;
+	 s:postalCode "37106"@cs ;
+	 s:addressLocality "České Budějovice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích---pobočka-(odd.-trestní,-odd.-opatrovnické)>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Českých Budějovicích - pobočka (odd. trestní, odd. opatrovnické)"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích---pobočka-(odd.-trestní,-odd.-opatrovnické)/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích---pobočka-(odd.-trestní,-odd.-opatrovnické)/postal-address/1> ;
+	 s:telephone "+420389018111"^^xsd:string ;
+	 s:faxNumber "+420386360321"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.cbu.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=123&j=133&k=1304> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích---pobočka-(odd.-trestní,-odd.-opatrovnické)/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024627"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-českých-budějovicích---pobočka-(odd.-trestní,-odd.-opatrovnické)/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Zátkovo nábřeží 2"@cs ;
+	 s:postalCode "37106"@cs ;
+	 s:addressLocality "České Budějovice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jindřichově-hradci>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Jindřichově Hradci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jindřichově-hradci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jindřichově-hradci/postal-address/1> ;
+	 s:telephone "+420384340011"^^xsd:string ;
+	 s:faxNumber "+420384361580"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.jhr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=138&j=148&k=1439> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jindřichově-hradci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024643"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jindřichově-hradci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Klášterská 123"@cs ;
+	 s:postalCode "37728"@cs ;
+	 s:addressLocality "Jindřichův Hradec"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-písku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Písku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-písku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-písku/postal-address/1> ;
+	 s:telephone "+420382731111"^^xsd:string ;
+	 s:faxNumber "+420382217195"^^xsd:string ;
+	 s:email <mailto:posta@osoud.psk.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=160&j=170&k=1637> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-písku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024660"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-písku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Velké nám. 121/17"@cs ;
+	 s:postalCode "39741"@cs ;
+	 s:addressLocality "Písek"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prachaticích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Prachaticích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prachaticích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prachaticích/postal-address/1> ;
+	 s:telephone "+420388305111"^^xsd:string ;
+	 s:faxNumber "+420388312254"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.ptc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=165&j=175&k=1682> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prachaticích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024678"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prachaticích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Pivovarská 3"@cs ;
+	 s:postalCode "38318"@cs ;
+	 s:addressLocality "Prachatice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-táboře>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Táboře"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-táboře/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-táboře/postal-address/1> ;
+	 s:telephone "+420381205111"^^xsd:string ;
+	 s:faxNumber "+420381256308"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.tab.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=189&j=199&k=1898> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-táboře/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024694"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-táboře/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nám. Mikoláše z Husi 43"@cs ;
+	 s:postalCode "39017"@cs ;
+	 s:addressLocality "Tábor"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-strakonicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Strakonicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-strakonicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-strakonicích/postal-address/1> ;
+	 s:telephone "+420383355111"^^xsd:string ;
+	 s:faxNumber "+420383324542"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.sce.justice.cz> ;
+	 s:url <http://www.justice.cz/ossce> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-strakonicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024686"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-strakonicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Smetanova 455"@cs ;
+	 s:postalCode "38623"@cs ;
+	 s:addressLocality "Strakonice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-brně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Městský soud v Brně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/městský-soud-v-brně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/městský-soud-v-brně/postal-address/1> ;
+	 s:telephone "+420546511111"^^xsd:string ;
+	 s:faxNumber "+420546530269"^^xsd:string ;
+	 s:email <mailto:podatelna@msoud.brn.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=119&j=129&k=1268> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-brně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025062"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/městský-soud-v-brně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Polní 994/39"@cs ;
+	 s:postalCode "60801"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-brno-venkov>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Brno-venkov"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-brno-venkov/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-brno-venkov/postal-address/1> ;
+	 s:telephone "+420546511111"^^xsd:string ;
+	 s:faxNumber "+420546576012"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.brnv.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=120&j=130&k=1277> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-brno-venkov/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025071"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-brno-venkov/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Polní 39/994"@cs ;
+	 s:postalCode "60804"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-blansku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Blansku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-blansku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-blansku/postal-address/1> ;
+	 s:telephone "+420516482111"^^xsd:string ;
+	 s:faxNumber "+420516415423"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.bla.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=117&j=127&k=1250> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-blansku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025054"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-blansku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Hybešova 5"@cs ;
+	 s:postalCode "67828"@cs ;
+	 s:addressLocality "Blansko"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-břeclavi>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Břeclavi"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-břeclavi/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-břeclavi/postal-address/1> ;
+	 s:telephone "+420519322424"^^xsd:string ;
+	 s:faxNumber "+420519321686"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.brv.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=118&j=128&k=1259> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-břeclavi/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025089"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-břeclavi/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Národních hrdinů 11"@cs ;
+	 s:postalCode "69024"@cs ;
+	 s:addressLocality "Břeclav"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hodoníně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Hodoníně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hodoníně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hodoníně/postal-address/1> ;
+	 s:telephone "+420518307211"^^xsd:string ;
+	 s:faxNumber "+420518321218"^^xsd:string ;
+	 s:email <mailto:posta@osoud.hod.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=132&j=142&k=1385> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hodoníně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025101"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hodoníně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Velkomoravská 4"@cs ;
+	 s:postalCode "69546"@cs ;
+	 s:addressLocality "Hodonín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vyškově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Vyškově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vyškově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vyškově/postal-address/1> ;
+	 s:telephone "+420517348465"^^xsd:string ;
+	 s:faxNumber "+420517348121"^^xsd:string ;
+	 s:email <mailto:posta@osoud.vys.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=198&j=208&k=1979> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vyškově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025160"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vyškově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Kašíkova 28"@cs ;
+	 s:postalCode "68218"@cs ;
+	 s:addressLocality "Vyškov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-znojmě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Znojmě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-znojmě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-znojmě/postal-address/1> ;
+	 s:telephone "+420515266211"^^xsd:string ;
+	 s:faxNumber "+420515221195"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.zno.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=201&j=211&k=2006> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-znojmě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025178"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-znojmě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "náměstí Republiky 1"@cs ;
+	 s:postalCode "67008"@cs ;
+	 s:addressLocality "Znojmo"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chebu>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Chebu"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chebu/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chebu/postal-address/1> ;
+	 s:telephone "+420377867410"^^xsd:string ;
+	 s:faxNumber "+420377867412"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.chb.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=125&j=135&k=1322> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chebu/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024724"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chebu/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Lidická 1"@cs ;
+	 s:postalCode "35060"@cs ;
+	 s:addressLocality "Cheb"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karlových-varech>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Karlových Varech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karlových-varech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karlových-varech/postal-address/1> ;
+	 s:telephone "+420377867211"^^xsd:string ;
+	 s:faxNumber "+420353233981"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kva.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=139&j=149&k=1448> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karlových-varech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024732"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karlových-varech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Moskevská 17"@cs ;
+	 s:postalCode "36033"@cs ;
+	 s:addressLocality "Karlovy Vary"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-sokolově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Sokolově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-sokolově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-sokolově/postal-address/1> ;
+	 s:telephone "+420377867000"^^xsd:string ;
+	 s:faxNumber "+420377867007"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.sok.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=185&j=195&k=1862> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-sokolově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024791"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-sokolově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "K. H. Borovského 57"@cs ;
+	 s:postalCode "35632"@cs ;
+	 s:addressLocality "Sokolov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-havlíčkově-brodě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Havlíčkově Brodě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-havlíčkově-brodě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-havlíčkově-brodě/postal-address/1> ;
+	 s:telephone "+420569493111"^^xsd:string ;
+	 s:faxNumber "+420569493150"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.hbr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=131&j=141&k=1376> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-havlíčkově-brodě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024937"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-havlíčkově-brodě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Husova 2895"@cs ;
+	 s:postalCode "58025"@cs ;
+	 s:addressLocality "Havlíčkův Brod"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jihlavě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Jihlavě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jihlavě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jihlavě/postal-address/1> ;
+	 s:telephone "+420567563111"^^xsd:string ;
+	 s:faxNumber "+420567563101"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.jia.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=137&j=147&k=1430> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jihlavě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025119"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jihlavě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "tř. Legionářů 9a"@cs ;
+	 s:postalCode "58726"@cs ;
+	 s:addressLocality "Jihlava"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pelhřimově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Pelhřimově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pelhřimově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pelhřimově/postal-address/1> ;
+	 s:telephone "+420565303611"^^xsd:string ;
+	 s:faxNumber "+420565323651"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.plh.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=159&j=169&k=1628> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pelhřimově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024651"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pelhřimově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Tř. Legií 876"@cs ;
+	 s:postalCode "39336"@cs ;
+	 s:addressLocality "Pelhřimov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-třebíči>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Třebíči"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-třebíči/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-třebíči/postal-address/1> ;
+	 s:telephone "+420568606211"^^xsd:string ;
+	 s:faxNumber "+420568841636"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.trb.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=192&j=202&k=1925> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-třebíči/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025143"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-třebíči/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Bráfova 502"@cs ;
+	 s:postalCode "67434"@cs ;
+	 s:addressLocality "Třebíč"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-žďáru-nad-sázavou>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Žďáru nad Sázavou"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-žďáru-nad-sázavou/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-žďáru-nad-sázavou/postal-address/1> ;
+	 s:telephone "+420566682611"^^xsd:string ;
+	 s:faxNumber "+420566627957"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.zds.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=199&j=209&k=1988> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-žďáru-nad-sázavou/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025186"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-žďáru-nad-sázavou/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Strojírenská 2210/28"@cs ;
+	 s:postalCode "59119"@cs ;
+	 s:addressLocality "Žďár nad Sázavou"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hradci-králové>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Hradci Králové"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hradci-králové/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hradci-králové/postal-address/1> ;
+	 s:telephone "+420495000900"^^xsd:string ;
+	 s:faxNumber "+420495512264"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.hrk.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=133&j=143&k=1394> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hradci-králové/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024945"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-hradci-králové/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Ignáta Herrmanna 227"@cs ;
+	 s:postalCode "50200"@cs ;
+	 s:addressLocality "Hradec Králové"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jičíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Jičíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jičíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jičíně/postal-address/1> ;
+	 s:telephone "+420493547111"^^xsd:string ;
+	 s:faxNumber "+420493547128"^^xsd:string ;
+	 s:email <mailto:posta@osoud.jic.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=136&j=146&k=1421> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jičíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024961"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jičíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Šafaříkova 842"@cs ;
+	 s:postalCode "50625"@cs ;
+	 s:addressLocality "Jičín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Náchodě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě/postal-address/1> ;
+	 s:telephone "+420491443111"^^xsd:string ;
+	 s:faxNumber "+420491443208"^^xsd:string ;
+	 s:email <mailto:posta@osoud.nac.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=152&j=162&k=1565> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024970"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Palachova 1303"@cs ;
+	 s:postalCode "54729"@cs ;
+	 s:addressLocality "Náchod"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě---exekuční-oddělení>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Náchodě - exekuční oddělení"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě---exekuční-oddělení/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě---exekuční-oddělení/postal-address/1> ;
+	 s:telephone "+420491423119"^^xsd:string ;
+	 s:faxNumber "+420491423119"^^xsd:string ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=152&j=162&k=1565> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě---exekuční-oddělení/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024970"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-náchodě---exekuční-oddělení/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Riegrova 161"@cs ;
+	 s:postalCode "54729"@cs ;
+	 s:addressLocality "Náchod"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rychnově-nad-kněžnou>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Rychnově nad Kněžnou"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rychnově-nad-kněžnou/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rychnově-nad-kněžnou/postal-address/1> ;
+	 s:telephone "+420494548300"^^xsd:string ;
+	 s:faxNumber "+420494548331"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.rkn.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=183&j=193&k=1844> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rychnově-nad-kněžnou/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024996"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rychnově-nad-kněžnou/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Svatohavelská 93"@cs ;
+	 s:postalCode "51619"@cs ;
+	 s:addressLocality "Rychnov nad Kněžnou"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-trutnově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Trutnově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-trutnově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-trutnově/postal-address/1> ;
+	 s:telephone "+420499840116"^^xsd:string ;
+	 s:faxNumber "+420499813054"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.tru.justice.cz> ;
+	 s:url <http://www.justice.cz/ostru> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-trutnově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025020"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-trutnově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nádražní 106/5"@cs ;
+	 s:postalCode "54120"@cs ;
+	 s:addressLocality "Trutnov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-české-lípě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v České Lípě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-české-lípě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-české-lípě/postal-address/1> ;
+	 s:telephone "+420487885111"^^xsd:string ;
+	 s:faxNumber "+420487523223"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.cli.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=122&j=132&k=1295> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-české-lípě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024821"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-české-lípě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Děčínská 389/4"@cs ;
+	 s:postalCode "47052"@cs ;
+	 s:addressLocality "Česká Lípa"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jablonci-nad-nisou>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Jablonci nad Nisou"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jablonci-nad-nisou/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jablonci-nad-nisou/postal-address/1> ;
+	 s:telephone "+420483337011"^^xsd:string ;
+	 s:faxNumber "+420483311917"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.jbc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=134&j=144&k=1403> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jablonci-nad-nisou/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024856"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jablonci-nad-nisou/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Mírové nám. 483/4"@cs ;
+	 s:postalCode "46659"@cs ;
+	 s:addressLocality "Jablonec nad Nisou"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-liberci>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Liberci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-liberci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-liberci/postal-address/1> ;
+	 s:telephone "+420485238111"^^xsd:string ;
+	 s:faxNumber "+420485238235"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.lbc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=146&j=156&k=1511> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-liberci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024864"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-liberci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "U Soudu 540/3"@cs ;
+	 s:postalCode "46072"@cs ;
+	 s:addressLocality "Liberec"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-semilech>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Semilech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-semilech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-semilech/postal-address/1> ;
+	 s:telephone "+420481652111"^^xsd:string ;
+	 s:faxNumber "+420481652177"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.sem.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=184&j=194&k=1853> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-semilech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025003"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-semilech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nádražní 25"@cs ;
+	 s:postalCode "51334"@cs ;
+	 s:addressLocality "Semily"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Bruntále"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále/postal-address/1> ;
+	 s:telephone "+420554786220"^^xsd:string ;
+	 s:faxNumber "+420554711220"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.bru.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=121&j=131&k=1286> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025208"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Partyzánská 11"@cs ;
+	 s:postalCode "79201"@cs ;
+	 s:addressLocality "Bruntál"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále---pobočka-v-krnově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Bruntále - pobočka v Krnově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále---pobočka-v-krnově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále---pobočka-v-krnově/postal-address/1> ;
+	 s:telephone "+420554637520"^^xsd:string ;
+	 s:faxNumber "+420554637521"^^xsd:string ;
+	 s:email <mailto:podatelna.krnov@osoud.bru.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=121&j=131&k=1286> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále---pobočka-v-krnově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025208"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-bruntále---pobočka-v-krnově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Revoluční 965/60"@cs ;
+	 s:postalCode "79401"@cs ;
+	 s:addressLocality "Krnov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Karviné"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné/postal-address/1> ;
+	 s:telephone "+420596390111"^^xsd:string ;
+	 s:faxNumber "+420596312491"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kna.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=140&j=150&k=1457> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025224"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "park Bedřicha Smetany 176/5"@cs ;
+	 s:postalCode "73331"@cs ;
+	 s:addressLocality "Karviná"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné---pobočka-v-havířově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Karviné - pobočka v Havířově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné---pobočka-v-havířově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné---pobočka-v-havířově/postal-address/1> ;
+	 s:telephone "+420596498111"^^xsd:string ;
+	 s:faxNumber "+420596498150"^^xsd:string ;
+	 s:email <mailto:podatelna.havirov@osoud.kna.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=140&j=150&k=1457> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné---pobočka-v-havířově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025224"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-karviné---pobočka-v-havířově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dlouhá Třída 1647/46a"@cs ;
+	 s:postalCode "73601"@cs ;
+	 s:addressLocality "Havířov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-novém-jičíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Novém Jičíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-novém-jičíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-novém-jičíně/postal-address/1> ;
+	 s:telephone "+420556779511"^^xsd:string ;
+	 s:faxNumber "+420556702465"^^xsd:string ;
+	 s:email <mailto:osnovyjicin@osoud.nji.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=153&j=163&k=1574> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-novém-jičíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025232"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-novém-jičíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Tyršova 3"@cs ;
+	 s:postalCode "74111"@cs ;
+	 s:addressLocality "Nový Jičín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-opavě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Opavě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-opavě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-opavě/postal-address/1> ;
+	 s:telephone "+420553759211"^^xsd:string ;
+	 s:faxNumber "+420553622168"^^xsd:string ;
+	 s:email <mailto:posta@osoud.opa.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=156&j=166&k=1601> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-opavě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025259"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-opavě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Olomoucká 27"@cs ;
+	 s:postalCode "74677"@cs ;
+	 s:addressLocality "Opava"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ostravě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Ostravě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ostravě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ostravě/postal-address/1> ;
+	 s:telephone "+420596972111"^^xsd:string ;
+	 s:faxNumber "+420596972801"^^xsd:string ;
+	 s:email <mailto:osostrava@osoud.ova.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=157&j=167&k=1610> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ostravě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025267"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ostravě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "U Soudu 6187/4"@cs ;
+	 s:postalCode "70882"@cs ;
+	 s:addressLocality "Ostrava - Poruba"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-frýdku-místku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Frýdku-Místku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-frýdku-místku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-frýdku-místku/postal-address/1> ;
+	 s:telephone "+420558411111"^^xsd:string ;
+	 s:faxNumber "+420558627707"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.frm.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=130&j=140&k=1367> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-frýdku-místku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025216"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-frýdku-místku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Na Poříčí 3206"@cs ;
+	 s:postalCode "73813"@cs ;
+	 s:addressLocality "Frýdek-Místek"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jeseníku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Jeseníku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jeseníku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jeseníku/postal-address/1> ;
+	 s:telephone "+420584411434"^^xsd:string ;
+	 s:faxNumber "+420584412692"^^xsd:string ;
+	 s:email <mailto:posta@osoud.jes.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=135&j=145&k=1412> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jeseníku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "64628019"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-jeseníku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dukelská 761/2a"@cs ;
+	 s:postalCode "79001"@cs ;
+	 s:addressLocality "Jeseník"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-olomouci>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Olomouci"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-olomouci/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-olomouci/postal-address/1> ;
+	 s:telephone "+420585503111"^^xsd:string ;
+	 s:faxNumber "+420585225250"^^xsd:string ;
+	 s:email <mailto:posta@osoud.olc.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=155&j=165&k=1592> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-olomouci/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025241"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-olomouci/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Tř. Svobody 685/16"@cs ;
+	 s:postalCode "77138"@cs ;
+	 s:addressLocality "Olomouc"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prostějově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Prostějově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prostějově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prostějově/postal-address/1> ;
+	 s:telephone "+420582401611"^^xsd:string ;
+	 s:faxNumber "+420582342276"^^xsd:string ;
+	 s:email <mailto:posta@osoud.pro.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=180&j=190&k=1817> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prostějově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025135"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-prostějově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Havlíčkova 2936/16"@cs ;
+	 s:postalCode "79709"@cs ;
+	 s:addressLocality "Prostějov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-přerově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Přerově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-přerově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-přerově/postal-address/1> ;
+	 s:telephone "+420581279111"^^xsd:string ;
+	 s:faxNumber "+420581279224"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pre.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=178&j=188&k=1799> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-přerově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025275"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-přerově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Smetanova 2016/2"@cs ;
+	 s:postalCode "75011"@cs ;
+	 s:addressLocality "Přerov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-šumperku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Šumperku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-šumperku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-šumperku/postal-address/1> ;
+	 s:telephone "+420583313911"^^xsd:string ;
+	 s:faxNumber "+420583215260"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.sup.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=187&j=197&k=1880> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-šumperku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025283"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-šumperku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "M. R. Štefánika 12"@cs ;
+	 s:postalCode "78773"@cs ;
+	 s:addressLocality "Šumperk"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chrudimi>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Chrudimi"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chrudimi/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chrudimi/postal-address/1> ;
+	 s:telephone "+420469669711"^^xsd:string ;
+	 s:faxNumber "+420469669751"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.chr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=127&j=137&k=1340> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chrudimi/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024953"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chrudimi/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Všehrdovo nám. 45"@cs ;
+	 s:postalCode "53721"@cs ;
+	 s:addressLocality "Chrudim"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pardubicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Pardubicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pardubicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pardubicích/postal-address/1> ;
+	 s:telephone "+420466750111"^^xsd:string ;
+	 s:faxNumber "+420466530345"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pce.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=158&j=168&k=1619> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pardubicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024988"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-pardubicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Na Třísle 118"@cs ;
+	 s:postalCode "53095"@cs ;
+	 s:addressLocality "Pardubice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-orlicí>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Ústí nad Orlicí"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-orlicí/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-orlicí/postal-address/1> ;
+	 s:telephone "+420465521143"^^xsd:string ;
+	 s:faxNumber "+420465523269"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.uno.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=196&j=206&k=1961> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-orlicí/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025038"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-orlicí/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Husova 975"@cs ;
+	 s:postalCode "56217"@cs ;
+	 s:addressLocality "Ústí nad Orlicí"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Svitavách"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách/postal-address/1> ;
+	 s:telephone "+420461352811"^^xsd:string ;
+	 s:faxNumber "+420461352837"^^xsd:string ;
+	 s:email <mailto:posta@osoud.svy.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=188&j=198&k=1889> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025011"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dimitrovova 33/679"@cs ;
+	 s:postalCode "56819"@cs ;
+	 s:addressLocality "Svitavy"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---exekuční-oddělení>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Svitavách - exekuční oddělení"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---exekuční-oddělení/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---exekuční-oddělení/postal-address/1> ;
+	 s:telephone "+420461352846"^^xsd:string ;
+	 s:faxNumber "+420461352837"^^xsd:string ;
+	 s:email <mailto:posta@osoud.svy.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=188&j=198&k=1889> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---exekuční-oddělení/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025011"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---exekuční-oddělení/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dimitrovova 679/33"@cs ;
+	 s:postalCode "56819"@cs ;
+	 s:addressLocality "Svitavy"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---opatrovnické-oddělení>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Svitavách - opatrovnické oddělení"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---opatrovnické-oddělení/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---opatrovnické-oddělení/postal-address/1> ;
+	 s:telephone "+420461352829"^^xsd:string ;
+	 s:faxNumber "+420461352837"^^xsd:string ;
+	 s:email <mailto:posta@osoud.svy.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=188&j=198&k=1889> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---opatrovnické-oddělení/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025011"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-svitavách---opatrovnické-oddělení/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dimitrovova 679/33"@cs ;
+	 s:postalCode "56819"@cs ;
+	 s:addressLocality "Svitavy"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-jih>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Plzeň-jih"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-jih/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-jih/postal-address/1> ;
+	 s:telephone "+420377868411"^^xsd:string ;
+	 s:faxNumber "+420377868401"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.plzj.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=161&j=171&k=1646> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-jih/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024767"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-jih/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Edvarda Beneše 1"@cs ;
+	 s:postalCode "30624"@cs ;
+	 s:addressLocality "Plzeň"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-město>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Plzeň-město"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-město/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-město/postal-address/1> ;
+	 s:telephone "+420377869111"^^xsd:string ;
+	 s:faxNumber "+420377869202"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.plzm.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?j=174&o=164&kat=1673> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-město/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024759"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-město/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nádražní 7"@cs ;
+	 s:postalCode "30623"@cs ;
+	 s:addressLocality "Plzeň"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-sever>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud Plzeň-sever"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-sever/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-sever/postal-address/1> ;
+	 s:telephone "+420377869511"^^xsd:string ;
+	 s:faxNumber "+420377869512"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.plzs.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=163&j=173&k=1664> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-sever/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024775"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-plzeň-sever/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Edvarda Beneše 1"@cs ;
+	 s:postalCode "30316"@cs ;
+	 s:addressLocality "Plzeň"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-domažlicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Domažlicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-domažlicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-domažlicích/postal-address/1> ;
+	 s:telephone "+420379723091"^^xsd:string ;
+	 s:faxNumber "+420379722233"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.dom.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=129&j=139&k=1358> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-domažlicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024716"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-domažlicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Paroubkova 228"@cs ;
+	 s:postalCode "34450"@cs ;
+	 s:addressLocality "Domažlice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-klatovech>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Klatovech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-klatovech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-klatovech/postal-address/1> ;
+	 s:telephone "+420377869800"^^xsd:string ;
+	 s:faxNumber "+420377869890"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kla.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=142&j=152&k=1475> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-klatovech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024741"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-klatovech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dukelská 138"@cs ;
+	 s:postalCode "33901"@cs ;
+	 s:addressLocality "Klatovy"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rokycanech>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Rokycanech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rokycanech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rokycanech/postal-address/1> ;
+	 s:telephone "+420371746111"^^xsd:string ;
+	 s:faxNumber "+420371725182"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.rok.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=182&j=192&k=1835> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rokycanech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024783"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rokycanech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Jiráskova 67"@cs ;
+	 s:postalCode "33764"@cs ;
+	 s:addressLocality "Rokycany"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-tachově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Tachově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-tachově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-tachově/postal-address/1> ;
+	 s:telephone "+420377867611"^^xsd:string ;
+	 s:faxNumber "+420377867650"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.tch.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=190&j=200&k=1907> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-tachově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024805"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-tachově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Nám. Republiky 71"@cs ;
+	 s:postalCode "34730"@cs ;
+	 s:addressLocality "Tachov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-benešově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Benešově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-benešově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-benešově/postal-address/1> ;
+	 s:telephone "+420317723871"^^xsd:string ;
+	 s:faxNumber "+420317724825"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.ben.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=115&j=125&k=1232> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-benešově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024490"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-benešově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Masarykovo nám. 223"@cs ;
+	 s:postalCode "25645"@cs ;
+	 s:addressLocality "Benešov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-berouně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Berouně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-berouně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-berouně/postal-address/1> ;
+	 s:telephone "+420311604500"^^xsd:string ;
+	 s:faxNumber "+420311624649"^^xsd:string ;
+	 s:email <mailto:osberoun@osoud.ber.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=116&j=126&k=1241> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-berouně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024503"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-berouně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Wagnerovo nám. 1249"@cs ;
+	 s:postalCode "26647"@cs ;
+	 s:addressLocality "Beroun"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kladně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Kladně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kladně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kladně/postal-address/1> ;
+	 s:telephone "+420312278722"^^xsd:string ;
+	 s:faxNumber "+420312243161"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kld.justice.cz> ;
+	 s:url <http://www.justice.cz/oskld> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kladně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024511"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kladně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "nám. Edvarda Beneše 1997"@cs ;
+	 s:postalCode "27255"@cs ;
+	 s:addressLocality "Kladno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kolíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Kolíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kolíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kolíně/postal-address/1> ;
+	 s:telephone "+420321770711"^^xsd:string ;
+	 s:faxNumber "+420321770707"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kol.justice.cz> ;
+	 s:url <http://portal.justice.cz/Justice2/Soud/soud.aspx?j=153&o=143&k=1484&d=10127> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kolíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024520"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kolíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Kmochova 144"@cs ;
+	 s:postalCode "28023"@cs ;
+	 s:addressLocality "Kolín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kutné-hoře>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Kutné Hoře"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kutné-hoře/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kutné-hoře/postal-address/1> ;
+	 s:telephone "+420327533500"^^xsd:string ;
+	 s:faxNumber "+420327533578"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.kha.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=145&j=155&k=1502> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kutné-hoře/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024538"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kutné-hoře/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "náměstí Národního odboje 58/6"@cs ;
+	 s:postalCode "28435"@cs ;
+	 s:addressLocality "Kutná Hora"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mělníku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Mělníku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mělníku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mělníku/postal-address/1> ;
+	 s:telephone "+420315648111"^^xsd:string ;
+	 s:faxNumber "+420315622476"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.mel.justice.cz> ;
+	 s:url <http://www.justice.cz/osmel> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mělníku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024546"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mělníku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Krombholcova 264"@cs ;
+	 s:postalCode "27646"@cs ;
+	 s:addressLocality "Mělník"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mladé-boleslavi>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Mladé Boleslavi"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mladé-boleslavi/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mladé-boleslavi/postal-address/1> ;
+	 s:telephone "+420326377500"^^xsd:string ;
+	 s:faxNumber "+420326377632"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.mlb.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=150&j=160&k=1547> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mladé-boleslavi/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024554"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mladé-boleslavi/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "nám. Republiky 100"@cs ;
+	 s:postalCode "29305"@cs ;
+	 s:addressLocality "Mladá Boleslav"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-nymburce>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Nymburce"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-nymburce/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-nymburce/postal-address/1> ;
+	 s:telephone "+420325519300"^^xsd:string ;
+	 s:faxNumber "+420325514985"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.nym.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=154&j=164&k=1583> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-nymburce/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024562"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-nymburce/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Soudní 996/10"@cs ;
+	 s:postalCode "28862"@cs ;
+	 s:addressLocality "Nymburk"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-příbrami>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Příbrami"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-příbrami/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-příbrami/postal-address/1> ;
+	 s:telephone "+420318650111"^^xsd:string ;
+	 s:faxNumber "+420318624949"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.pbr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?j=189&o=179&k=1808&d=9141> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-příbrami/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024597"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-příbrami/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Milínská 167"@cs ;
+	 s:postalCode "26128"@cs ;
+	 s:addressLocality "Příbram"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rakovníku>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Rakovníku"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rakovníku/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rakovníku/postal-address/1> ;
+	 s:telephone "+420313285347"^^xsd:string ;
+	 s:faxNumber "+420313512049"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.rak.justice.cz> ;
+	 s:url <http://www.justice.cz/osrak/> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rakovníku/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024601"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-rakovníku/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Sixtovo nám. 76"@cs ;
+	 s:postalCode "26923"@cs ;
+	 s:addressLocality "Rakovník"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-děčíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Děčíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-děčíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-děčíně/postal-address/1> ;
+	 s:telephone "+420412709811"^^xsd:string ;
+	 s:faxNumber "+420412510039"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.dec.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=128&j=138&k=1349> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-děčíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024830"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-děčíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Masarykovo nám. 1"@cs ;
+	 s:postalCode "40597"@cs ;
+	 s:addressLocality "Děčín 1"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chomutově>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Chomutově"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chomutově/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chomutově/postal-address/1> ;
+	 s:telephone "+420474698611"^^xsd:string ;
+	 s:faxNumber "+420474698579"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.chv.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=126&j=136&k=1331> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chomutově/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024848"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-chomutově/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Na Příkopech 663"@cs ;
+	 s:postalCode "43014"@cs ;
+	 s:addressLocality "Chomutov"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-litoměřicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Litoměřicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-litoměřicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-litoměřicích/postal-address/1> ;
+	 s:telephone "+420416721111"^^xsd:string ;
+	 s:faxNumber "+420416732697"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.ltm.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=147&j=157&k=1520> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-litoměřicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024872"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-litoměřicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Na Valech 525/12"@cs ;
+	 s:postalCode "41297"@cs ;
+	 s:addressLocality "Litoměřice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-lounech>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Lounech"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-lounech/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-lounech/postal-address/1> ;
+	 s:telephone "+420415629911"^^xsd:string ;
+	 s:faxNumber "+420415654631"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.lou.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=148&j=158&k=1529> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-lounech/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024881"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-lounech/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Sladkovského 1132"@cs ;
+	 s:postalCode "44029"@cs ;
+	 s:addressLocality "Louny"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mostě>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Mostě"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mostě/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mostě/postal-address/1> ;
+	 s:telephone "+420477104711"^^xsd:string ;
+	 s:faxNumber "+420477104712"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.mst.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=151&j=161&k=1556> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mostě/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024899"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-mostě/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Moskevská 2"@cs ;
+	 s:postalCode "43474"@cs ;
+	 s:addressLocality "Most"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-teplicích>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Teplicích"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-teplicích/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-teplicích/postal-address/1> ;
+	 s:telephone "+420417599111"^^xsd:string ;
+	 s:faxNumber "+420417599599"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.tep.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=191&j=201&k=1916> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-teplicích/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024902"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-teplicích/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "U soudu 1450/11"@cs ;
+	 s:postalCode "41661"@cs ;
+	 s:addressLocality "Teplice"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-labem>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Ústí nad Labem"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-labem/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-labem/postal-address/1> ;
+	 s:telephone "+420475247111"^^xsd:string ;
+	 s:faxNumber "+420475530445"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.unl.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=195&j=205&k=1952> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-labem/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00024911"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-ústí-nad-labem/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Kramoly 641/37"@cs ;
+	 s:postalCode "40024"@cs ;
+	 s:addressLocality "Ústí nad Labem"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kroměříži>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Kroměříži"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kroměříži/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kroměříži/postal-address/1> ;
+	 s:telephone "+420573522111"^^xsd:string ;
+	 s:faxNumber "+420573331786"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.krm.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=144&j=154&k=1493> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kroměříži/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025127"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-kroměříži/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Soudní 1279/11"@cs ;
+	 s:postalCode "76742"@cs ;
+	 s:addressLocality "Kroměříž"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-uherském-hradišti>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud v Uherském Hradišti"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-uherském-hradišti/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-v-uherském-hradišti/postal-address/1> ;
+	 s:telephone "+420575754101"^^xsd:string ;
+	 s:faxNumber "+420575754307"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.uhr.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=194&j=204&k=1943> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-uherském-hradišti/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025151"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-v-uherském-hradišti/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Svatováclavská 568"@cs ;
+	 s:postalCode "68669"@cs ;
+	 s:addressLocality "Uherské Hradiště"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Vsetíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně/postal-address/1> ;
+	 s:telephone "+420571484511"^^xsd:string ;
+	 s:faxNumber "+420571484541"^^xsd:string ;
+	 s:email <mailto:posta@osoud.vst.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=197&j=207&k=1970> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025291"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Horní náměstí 5"@cs ;
+	 s:postalCode "75539"@cs ;
+	 s:addressLocality "Vsetín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně---pobočka-ve-valašském-meziříčí>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Vsetíně - pobočka ve Valašském Meziříčí"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně---pobočka-ve-valašském-meziříčí/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně---pobočka-ve-valašském-meziříčí/postal-address/1> ;
+	 s:telephone "+420571755111"^^xsd:string ;
+	 s:faxNumber "+420571755325"^^xsd:string ;
+	 s:email <mailto:posta.vm@osoud.vst.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=197&j=207&k=1970> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně---pobočka-ve-valašském-meziříčí/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025291"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-vsetíně---pobočka-ve-valašském-meziříčí/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Ulice Legií 1374"@cs ;
+	 s:postalCode "75701"@cs ;
+	 s:addressLocality "Valašské Meziříčí"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-zlíně>
+	 a court-kinds:District, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Okresní soud ve Zlíně"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-zlíně/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-zlíně/postal-address/1> ;
+	 s:telephone "+420577171111"^^xsd:string ;
+	 s:faxNumber "+420577172101"^^xsd:string ;
+	 s:email <mailto:podatelna@osoud.zln.justice.cz> ;
+	 s:url <http://portal.justice.cz/justice2/soud/soud.aspx?o=200&j=210&k=1997> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-zlíně/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "00025097"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/okresní-soud-ve-zlíně/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Dlouhé Díly 351"@cs ;
+	 s:postalCode "76302"@cs ;
+	 s:addressLocality "Zlín"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/ústavní-soud>
+	 a court-kinds:Constitutional, gr:BusinessEntity, s:Organization ;
+	 dcterms:title "Ústavní soud"@cs ;
+	 adms:identifier <http://linked.opendata.cz/resource/court/cs/ústavní-soud/identifier/1> ;
+	 s:address <http://linked.opendata.cz/resource/court/cs/ústavní-soud/postal-address/1> ;
+	 s:telephone "+420542162111"^^xsd:string ;
+	 s:faxNumber "+420542218326"^^xsd:string ;
+	 s:email <mailto:podani@usoud.cz> ;
+	 s:url <http://www.concourt.cz/> 
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/ústavní-soud/identifier/1>
+	 a adms:Identifier ;
+	 skos:notation "48513687"^^xsd:string ;
+	 dcterms:creator <http://linked.opendata.cz/resource/business-entity/CZ00025593> ;
+	 adms:schemeAgency "Český statistický úřad"
+	 .
+
+<http://linked.opendata.cz/resource/court/cs/ústavní-soud/postal-address/1>
+	 a s:PostalAddress ;
+	 s:streetAddress "Joštova 8"@cs ;
+	 s:postalCode "66083"@cs ;
+	 s:addressLocality "Brno"@cs ;
+	 s:addressCountry "Česká republika"@cs
+	 .
+
