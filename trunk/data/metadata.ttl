@@ -16,6 +16,8 @@
 @prefix court-kinds: <http://purl.org/lex/court-kinds#> . 
 
 <http://linked.opendata.cz/resource/dataset/court/cs> a prov:Entity, void:Dataset;
+   dcterms:title "Soudy České republiky"@cs ;
+   dcterms:title "Courts of the Czech Republik"@en ;
    dcterms:description "Data o soudech ČR, jejich kontakty a zkratky"@cs;
    dcterms:description "Dataset about Czech courts including contacts and abbreviations"@en;
    void:exampleResource <http://linked.opendata.cz/resource/court/cs/obvodní-soud-pro-prahu-4> ;
