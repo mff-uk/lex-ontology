@@ -11,12 +11,10 @@
 @prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
 @prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
 
-@prefix r: <http://legislation.opendata.cz/id/>
-@prefix p: <http://legislation.opendata.cz/doc/>
 
 ########## WORK 2005/203
 #the source of law - act
-r:cz/act/2005/203
+<http://legislation.opendata.cz/id/cz/act/2005/203>
 	a lex:SourceOfLaw ;
 	%metadata
 	lexm:countryOfIssue "cz"^^lexdt:countryCode ;
@@ -29,41 +27,41 @@ r:cz/act/2005/203
 	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2005-203> ;
 	
 	%last and original expression
-	lex:origExpression p:cz/act/2005/203/version/cz/2005-05-27 ;
-	lex:lastExpression p:cz/act/2005/203/version/cz/2009-12-31 ;
+	lex:origExpression <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
+	lex:lastExpression <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
 
 
 #sample sections (do not contain any text!)
-r:cz/act/2005/203/section/2/1/d
+<http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1/d>
 	a lex:SourceOfLawSection ;
-	lex:enclosingSection r:cz/act/2005/203/section/2/1 ;
-	lex:belongsTo r:cz/act/2005/203 .
+	frbr:partOf <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1> ;
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2005/203> .
 
-r:cz/act/2005/203/section/2/1
+<http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1>
 	a lex:SourceOfLawSection ;
-	lex:enclosingSection r:cz/act/2005/203/section/2 ;
-	lex:belongsTo r:cz/act/2005/203 .
+	frbr:partOf <http://legislation.opendata.cz/id/cz/act/2005/203/section/2> ;
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2005/203> .
 	
-r:cz/act/2005/203/section/2
+<http://legislation.opendata.cz/id/cz/act/2005/203/section/2>
 	a lex:SourceOfLawSection ;
-	lex:belongsTo r:cz/act/2005/203 .
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2005/203> .
 	
 
-r:cz/act/2005/203/section/4/3
+<http://legislation.opendata.cz/id/cz/act/2005/203/section/4/3>
 	a lex:SourceOfLawSection ;
-	lex:enclosingSection r:cz/act/2005/203/section/4 ;
-	lex:belongsTo r:cz/act/2005/203 .
+	frbr:partOf <http://legislation.opendata.cz/id/cz/act/2005/203/section/4> ;
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2005/203> .
 	
-r:cz/act/2005/203/section/4
+<http://legislation.opendata.cz/id/cz/act/2005/203/section/4>
 	a lex:SourceOfLawSection ;
-	lex:belongsTo r:cz/act/2005/203 .
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2005/203> .
 	
 ########### EXPRESSIONS
 ## First expression
 p:cz/act/2005/203/version/cz/2005-05-27
 	a lex:SourceOfLawExpression ;
-	foaf:primaryTopic r:cz/act/2005/203 ;
-	frbr:realizationOf r:cz/act/2005/203 ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203> ;
+	frbr:realizationOf <http://legislation.opendata.cz/id/cz/act/2005/203> ;
 	
 	%metadata
 	dcterms:valid "2005-05-27"^^xsd:date ;
@@ -73,31 +71,31 @@ p:cz/act/2005/203/version/cz/2005-05-27
 ## its sections (sample)	
 p:cz/act/2005/203/version/cz/2005-05-27/section/2/1/d
 	a lex:SourceOfLawExpressionSection ;
-	lex:enclosingSection p:cz/act/2005/203/version/cz/2005-05-27/section/2/1 ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2/1/d ;
+	frbr:partOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27/section/2/1> ;
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1/d> ;
 	
-	% content TODO notes 1a) It differs from p:cz/act/2005/203/version/cz/2009-12-31/section/2/1/d
+	% content TODO notes 1a) It differs from <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/2/1/d>
 	dcterms:description "za zranìní nebo znásilnìní pøíslušníkem nìkteré z okupaèních armád nebo civilní osobou zdržující se na území Èeskoslovenska v souvislosti s pobytem okupaèních armád nebyla odškodnìna podle jiného právního pøedpisu1)."@cs
 	
 p:cz/act/2005/203/version/cz/2005-05-27/section/2/1
 	a lex:SourceOfLawExpressionSection ;
-	lex:enclosingSection p:cz/act/2005/203/version/cz/2005-05-27/section/2 ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2/1 ;
+	frbr:partOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27/section/2> ;
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1> ;
 	
 	dcterms:description "Osobou oprávnìnou podle tohoto zákona je fyzická osoba, která:"@cs
 	
 p:cz/act/2005/203/version/cz/2005-05-27/section/2
 	a lex:SourceOfLawExpressionSection ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2 .
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2> .
 
 	
 p:cz/act/2005/203/version/cz/2005-05-27/section/4
 	a lex:SourceOfLawExpressionSection ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2005-05-27 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/4 .
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/4> .
 	
 %indicate it is part of another expression
 	
@@ -105,51 +103,51 @@ p:cz/act/2005/203/version/cz/2005-05-27/section/4
 ## Second expression
 p:cz/act/2005/203/version/cz/2009-12-31
 	a lex:SourceOfLawExpression ;
-	foaf:primaryTopic r:cz/act/2005/203 ;
-	frbr:realizationOf r:cz/act/2005/203 ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203> ;
+	frbr:realizationOf <http://legislation.opendata.cz/id/cz/act/2005/203> ;
 		
 	%metadata
 	dcterms:valid "2009-12-31"^^xsd:date ;
 	lexm:languageOfExpression "cz"^^lexdt:countryCode ;
-	prov:wasRevisionOf p:cz/act/2005/203/version/cz/2005-05-27 ;
+	prov:wasRevisionOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27> ;
 	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2005-203/zneni-20091231> .
 	
 
 ## its sections (sample)	
 p:cz/act/2005/203/version/cz/2009-12-31/section/2/1/d
 	a lex:SourceOfLawExpressionSection ;
-	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/2/1 ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2/1/d ;
+	frbr:partOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/2/1> ;
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1/d> ;
 	
 	% content TODO notes 1a)
 	dcterms:description "za zranìní nebo znásilnìní pøíslušníkem nìkteré z okupaèních armád nebo civilní osobou zdržující se na území Èeskoslovenska v souvislosti s pobytem okupaèních armád nebyla odškodnìna podle jiného právního pøedpisu1) nebo na základì usnesení vlády1a) penìžní èástkou stejnou, jako je èástka uvedená v § 4 odst. 2, anebo vyšší."@cs
 	
 p:cz/act/2005/203/version/cz/2009-12-31/section/2/1
 	a lex:SourceOfLawExpressionSection ;
-	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/2 ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2/1 ;
+	frbr:partOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/2> ;
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1> ;
 	
 	dcterms:description "Osobou oprávnìnou podle tohoto zákona je fyzická osoba, která:"@cs
 	
 p:cz/act/2005/203/version/cz/2009-12-31/section/2
 	a lex:SourceOfLawExpressionSection ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/2 .
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/2> .
 	
 # This section is not in the first expression
 p:cz/act/2005/203/version/cz/2009-12-31/section/4/3
 	a lex:SourceOfLawExpressionSection ;
-	lex:enclosingSection p:cz/act/2005/203/version/cz/2009-12-31/section/4 ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/4/3 ;
+	frbr:partOf <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/4> ;
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/4/3> ;
 	
 	dcterms:description "Výše nároku stanovená v odstavcích 1 a 2 se sníží o èástku, která byla oprávnìné osobì v souladu s úèelem uvedeným v § 1 pøed vyplacením nároku poskytnuta jako odškodnìní na základì jiných právních pøedpisù1) nebo na základì usnesení vlády1a)."@cs
 	
 p:cz/act/2005/203/version/cz/2009-12-31/section/4
 	a lex:SourceOfLawExpressionSection ;
-	lex:belongsTo p:cz/act/2005/203/version/cz/2009-12-31 ;
-	foaf:primaryTopic r:cz/act/2005/203/section/4 .
+	lex:belongsTo <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31> ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2005/203/section/4> .
 
 %indicate it is part of another expression

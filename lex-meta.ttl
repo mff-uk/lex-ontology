@@ -19,7 +19,7 @@
 @prefix lexm:        <http://purl.org/lex/meta#> .
 @prefix lexdt:        <http://purl.org/lex/datatypes#> .
 @prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
-@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+#@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
 
 # --- Ontology metadata ---------------------------------------
 
@@ -39,15 +39,17 @@ w3p: a owl:Ontology ;
 ################
 	
 # source of law type - Act, Notice, Judgment - relevant for lex:SourceOfLaw
-lexm:sourceOfLawType a owl:FunctionalProperty ;
-	rdfs:label "Typ právního zdroje"@cs, "Source of law type"@en ;
-	rdfs:comment "Source of law type"@en ;
-	rdfs:domain lex:SourceOfLaw ;
-	rdfs:range skos:Concept, [
-		a owl:Restriction ;
-		owl:onProperty skos:inScheme ;
-		owl:hasValue lexsoltypes:
-	] .
+# Covered by classes in lex.ttl
+#lexm:sourceOfLawType a owl:FunctionalProperty ;
+#	rdfs:label "Typ právního zdroje"@cs, "Source of law type"@en ;
+#	rdfs:comment "Source of law type"@en ;
+#	rdfs:domain lex:SourceOfLaw ;
+#	rdfs:range skos:Concept, [
+#		a owl:Restriction ;
+#		owl:onProperty skos:inScheme ;
+#		owl:hasValue lexsoltypes:
+#	] .
+
 
 # country of issue - relevant for lex:SourceOfLaw
 # 2 znaky dle ISO 3166, e.g. cz
