@@ -11,12 +11,10 @@
 @prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
 @prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
 
-@prefix r: <http://legislation.opendata.cz/id/>
-@prefix p: <http://legislation.opendata.cz/doc/>
 
 ########## WORK 2009/491
 #the source of law - act
-r:cz/act/2009/491
+<http://legislation.opendata.cz/id/cz/act/2009/491>
 	a lex:SourceOfLaw ;
 	%metadata
 	lexm:countryOfIssue "cz"^^lexdt:countryCode ;
@@ -29,47 +27,47 @@ r:cz/act/2009/491
 	rdfs:seeAlso <http://www.zakonyprolidi.cz/cs/2009-491> ;
 	
 	%last and original expression
-	lex:origExpression p:cz/act/2009/491/version/cz/2009-12-31 ;
-	lex:lastExpression p:cz/act/2009/491/version/cz/2009-12-31 ;
+	lex:origExpression <http://legislation.opendata.cz/doc/cz/act/2009/491/version/cz/2009-12-31> ;
+	lex:lastExpression <http://legislation.opendata.cz/doc/cz/act/2009/491/version/cz/2009-12-31> ;
 
 	%novelizes
-	lex:amends r:cz/act/2005/203 ;
-	lex:sourceOfAmendment p:cz/act/2005/203/version/cz/2005-05-27;
-	lex:targetOfAmendment p:cz/act/2005/203/version/cz/2009-12-31;
+	lex:amends <http://legislation.opendata.cz/id/cz/act/2005/203> ;
+	lex:sourceOfAmendment <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27>;
+	lex:targetOfAmendment <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31>;
 
 #sample section MODIFIES 2005/203/section/2/1/d
-r:cz/act/2009/491/section/1/1
+<http://legislation.opendata.cz/id/cz/act/2009/491/section/1/1>
 	a lex:SourceOfLawSection ;
-	lex:enclosingSection r:cz/act/2005/203/section/1 ;
-	lex:belongsTo r:cz/act/2009/491 ;
+	frbr:partOf <http://legislation.opendata.cz/id/cz/act/2005/203/section/1> ;
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2009/491> ;
 	
 	%modifies the given section of another source of law
-	lex:modifiesSection r:cz/act/2005/203/section/2/1/d ;
-	lex:originalSection p:cz/act/2005/203/version/cz/2005-05-27/section/2/1/d ;
-	lex:modifiedSection p:cz/act/2005/203/version/cz/2009-12-31/section/2/1/d ;
+	lex:modifiesSection <http://legislation.opendata.cz/id/cz/act/2005/203/section/2/1/d> ;
+	lex:originalSection <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2005-05-27/section/2/1/d> ;
+	lex:modifiedSection <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/2/1/d> ;
 	
 	%content TODO note 1a
 	dcterms:description "V § 2 odst. 1 se na konci písmene d) doplòují slova „nebo na základì usnesení vlády1a) penìžní èástkou stejnou, jako je èástka uvedená v § 4 odst. 2, anebo vyšší."@cs ;
 	
 	dcterms:description "Poznámka pod èarou è. 1a zní: „1a) Usnesení vlády Èeské a Slovenské Federativní Republiky ze dne 19. prosince 1991 è. 822 o zásadách pro odškodòování pozùstalých po obìtech vstupu, pobytu a odchodu sovìtských vojsk a obèanù poškozených na zdraví v souvislosti se vstupem, pobytem a odchodem sovìtských vojsk."@cs .
 
-r:cz/act/2009/491/section/1
+<http://legislation.opendata.cz/id/cz/act/2009/491/section/1>
 	a lex:SourceOfLawSection ;
-	lex:belongsTo r:cz/act/2009/491 .
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2009/491 .>
 	
 	%content (not described in subsections)
 	%TODO vyjadrit kde ten content je (na zacatku, na konci?)
 	dcterms:description "Zákon è. 203/2005 Sb., o odškodnìní nìkterých obìtí okupace Èeskoslovenska vojsky Svazu sovìtských socialistických republik, Nìmecké demokratické republiky, Polské lidové republiky, Maïarské lidové republiky a Bulharské lidové republiky, se mìní takto:"@cs .
 
-#sample section CREATES r:cz/act/2005/203/section/4/3	
-r:cz/act/2009/491/section/1/3
+#sample section CREATES <http://legislation.opendata.cz/id/cz/act/2005/203/section/4/3>
+<http://legislation.opendata.cz/id/cz/act/2009/491/section/1/3>
 	a lex:SourceOfLawSection ;
-	lex:enclosingSection r:cz/act/2005/203/section/1 ;
-	lex:belongsTo r:cz/act/2009/491 ;
+	frbr:partOf <http://legislation.opendata.cz/id/cz/act/2005/203/section/1> ;
+	lex:belongsTo <http://legislation.opendata.cz/id/cz/act/2009/491> ;
 	
 	%modifies the given section of another source of law
-	lex:createsSection r:cz/act/2005/203/section/4/3 ;
-	lex:created p:cz/act/2005/203/version/cz/2009-12-31/section/4/3 ;
+	lex:createsSection <http://legislation.opendata.cz/id/cz/act/2005/203/section/4/3> ;
+	lex:created <http://legislation.opendata.cz/doc/cz/act/2005/203/version/cz/2009-12-31/section/4/3> ;
 	
 	%content TODO note 1a, 1
 	dcterms:description "V § 4 se doplòuje odstavec 3, který zní: (3) Výše nároku stanovená v odstavcích 1 a 2 se sníží o èástku, která byla oprávnìné osobì v souladu s úèelem uvedeným v § 1 pøed vyplacením nároku poskytnuta jako odškodnìní na základì jiných právních pøedpisù1) nebo na základì usnesení vlády1a).@cs  .
@@ -79,8 +77,8 @@ r:cz/act/2009/491/section/1/3
 ## First expression
 p:cz/act/2009/491/version/cz/2009-12-31
 	a lex:SourceOfLawExpression ;
-	foaf:primaryTopic r:cz/act/2009/491 ;
-	frbr:realizationOf r:cz/act/2009/491 ;
+	foaf:primaryTopic <http://legislation.opendata.cz/id/cz/act/2009/491> ;
+	frbr:realizationOf <http://legislation.opendata.cz/id/cz/act/2009/491> ;
 	
 	%metadata
 	dcterms:valid "2009-12-31"^^xsd:date ;

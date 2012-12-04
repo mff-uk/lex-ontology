@@ -19,7 +19,7 @@
 @prefix lexm:        <http://purl.org/lex/meta#> .
 @prefix lexdt:        <http://purl.org/lex/datatypes#> .
 @prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
-@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+#@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
 
 # --- Ontology metadata ---------------------------------------
 
@@ -57,25 +57,49 @@ lex:SourceOfLawManifestation a owl:Class ;
   rdfs:comment "A class representing source of law materialized in a form of a concrete document in a concrete format (e.g., PDF)."@en ;
 	rdfs:subClassOf frbr:Manifestation .
 
-# Defines sections
-# Valid for Acts, Notices, not for Judgements! (TODO how to express explicitely?)
-# the first one is used to denote all sections, regardless if it is a section of Work, Expression, or Manifestation
-lex:SourceOfLawSectionInGeneral a owl:Class ;
-	rdfs:label "Paragraf právního zdroje"@cs, "Section in general"@en ;
-	rdfs:comment "A class representing a general section."@en .
-lex:SourceOfLawSection a owl:Class ;
-	rdfs:label "Paragraf právního zdroje"@cs, "Section of work"@en ;
-	rdfs:comment "A class representing section of a Work."@en ;
-	rdfs:subClassOf lex:SourceOfLawSectionInGeneral .
-lex:SourceOfLawExpressionSection a owl:Class ;
-	rdfs:label "Paragraf znìní právního zdroje"@cs, "Section of expression"@en ;
-	rdfs:comment "A class representing section of a Expression."@en ;
-	rdfs:subClassOf lex:SourceOfLawSectionInGeneral .
-lex:SourceOfLawManifestationSection a owl:Class ;
-	rdfs:label "Paragraf reprezentace znìní právního zdroje"@cs, "Section of expression's manifestation"@en ;
-	rdfs:comment "A class representing section of a Manifestation."@en ;
-	rdfs:subClassOf lex:SourceOfLawSectionInGeneral .
+#############################
 
+# Defines law artifacts
+lex:LawArtifact a owl:Class ;
+	rdfs:label "Právní artifact"@cs, "law artifact"@en ;
+	rdfs:comment "A class representing law artifact."@en ;
+
+# Defines sources of law
+# acts, judgments, notices
+lex:SourceOfLaw a owl:Class ;
+	rdfs:label "Dokument právního zdroje"@cs, "Source of law document"@en ;
+	rdfs:comment "A class representing section of a source of law."@en ;
+	rdfs:subClassOf lex:LawArtifact .
+	
+# Defines sections 
+# Valid for Acts, Notices, not for Judgements! (TODO how to express explicitely?)
+lex:Section a owl:Class ;
+	rdfs:label "Paragraf právního zdroje"@cs, "Section of source of law"@en ;
+	rdfs:comment "A class representing section of a source of law."@en ;
+	rdfs:subClassOf lex:LawArtifact .
+	
+
+#######################################################	
+#Defines classes for the particular types of sources
+lex:Act a owl:Class ;
+	rdfs:label "Zákon"@cs, "Act"@en ;
+	rdfs:comment "Tøída reprezentující zákon)"@cs ;
+    rdfs:comment "A class representing a law)"@en ;
+	rdfs:subClassOf frbr:SourceOfLaw .
+	
+lex:Notice a owl:Class ;
+	rdfs:label "Vyhláška"@cs, "Notice"@en ;
+	rdfs:comment "Tøída reprezentující vyhlášku)"@cs ;
+    rdfs:comment "A class representing a notice)"@en ;
+	rdfs:subClassOf frbr:SourceOfLaw .
+
+lex:Judikát a owl:Class ;
+  rdfs:label "Judikát"@cs, "Judgment"@en ;
+  rdfs:comment "Tøída reprezentující judikát"@cs ;
+  rdfs:comment "A class representing a judgment"@en ;
+  rdfs:subClassOf frbr:SourceOfLaw .
+  .
+	
 ##########
 ## Object Properties
 ########
@@ -85,13 +109,13 @@ lex:SourceOfLawManifestationSection a owl:Class ;
 lex:lastExpression a owl:FunctionalProperty;
 	rdfs:label "Poslední znìní"@cs, "Last expression"@en ;
 	rdfs:comment "Last expression of the Work"@en ;
-	rdfs:domain lex:SourceOfLaw;
-	rdfs:range lex:SourceOfLawExpression.
+	rdfs:domain lex:SourceOfLaw, frbr:Work ;
+	rdfs:range lex:SourceOfLaw, frbr:Expression .
 lex:originalExpression a owl:FunctionalProperty;
 	rdfs:label "Pùvodní znìní"@cs, "Original expression"@en ;
 	rdfs:comment "Original expression of the Work"@en ;
-	rdfs:domain lex:SourceOfLaw;
-	rdfs:range lex:SourceOfLawExpression.
+	rdfs:domain lex:SourceOfLaw, frbr:Work;
+	rdfs:range lex:SourceOfLaw, frbr:Expression.
 
 # to associate lex:SourceOfLaw with another lex:SourceOfLaw or lex:SourceOfLawExpression 
 # goal: to express novelization (high level view)
@@ -181,14 +205,27 @@ lex:belongsToManifestation a owl:ObjectProperty;
 
 # to express hierarchy of sections 
 # TODO how to ensure that only section of work can belong to section of work?
-# TODO nebo pouzit dcterms:isPartOf? 
-lex:enclosingSection a owl:ObjectProperty;
-	rdfs:label "patøí do sekce"@cs, "Enclosing section"@en ;
-	rdfs:comment "A section points the section to which it belongs"@en ;
-	rdfs:domain lex:SourceOfLawSectionInGeneral;
-	rdfs:range lex:SourceOfLawSectionInGeneral.
+# TODO nebo pouzit dcterms:isPartOf? frbr:part_of
+#lex:enclosingSection a owl:ObjectProperty;
+#	rdfs:label "patøí do sekce"@cs, "Enclosing section"@en ;
+#	rdfs:comment "A section points the section to which it belongs"@en ;
+#	rdfs:domain lex:SourceOfLawSectionInGeneral;
+#	rdfs:range lex:SourceOfLawSectionInGeneral.
+# we use frbr:part_of for that	
+
+# to express that source of law expression refers to another source of law (work)
+lex:refersTo a owl:ObjectProperty;
+	rdfs:label "odkazuje na"@cs, "Refers to"@en ;
+	rdfs:comment "Source of law refers to another source of law"@en ;
+	rdfs:domain lex:SourceOfLawExpression; # or lex:SourceOfLawExpressionSection
+	#rdfs:range lex:SourceOfLaw;	#or lex:SourceOfLawSection
 	
-	
+# to express that source of law refers to another source of law expression (particular expression)
+#lex:refersToExpression a owl:ObjectProperty;
+#	rdfs:label "odkazuje na"@cs, "Refers to"@en ;
+#	rdfs:comment "Source of law refers to another source of law"@en ;
+#	rdfs:domain lex:SourceOfLawExpression; # or lex:SourceOfLawExpressionSection
+#	rdfs:range lex:SourceOfLawExpression;	# or lex:SourceOfLawExpressionSection
 	
 ##########
 ## Data Properties

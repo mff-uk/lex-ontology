@@ -12,13 +12,11 @@
 @prefix doc-kinds:  <http://purl.org/lex/document-kinds#> .
 @prefix agenda:     <http://purl.org/lex/agenda-soudu#> .
 
-judikat:Judikát a owl:Class ;
-  rdfs:subClassOf lex:SourceOfLaw
-  .
 
 ##############################################################
 ########################## Classes ###########################
 ##############################################################
+
 
 judikat:Spisová-značka a owl:Class ;
   rdfs:label "Soudní spisová značka"@cs ;

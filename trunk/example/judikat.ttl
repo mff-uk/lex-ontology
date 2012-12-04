@@ -16,7 +16,7 @@
 # Spisová značka:	22 Cdo 4021/2010
 # ECLI:	ECLI:CZ:NS:2012:22.CDO.4021.2010.1
 
-<http://linked.opendata.cz/resource/court/cs/judikat#CZ-NS-22-CDO-4021-2010> a judikat:Judikát ;
+<http://linked.opendata.cz/resource/court/cs/judikat#CZ-NS-22-CDO-4021-2010> a lex:Judikát ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cs/nejvyšší-soud> ;
    judikat:typ doc-kinds:Usnesení ;
 #  dcterms:issued "2012-02-02"^^xsd:date ;
@@ -54,7 +54,7 @@
 # Ústavní soud
 # Spisová značka: IV.ÚS 4190/12 
 
-<http://linked.opendata.cz/resource/court/cs/judikat#CZ-IV-ÚS-4190-12> a judikat:Judikát ;
+<http://linked.opendata.cz/resource/court/cs/judikat#CZ-IV-ÚS-4190-12> a lex:Judikát ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cs/ústavní-soud> ;
    judikat:typ doc-kinds:Usnesení ;
    judikat:datumRozhodnutí "2012-11-19"^^xsd:date ;
@@ -78,7 +78,7 @@
 # Nejvyšší správní soud
 # Číslo jednací: 3 Ads 148/2008 - 86 
 
-<http://linked.opendata.cz/resource/court/cs/judikat#CZ-3-Ads-148-2008-86> a judikat:Judikát ;
+<http://linked.opendata.cz/resource/court/cs/judikat#CZ-3-Ads-148-2008-86> a lex:Judikát ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cs/nejvyšší-správní-soud> ;
    judikat:typ doc-kinds:Rozsudek ;
    judikat:datumRozhodnutí "2010-08-25"^^xsd:date ;
