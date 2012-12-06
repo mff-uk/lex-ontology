@@ -78,15 +78,15 @@
 # Nejvyšší správní soud
 # Číslo jednací: 3 Ads 148/2008 - 86 
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/3-Ads-148-2008-86> a lex:Judikát ;
+<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86> a lex:Judikát ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-správní-soud> ;
    judikat:typ doc-kinds:Rozsudek ;
    judikat:datumRozhodnutí "2010-08-25"^^xsd:date ;
    judikat:místo-vydání "Brno" ;
-   judikat:číslo-jednací <http://linked.opendata.cz/resource/legislation/cz/judikat/2008/3-Ads-148-2008-86/číslo-jednací> ;
+   judikat:číslo-jednací <http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86/číslo-jednací> ;
    .   
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/3-Ads-148-2008-86/číslo-jednací> a judikat:Číslo-jednací ;
+<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86/číslo-jednací> a judikat:Číslo-jednací ;
 	 skos:notation "3 Ads 148/2008 - 86"^^xsd:string ;
 	 dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-správní-soud> ;
 	 adms:schemeAgency "Nejvyšší správní soud" ;
