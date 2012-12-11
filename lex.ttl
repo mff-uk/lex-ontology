@@ -93,7 +93,7 @@ lex:Notice a owl:Class ;
     rdfs:comment "A class representing a notice)"@en ;
 	rdfs:subClassOf frbr:SourceOfLaw .
 
-lex:Judikát a owl:Class ;
+lex:Judgement a owl:Class ;
   rdfs:label "Judikát"@cs, "Judgment"@en ;
   rdfs:comment "Tøída reprezentující judikát"@cs ;
   rdfs:comment "A class representing a judgment"@en ;

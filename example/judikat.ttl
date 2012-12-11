@@ -8,7 +8,7 @@
 
 #Own namespaces
 @prefix lex:        <http://purl.org/lex#> .
-@prefix judikat:    <http://purl.org/lex/judikat#> .
+@prefix judgement:  <http://purl.org/lex/judgement#> .
 @prefix doc-kinds:  <http://purl.org/lex/document-kinds#> .
 @prefix agenda:     <http://purl.org/lex/agenda-soudu#> .
 
@@ -16,83 +16,83 @@
 # Spisová značka:	22 Cdo 4021/2010
 # ECLI:	ECLI:CZ:NS:2012:22.CDO.4021.2010.1
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2010/NS/22-CDO-4021-2010> a lex:Judikát ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2010/22-CDO-4021-2010> a lex:Judgement ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-soud> ;
-   judikat:typ doc-kinds:Usnesení ;
+   judgement:typ doc-kinds:Usnesení ;
 #  dcterms:issued "2012-02-02"^^xsd:date ;
-   judikat:datumRozhodnutí "2012-09-25"^^xsd:date ;
-   judikat:heslo "Společné jmění manželů"@cs ;
-   judikat:místo-vydání "Brno" ;
-   judikat:spisová-značka <http://linked.opendata.cz/resource/legislation/cz/judikat/2010/NS/22-CDO-4021-2010/spisová-značka> ;
-   judikat:ecli <http://linked.opendata.cz/resource/legislation/cz/judikat/2010/NS/22-CDO-4021-2010/ECLI> ;
-   judikat:dotčený-předpis "§ 145 odst. 2 obč. zák."^^xsd:string
+   judgement:datumRozhodnutí "2012-09-25"^^xsd:date ;
+   judgement:heslo "Společné jmění manželů"@cs ;
+   judgement:místo-vydání "Brno" ;
+   judgement:spisová-značka <http://linked.opendata.cz/resource/legislation/cz/judgement/2010/22-CDO-4021-2010/spisová-značka> ;
+   judgement:ecli <http://linked.opendata.cz/resource/legislation/cz/judgement/2010/22-CDO-4021-2010/ECLI> ;
+   judgement:dotčený-předpis "§ 145 odst. 2 obč. zák."^^xsd:string
    .   
   
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2010/NS/22-CDO-4021-2010/spisová-značka> a judikat:Spisová-značka ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2010/22-CDO-4021-2010/spisová-značka> a judgement:Spisová-značka ;
 	 skos:notation "22 Cdo 4021/2010"^^xsd:string ;
 	 dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-soud> ;
 	 adms:schemeAgency "Nejvyšší soud" ;
-   judikat:číslo-senátu "22"^^xsd:string ;
-   judikat:druh-věci agenda:Cdo ;
-   judikat:pořadí "4021"^^xsd:integer ;
-   judikat:rok "2012"^^xsd:gYear         
+   judgement:číslo-senátu "22"^^xsd:string ;
+   judgement:druh-věci agenda:Cdo ;
+   judgement:pořadí "4021"^^xsd:integer ;
+   judgement:rok "2012"^^xsd:gYear         
 	 .
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2010/NS/22-CDO-4021-2010/ECLI> a judikat:ECLI ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2010/22-CDO-4021-2010/ECLI> a judgement:ECLI ;
 	 skos:notation "ECLI:CZ:NS:2012:22.CDO.4021.2010.1"^^xsd:string ;
 	 dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-soud> ;
 	 adms:schemeAgency "Nejvyšší soud" ;
-   judikat:kód-země "CZ"^^xsd:string ;
-   judikat:kód-soudu "NS"^^xsd:string ;   
-   judikat:číslo-senátu "22"^^xsd:string ;
-   judikat:druh-věci agenda:Cdo ;
-   judikat:pořadí-v-rejstříku "4021"^^xsd:integer ;
-   judikat:rok "2012"^^xsd:gYear ;
-   judikat:pořadí-rozhodnutí "1"^^xsd:integer ;            
+   judgement:kód-země "CZ"^^xsd:string ;
+   judgement:kód-soudu "NS"^^xsd:string ;   
+   judgement:číslo-senátu "22"^^xsd:string ;
+   judgement:druh-věci agenda:Cdo ;
+   judgement:pořadí-v-rejstříku "4021"^^xsd:integer ;
+   judgement:rok "2012"^^xsd:gYear ;
+   judgement:pořadí-rozhodnutí "1"^^xsd:integer ;            
 	 .
    
 # Ústavní soud
 # Spisová značka: IV.ÚS 4190/12 
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2012/ÚS/IV-ÚS-4190-12> a lex:Judikát ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2012/IV-ÚS-4190-12> a lex:Judgement ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cz/ústavní-soud> ;
-   judikat:typ doc-kinds:Usnesení ;
-   judikat:datumRozhodnutí "2012-11-19"^^xsd:date ;
-   judikat:heslo "Náklady řízení"@cs ;
-   judikat:heslo "Rozsudek"@cs ;
-   judikat:spisová-značka <http://linked.opendata.cz/resource/legislation/cz/judikat/2012/ÚS/IV-ÚS-4190-12/spisová-značka> ;
-   judikat:dotčený-předpis "2/1993 Sb., čl. 36 odst.1"^^xsd:string ;
-   judikat:dotčený-předpis "99/1963 Sb., § 142, § 166"^^xsd:string 
+   judgement:typ doc-kinds:Usnesení ;
+   judgement:datumRozhodnutí "2012-11-19"^^xsd:date ;
+   judgement:heslo "Náklady řízení"@cs ;
+   judgement:heslo "Rozsudek"@cs ;
+   judgement:spisová-značka <http://linked.opendata.cz/resource/legislation/cz/judgement/2012/IV-ÚS-4190-12/spisová-značka> ;
+   judgement:dotčený-předpis "2/1993 Sb., čl. 36 odst.1"^^xsd:string ;
+   judgement:dotčený-předpis "99/1963 Sb., § 142, § 166"^^xsd:string 
    .   
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2012/ÚS/IV-ÚS-4190-12/spisová-značka> a judikát:Spisová-značka ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2012/IV-ÚS-4190-12/spisová-značka> a judikát:Spisová-značka ;
 	 skos:notation "IV.ÚS 4190/12"^^xsd:string ;
 	 dcterms:creator <http://linked.opendata.cz/resource/court/cz/ústavní-soud> ;
 	 adms:schemeAgency "Ústavní soud" ;
-   judikat:číslo-senátu "IV."^^xsd:string ;
-   judikat:druh-věci agenda:ÚS ;
-   judikat:pořadí "4190"^^xsd:integer ;
-   judikat:rok "2012"^^xsd:gYear         
+   judgement:číslo-senátu "IV."^^xsd:string ;
+   judgement:druh-věci agenda:ÚS ;
+   judgement:pořadí "4190"^^xsd:integer ;
+   judgement:rok "2012"^^xsd:gYear         
 	 .
    
 # Nejvyšší správní soud
 # Číslo jednací: 3 Ads 148/2008 - 86 
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86> a lex:Judikát ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2008/3-Ads-148-2008-86> a lex:Judgement ;
    dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-správní-soud> ;
-   judikat:typ doc-kinds:Rozsudek ;
-   judikat:datumRozhodnutí "2010-08-25"^^xsd:date ;
-   judikat:místo-vydání "Brno" ;
-   judikat:číslo-jednací <http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86/číslo-jednací> ;
+   judgement:typ doc-kinds:Rozsudek ;
+   judgement:datumRozhodnutí "2010-08-25"^^xsd:date ;
+   judgement:místo-vydání "Brno" ;
+   judgement:číslo-jednací <http://linked.opendata.cz/resource/legislation/cz/judgement/2008/3-Ads-148-2008-86/číslo-jednací> ;
    .   
 
-<http://linked.opendata.cz/resource/legislation/cz/judikat/2008/NSS/3-Ads-148-2008-86/číslo-jednací> a judikat:Číslo-jednací ;
+<http://linked.opendata.cz/resource/legislation/cz/judgement/2008/3-Ads-148-2008-86/číslo-jednací> a judgement:Číslo-jednací ;
 	 skos:notation "3 Ads 148/2008 - 86"^^xsd:string ;
 	 dcterms:creator <http://linked.opendata.cz/resource/court/cz/nejvyšší-správní-soud> ;
 	 adms:schemeAgency "Nejvyšší správní soud" ;
-   judikat:číslo-senátu "3"^^xsd:string ;
-   judikat:druh-věci agenda:Ads ;
-   judikat:pořadí "148"^^xsd:integer ;
-   judikat:rok "2008"^^xsd:gYear ;
-   judikat:číslo-strany "86"^^xsd:integer         
+   judgement:číslo-senátu "3"^^xsd:string ;
+   judgement:druh-věci agenda:Ads ;
+   judgement:pořadí "148"^^xsd:integer ;
+   judgement:rok "2008"^^xsd:gYear ;
+   judgement:číslo-strany "86"^^xsd:integer         
 	 .     
