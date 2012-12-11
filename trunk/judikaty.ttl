@@ -8,7 +8,7 @@
 
 #Own namespaces
 @prefix lex:        <http://purl.org/lex#> .
-@prefix judikat:    <http://purl.org/lex/judikat#> .
+@prefix judgement:  <http://purl.org/lex/judgement#> .
 @prefix doc-kinds:  <http://purl.org/lex/document-kinds#> .
 @prefix agenda:     <http://purl.org/lex/agenda-soudu#> .
 
@@ -18,15 +18,15 @@
 ##############################################################
 
 
-judikat:Spisová-značka a owl:Class ;
+judgement:Spisová-značka a owl:Class ;
   rdfs:label "Soudní spisová značka"@cs ;
   rdfs:subClassOf adms:Identifier .
 
-judikat:ECLI a owl:Class ;
+judgement:ECLI a owl:Class ;
   rdfs:label "Identifikátor ECLI"@cs ;
   rdfs:subClassOf adms:Identifier .
   
-judikat:Číslo-jednací a owl:Class ;
+judgement:Číslo-jednací a owl:Class ;
   rdfs:label "Soudní číslo jednací"@cs ;
   rdfs:subClassOf adms:Identifier .
 
@@ -34,28 +34,28 @@ judikat:Číslo-jednací a owl:Class ;
 ################ Properties - Identifiers ####################
 ##############################################################
 
-judikat:číslo-senátu a owl:FunctionalProperty ;
+judgement:číslo-senátu a owl:FunctionalProperty ;
   rdfs:label "Číslo senátu ve spisové značce"@cs ;
   rdfs:comment "Může být např. 22, 34, ... ale i I., IV. nebo Pl."@cs ;
   rdfs:domain [ a owl:Class ;
-    owl:unionOf (judikat:Spisová-značka judikat:ECLI judikat:Číslo-jednací)
+    owl:unionOf (judgement:Spisová-značka judgement:ECLI judgement:Číslo-jednací)
     ] ;
   rdfs:range xsd:string
   .
 
-judikat:staré-číslo-senátu a owl:FunctionalProperty ;
+judgement:staré-číslo-senátu a owl:FunctionalProperty ;
   rdfs:label "Číslo původního senátu ve spisové značce v případě předání věci mezi senáty"@cs ;
   rdfs:comment "Pokud byla věc převedena mezi dvěma odděleními, zapisují se staré i nové číslo oddělená lomítkem, např. 12/31 Cm 441/1997"@cs ;
   rdfs:domain [ a owl:Class ;
-    owl:unionOf (judikat:Spisová-značka judikat:ECLI judikat:Číslo-jednací)
+    owl:unionOf (judgement:Spisová-značka judgement:ECLI judgement:Číslo-jednací)
     ] ;
   rdfs:range xsd:string
   .
 
-judikat:druh-věci a owl:FunctionalProperty ;
+judgement:druh-věci a owl:FunctionalProperty ;
   rdfs:label "Druh věci ve spisové značce"@cs ;
   rdfs:domain [ a owl:Class ;
-    owl:unionOf (judikat:Spisová-značka judikat:ECLI judikat:Číslo-jednací)
+    owl:unionOf (judgement:Spisová-značka judgement:ECLI judgement:Číslo-jednací)
     ] ;
   rdfs:range skos:Concept, [
     a owl:Restriction ;
@@ -64,49 +64,49 @@ judikat:druh-věci a owl:FunctionalProperty ;
     ]
   .
 
-judikat:pořadí-v-rejstříku a owl:FunctionalProperty ;
+judgement:pořadí-v-rejstříku a owl:FunctionalProperty ;
   rdfs:label "Pořadí v rejstříku ve spisové značce"@cs ;
   rdfs:domain [ a owl:Class ;
-    owl:unionOf (judikat:Spisová-značka judikat:ECLI judikat:Číslo-jednací)
+    owl:unionOf (judgement:Spisová-značka judgement:ECLI judgement:Číslo-jednací)
     ] ;
   rdfs:range xsd:integer
   .
 
-judikat:rok a owl:FunctionalProperty ;
+judgement:rok a owl:FunctionalProperty ;
   rdfs:label "Rok ve spisové značce"@cs ;
   rdfs:domain [ a owl:Class ;
-    owl:unionOf (judikat:Spisová-značka judikat:ECLI judikat:Číslo-jednací)
+    owl:unionOf (judgement:Spisová-značka judgement:ECLI judgement:Číslo-jednací)
     ] ;
   rdfs:range xsd:gYear
   .
 
-judikat:kód-země a owl:FunctionalProperty ;
+judgement:kód-země a owl:FunctionalProperty ;
   rdfs:label "Kód země v ECLI"@cs ;
-  rdfs:domain judikat:ECLI ;
+  rdfs:domain judgement:ECLI ;
   rdfs:range xsd:string
   .
 
-judikat:kód-soudu a owl:FunctionalProperty ;
+judgement:kód-soudu a owl:FunctionalProperty ;
   rdfs:label "Kód soudu v ECLI"@cs ;
-  rdfs:domain judikat:ECLI ;
+  rdfs:domain judgement:ECLI ;
   rdfs:range xsd:string
   .
 
-judikat:rok-ECLI a owl:FunctionalProperty ;
+judgement:rok-ECLI a owl:FunctionalProperty ;
   rdfs:label "Rok v ECLI"@cs ;
-  rdfs:domain judikat:ECLI ;
+  rdfs:domain judgement:ECLI ;
   rdfs:range xsd:gYear
   .
 
-judikat:pořadí-rozhodnutí a owl:FunctionalProperty ;
+judgement:pořadí-rozhodnutí a owl:FunctionalProperty ;
   rdfs:label "Pořadí rozhodnutí ve stejné spisové značce"@cs ;
-  rdfs:domain judikat:ECLI ;
+  rdfs:domain judgement:ECLI ;
   rdfs:range xsd:integer
   .
 
-judikat:číslo-strany a owl:FunctionalProperty ;
+judgement:číslo-strany a owl:FunctionalProperty ;
   rdfs:label "Číslo strany ve spisu se spisovou značkou"@cs ;
-  rdfs:domain judikat:Číslo-jednací ;
+  rdfs:domain judgement:Číslo-jednací ;
   rdfs:range xsd:integer
   .
   
@@ -114,8 +114,8 @@ judikat:číslo-strany a owl:FunctionalProperty ;
 ################## Properties - judikát ##############
 ######################################################
 
-judikat:typ a owl:FunctionalProperty ;
-  rdfs:domain judikat:Judikát ; 
+judgement:typ a owl:FunctionalProperty ;
+  rdfs:domain lex:Judgement ; 
   rdfs:range skos:Concept, [
     a owl:Restriction ;
     owl:onProperty skos:inScheme ;
@@ -123,36 +123,36 @@ judikat:typ a owl:FunctionalProperty ;
     ]
   .  
 
-judikat:dotčený-předpis a rdf:Property ;
+judgement:dotčený-předpis a rdf:Property ;
   rdfs:label "Dotčený předpis"@cs ;
-  rdfs:domain judikat:Judikát 
+  rdfs:domain lex:Judgement 
   .  
 
-judikat:spisová-značka a owl:FunctionalProperty ;
+judgement:spisová-značka a owl:FunctionalProperty ;
   rdfs:label "Místo vydání"@cs ;
-  rdfs:domain judikat:Judikát ;
-  rdfs:range judikat:Spisová-značka 
+  rdfs:domain lex:Judgement ;
+  rdfs:range judgement:Spisová-značka 
   .
 
-judikat:ecli a owl:FunctionalProperty ;
+judgement:ecli a owl:FunctionalProperty ;
   rdfs:label "Místo vydání"@cs ;
-  rdfs:domain judikat:Judikát ;
-  rdfs:range judikat:ECLI 
+  rdfs:domain lex:Judgement ;
+  rdfs:range judgement:ECLI 
   .
 
-judikat:číslo-jednací a owl:FunctionalProperty ;
+judgement:číslo-jednací a owl:FunctionalProperty ;
   rdfs:label "Číslo jednací"@cs ;
-  rdfs:domain judikat:Judikát ;
-  rdfs:range judikat:Číslo-jednací 
+  rdfs:domain lex:Judgement ;
+  rdfs:range judgement:Číslo-jednací 
   .
   
-judikat:heslo a rdf:Property ;
+judgement:heslo a rdf:Property ;
   rdfs:label "Heslo"@cs ;
-  rdfs:domain judikat:Judikát
+  rdfs:domain lex:Judgement
   .
   
-judikat:místo-vydání a owl:FunctionalProperty ;
+judgement:místo-vydání a owl:FunctionalProperty ;
   rdfs:label "Místo vydání judikátu"@cs ;
-  rdfs:domain judikat:Judikát ;
+  rdfs:domain lex:Judgement ;
   rdfs:range xsd:string
   .
