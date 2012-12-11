@@ -1,17 +1,17 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix schema: <http://prov4j.org/w3p/schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://prov4j.org/w3p/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix vann:     <http://purl.org/vocab/vann/> .
 
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix opmo:   <http://openprovenance.org/model/opmo#>.
-@prefix cc: <http://creativecommons.org/ns#>.
+@prefix opmo:   <http://openprovenance.org/model/opmo#> .
+@prefix cc: <http://creativecommons.org/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 
 # --- Own namespaces ------------------------------------------
 
@@ -24,212 +24,167 @@
 # --- Ontology metadata ---------------------------------------
 
 lex: a owl:Ontology ;
-  dcterms:title "Lex ontology"@en ;
-  dcterms:description "Lex ontology."@en ;
-  dcterms:modified "2012-10-21"^^xsd:date ;
+  dcterms:title "LEX ontology"@en ;
+  dcterms:description "LEX ontology models various kinds of sources of law. It is based on various FRBR concepts, namely frbr:Work, frbr:Expression and frbr:Manifestation. "@en ;
+  dcterms:modified "2012-11-28"^^xsd:date ;
   vann:preferredNamespaceUri "http://purl.org/lex#" ;
   vann:preferredNamespacePrefix "lex" ;
-  dcterms:creator <http://purl.org/knap#me>;
+  dcterms:creator <http://purl.org/knap#me>, <http://purl.org/necasky#me>, <http://purl.org/klimek#me>;
   rdfs:seeAlso <http://prefix.cc/lex> ;
   dcterms:rights <http://creativecommons.org/licenses/by/3.0/cz/> .
-
 
 ##########
 ## Classes
 ########
 
-# Defines the particular source of law classes for Work, Expression, Manifestation
 lex:SourceOfLaw a owl:Class ;
 	rdfs:label "Právní zdroj"@cs, "Source of law"@en ;
-	rdfs:comment "Tøída reprezentující právní zdroj (zákon, vyhláška, judikát)"@cs ;
-  rdfs:comment "A class representing a source of law (law, notice, case law)."@en ;
-	rdfs:subClassOf frbr:Work .
-	
-lex:SourceOfLawExpression a owl:Class ;
-	rdfs:label "Znìní právního zdroje"@cs, "Source of law expression"@en ;
-	rdfs:comment "Tøída reprezentující znìní právního zdroje. Každý právní zdroj mùže mít nìkolik znìní. Napø. zákon mùže mít pùvodní znìní a potom nìkolik novelizovaná znìní."@cs ;
-  rdfs:comment "A class representing expression of the source of law. A source of law may have several expressions. E.g., a law may have its original expression and then several revised expressions."@en ;
-	rdfs:subClassOf frbr:Expression .
-	
-lex:SourceOfLawManifestation a owl:Class ;
-	rdfs:label "Materializovaná forma znìní právního zdroje "@cs, "Manifestation of a source of law expression"@en ;
-	rdfs:comment "Tøída reprezentující znìní právního zdroje materializované v podobì nìjakého konkrétního dokumentu v konkrétním formátu (napø. PDF)."@cs ;
-  rdfs:comment "A class representing source of law materialized in a form of a concrete document in a concrete format (e.g., PDF)."@en ;
-	rdfs:subClassOf frbr:Manifestation .
-
-#############################
-
-# Defines law artifacts
-lex:LawArtifact a owl:Class ;
-	rdfs:label "Právní artifact"@cs, "law artifact"@en ;
-	rdfs:comment "A class representing law artifact."@en ;
-
-# Defines sources of law
-# acts, judgments, notices
-lex:SourceOfLaw a owl:Class ;
-	rdfs:label "Dokument právního zdroje"@cs, "Source of law document"@en ;
-	rdfs:comment "A class representing section of a source of law."@en ;
-	rdfs:subClassOf lex:LawArtifact .
-	
-# Defines sections 
-# Valid for Acts, Notices, not for Judgements! (TODO how to express explicitely?)
-lex:Section a owl:Class ;
-	rdfs:label "Paragraf právního zdroje"@cs, "Section of source of law"@en ;
-	rdfs:comment "A class representing section of a source of law."@en ;
-	rdfs:subClassOf lex:LawArtifact .
-	
-
-#######################################################	
-#Defines classes for the particular types of sources
+	rdfs:comment "Instance této tøídy reprezentuje právní zdroj (zákon, vyhláška, judikát). Je komplementární ke slovníku FRBR. Používá se pro specifikaci typu dané instance frbr:Work, frbr:Expression èi frbr:Manifestation, která reprezentuje zákon, vyhlášku nebo judikát."@cs ;
+  rdfs:comment "An instance of this class represents a source of law (act, notice, court decision). It is independent on FRBR vocabulary. It is used to specifz a type of a given instance of frbr:Work, frbr:Expression or frbr:Manifestation which represents an act, notice or court decitions."@en .
+  
 lex:Act a owl:Class ;
-	rdfs:label "Zákon"@cs, "Act"@en ;
-	rdfs:comment "Tøída reprezentující zákon)"@cs ;
-    rdfs:comment "A class representing a law)"@en ;
-	rdfs:subClassOf frbr:SourceOfLaw .
-	
-lex:Notice a owl:Class ;
-	rdfs:label "Vyhláška"@cs, "Notice"@en ;
-	rdfs:comment "Tøída reprezentující vyhlášku)"@cs ;
-    rdfs:comment "A class representing a notice)"@en ;
-	rdfs:subClassOf frbr:SourceOfLaw .
+  rdfs:label "Zákon"@cs, "Law"@en ;
+  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje zákon, potom je oznaèena i jako instance této tøídy."@cs ;
+  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a law then it is marked also as an instance of this class."@en ;
+  rdfs:subClassOf lex:SourceOfLaw .
 
-lex:Judgement a owl:Class ;
-  rdfs:label "Judikát"@cs, "Judgment"@en ;
-  rdfs:comment "Tøída reprezentující judikát"@cs ;
-  rdfs:comment "A class representing a judgment"@en ;
-  rdfs:subClassOf frbr:SourceOfLaw .
-  .
-	
+lex:Decision a owl:Class ;
+  rdfs:label "Rozhodnutí soudu"@cs, "Court decision"@en ;
+  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje rozhodnutí soudu (napø. judikát), potom je oznaèena i jako instance této tøídy."@cs ;
+  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a court decision then it is marked also as an instance of this class."@en ;
+  rdfs:subClassOf lex:SourceOfLaw .
+
+lex:Notice a owl:Class ;
+  rdfs:label "Vyhláška"@cs, "Notice"@en ;
+  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje vyhlášku, potom je oznaèena i jako instance této tøídy."@cs ;
+  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a notice then it is marked also as an instance of this class."@en ;
+  rdfs:subClassOf lex:SourceOfLaw .
+  
+lex:Amendment a owl:Class ;
+  rdfs:label "Novela"@cs, "Amendment"@en ;
+  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje novelu, potom je oznaèena i jako instance této tøídy."@cs ;
+  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a amendment then it is marked also as an instance of this class."@en ;
+  rdfs:subClassOf lex:Act .
+
+lex:Change a owl:Class ;
+  rdfs:label "Zmìna právního zdroje"@cs, "Change of a source of law"@en ;
+  rdfs:comment "Právní zdroje (pøedevším zákony) mohou být novelizovány. Novela specifikuje množinu konkrétních jednotlivých zmìn. Ty jsou reprezentovány jako instance této tøídy. Z pohledu FRBR ontologie jsou úpravy provádìny na úrovni frbr:Expression."@cs ;
+  rdfs:comment "Sources of law (especially acts) can be amended. An amendment specifies a set of concrete particular changes. The changes are represented as instances of this class. From the point of view of FRBR ontology, amendments are made at the level of frbr:Expression."@en .
+
+lex:Creation a owl:Class ;
+  rdfs:label "Vytvoøení nové èásti právního zdroje"@cs, "Creation of a new part of a source of law"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající vytvoøení nové souèásti právního zdroje."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying creation of a new part of a source of law."@en ;
+  rdfs:subClassOf lex:Creation .
+
+lex:Removal a owl:Class ;
+  rdfs:label "Odstranìní existující èásti právního zdroje"@cs, "Removal of an existing part of a source of law"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající smazání existujícíc souèásti právního zdroje."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying removal of an existing part of a source of law."@en ;
+  rdfs:subClassOf lex:Creation .
+  
+lex:Update a owl:Class ;
+  rdfs:label "Zmìna existující èásti právního zdroje"@cs, "Update of an existing part of a source of law"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající zmìnu existující souèásti právního zdroje."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying an update of an existing part of a source of law."@en ;
+  rdfs:subClassOf lex:Creation .
+
+lex:Reference a owl:Class ;
+  rdfs:label "Reference mezi dvìma právními zdroji"@cs, "A reference between two sources of law"@en ;
+  rdfs:comment "Instance této tøídy reprezentuje referenci znìní jednoho právního zdroje na znìní jiného právního zdroje. Umožòuje pøesnì specifikovat i místo výskytu reference v textové reprezentaci odkazujícího se znìní."@cs ;
+  rdfs:comment "An instance of this class represents a reference of an expression of one source of law to an expression of another source of law. It enables to exactly specify the occurrence of the reference in the textual representation of the referencing expression." 
+
 ##########
 ## Object Properties
 ########
 
-# to associate lex:SourceOfLaw with lex:SourceOfLawExpression 
-# goal: to relate source of law with its first and last expression)
 lex:lastExpression a owl:FunctionalProperty;
-	rdfs:label "Poslední znìní"@cs, "Last expression"@en ;
-	rdfs:comment "Last expression of the Work"@en ;
-	rdfs:domain lex:SourceOfLaw, frbr:Work ;
-	rdfs:range lex:SourceOfLaw, frbr:Expression .
+	rdfs:label "Poslední existující znìní právního zdroje"@cs, "Last existing expression of a source of law"@en ;
+	rdfs:comment "An instance of this property links the last existing expression with a source of law. The expression exists but it may be the case that it has not come into force yet."@en ;
+	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:domain frbr:Work ;
+	rdfs:range frbr:Expression .
+	
+lex:actualExpression a owl:FunctionalProperty;
+	rdfs:label "V souèasnosti platné znìní právního zdroje"@cs, "Currently valid expression of a source of law"@en ;
+	rdfs:comment "An instance of this property links the currently valid expression with a source of law. This expression does not have to be the last expression."@en ;
+	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:domain frbr:Work ;
+	rdfs:range frbr:Expression .
+	
 lex:originalExpression a owl:FunctionalProperty;
-	rdfs:label "Pùvodní znìní"@cs, "Original expression"@en ;
-	rdfs:comment "Original expression of the Work"@en ;
-	rdfs:domain lex:SourceOfLaw, frbr:Work;
-	rdfs:range lex:SourceOfLaw, frbr:Expression.
+	rdfs:label "Pùvodní znìní právního zdroje"@cs, "Original expression of a source of law"@en ;
+	rdfs:comment "An instance of this property links the original existing expression with a source of law."@en ;
+	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:domain frbr:Work ;
+	rdfs:range frbr:Expression .
 
-# to associate lex:SourceOfLaw with another lex:SourceOfLaw or lex:SourceOfLawExpression 
-# goal: to express novelization (high level view)
-# TODO tyka se Act, Notice - should be restricted to Act, Notice as sourceOfLawType?
-lex:amends a owl:ObjectProperty;
-	rdfs:label "Novelizuje"@cs, "Amends"@en ;
-	rdfs:comment "A Work amends/novelizes another Work"@en ;
-	rdfs:domain lex:SourceOfLaw;
-	rdfs:range lex:SourceOfLaw.
-lex:sourceOfAmendment a owl:ObjectProperty;
-	rdfs:label "Zdroj novelizace"@cs, "Source of amendment"@en ;
-	rdfs:comment "A Work points to another Expression being a source of amendment"@en ;
-	rdfs:domain lex:SourceOfLaw;
-	rdfs:range lex:SourceOfLawExpression.
-lex:targetOfAmendment a owl:ObjectProperty;
-	rdfs:label "Novelizované znìní"@cs, "Target of amendment"@en ;
-	rdfs:comment "A Work points to another Expression being a target of amendment"@en ;
-	rdfs:domain lex:SourceOfLaw;
-	rdfs:range lex:SourceOfLawExpression.
+lex:definesChange a owl:FunctionalProperty;
+	rdfs:label "Zmìna definovaná novelou"@cs, "A change defined by an amendment"@en ;
+	rdfs:comment "An instance of this property associates an amendment with a particular change defined by the amendment."@en ;
+	# [TODO] domain constraint : frbr:Expression && lex:Amendment
+	rdfs:domain frbr:Expression ;
+	rdfs:range lex:Change .
 
+lex:createsExpression a owl:FunctionalProperty;
+	rdfs:label "Vytvoøená èást právního zdroje"@cs, "A newly created part of a source of law"@en ;
+	rdfs:comment "An instance of this property associates a creation change with the created part of a source of law."@en ;
+	rdfs:domain lex:Removal ;
+	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
+	rdfs:range frbr:Expression .
 	
-# to associate lex:SourceOfLawSection with another lex:SourceOfLawSection 
-# goal: to express novelization (low level view) - to expresses that one section creates, removes, modifies another one
-# should be restricted to Act, Notice as sourceOfLawType (TODO)
-lex:createsSection a owl:ObjectProperty;
-	rdfs:label "Pøidává paragraf"@cs, "Creates section"@en ;
-	rdfs:comment "A section of Work (novel) creates certain section in another Work (novelized Work)"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLawSection .	
-#can be infered from lex:createsSection and lex:targetOfAmendment 
-#TODO chceme to?
-lex:created a owl:ObjectProperty;
-	rdfs:label "Pragraf pøidán"@cs, "Section created"@en ;
-	rdfs:comment "A section of Work (novel) points to the section of Expression which was created by applying that novel"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLawExpressionSection .
-
-lex:removesSection a owl:ObjectProperty;
-	rdfs:label "Ruší "@cs, "Amends"@en ;
-	rdfs:comment "A section of Work (novel) removes certain section in another Work (novelized Work)"@en ;
-	rdfs:domain lex:SourceOfLawSection ;
-	rdfs:range lex:SourceOfLawSection .
-#can be infered from lex:removesSection and lex:sourceOfAmendment 
-#TODO chceme to?
-lex:removed a owl:ObjectProperty;
-	rdfs:label "Pragraf odebrán"@cs, "Section removed"@en ;
-	rdfs:comment "A section of Work (novel) points to the section of Expression which was removed by applying that novel"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLawExpressionSection .
+lex:removesExpression a owl:FunctionalProperty;
+	rdfs:label "Vyjmutá èást právního zdroje"@cs, "A removed part of a source of law"@en ;
+	rdfs:comment "An instance of this property associates a removal change with the removed part of a source of law."@en ;
+	rdfs:domain lex:Removal ;
+	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
+	rdfs:range frbr:Expression .
 	
-lex:modifiesSection a owl:ObjectProperty;
-	rdfs:label "Upravuje paragraf"@cs, "Modifies section"@en ;
-	rdfs:comment "A section of Work (novel) modifies certain section in another Work (novelized Work)"@en ;
-	rdfs:domain lex:SourceOfLawSection ;
-	rdfs:range lex:SourceOfLawSection .	 
-#can be infered from modifiesSection and lex:sourceOfAmendment 
-#TODO chceme to?
-lex:originalSection a owl:ObjectProperty;
-	rdfs:label "Pùvodní paragraf"@cs, "Original section"@en ;
-	rdfs:comment "A section of Work (novel) points to the section before the modification of the expression to which the novel applies"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLawExpressionSection .
-#can be infered from modifiesSection and lex:targetOfAmendment 
-#TODO chceme to?
-lex:modifiedSection a owl:ObjectProperty;
-	rdfs:label "Modifikovaný nový paragraf"@cs, "Section modified"@en ;
-	rdfs:comment "A section of Work (novel) points to the newly modified section in the expression resulting from the application of the novel"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLawExpressionSection .
-
-# to express that Section belongs to Work/Expression/Manifestation
-lex:belongsTo a owl:ObjectProperty;
-	rdfs:label "je souèástí právního zdroje"@cs, "Is part of source of law"@en ;
-	rdfs:comment "A section points the the whole source of law"@en ;
-	rdfs:domain lex:SourceOfLawSection;
-	rdfs:range lex:SourceOfLaw.
-lex:belongsToExpression a owl:ObjectProperty;
-	rdfs:label "je souèástí znìní"@cs, "Is part of source of law expression"@en ;
-	rdfs:comment "A section points the the whole source of law expression"@en ;
-	rdfs:domain lex:SourceOfLawExpressionSection;
-	rdfs:range lex:SourceOfLawExpression.	
-lex:belongsToManifestation a owl:ObjectProperty;
-	rdfs:label "je souèástí reprezentace znìní"@cs, "Is part of source of law manifestation"@en ;
-	rdfs:comment "A section points the the whole source of law manifestation"@en ;
-	rdfs:domain lex:SourceOfLawManifestationSection;
-	rdfs:range lex:SourceOfLawManifestation.
-
-# to express hierarchy of sections 
-# TODO how to ensure that only section of work can belong to section of work?
-# TODO nebo pouzit dcterms:isPartOf? frbr:part_of
-#lex:enclosingSection a owl:ObjectProperty;
-#	rdfs:label "patøí do sekce"@cs, "Enclosing section"@en ;
-#	rdfs:comment "A section points the section to which it belongs"@en ;
-#	rdfs:domain lex:SourceOfLawSectionInGeneral;
-#	rdfs:range lex:SourceOfLawSectionInGeneral.
-# we use frbr:part_of for that	
-
-# to express that source of law expression refers to another source of law (work)
-lex:refersTo a owl:ObjectProperty;
-	rdfs:label "odkazuje na"@cs, "Refers to"@en ;
-	rdfs:comment "Source of law refers to another source of law"@en ;
-	rdfs:domain lex:SourceOfLawExpression; # or lex:SourceOfLawExpressionSection
-	#rdfs:range lex:SourceOfLaw;	#or lex:SourceOfLawSection
+lex:updatesSourceExpression a owl:FunctionalProperty;
+	rdfs:label "Znìní upravované èásti právního zdroje pøed úpravou"@cs, "An expression of an updated part of a source of law before the update"@en ;
+	rdfs:comment "An instance of this property associates an update change with the updated part of a source of law before the udpate itself."@en ;
+	rdfs:domain lex:Removal ;
+	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
+	rdfs:range frbr:Expression .
 	
-# to express that source of law refers to another source of law expression (particular expression)
-#lex:refersToExpression a owl:ObjectProperty;
-#	rdfs:label "odkazuje na"@cs, "Refers to"@en ;
-#	rdfs:comment "Source of law refers to another source of law"@en ;
-#	rdfs:domain lex:SourceOfLawExpression; # or lex:SourceOfLawExpressionSection
-#	rdfs:range lex:SourceOfLawExpression;	# or lex:SourceOfLawExpressionSection
+lex:updatesTargetExpression a owl:FunctionalProperty;
+	rdfs:label "Znìní upravované èásti právního zdroje po úpravì"@cs, "An expression of an updated part of a source of law after the update"@en ;
+	rdfs:comment "An instance of this property associates an update change with the updated part of a source of law after the udpate."@en ;
+	rdfs:domain lex:Removal ;
+	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
+	rdfs:range frbr:Expression .
+
+lex:referencingExpression a owl:ObjectProperty;
+	rdfs:label "Odkazující se znìní právního zdroje"@cs, "A referencing expression of a source of law"@en ;
+	rdfs:comment "An instance of this property links a reference to a referencing expression of a source of law"@en ;
+	rdfs:domain lex:Reference;
+	# [TODO] range constraint : frbr:Expression && lex:SourceOfLaw
+	rdfs:range frbr:Expression .
+	
+lex:referencedExpression a owl:ObjectProperty;
+	rdfs:label "Odkazované znìní právního zdroje"@cs, "A referenced expression of a source of law"@en ;
+	rdfs:comment "An instance of this property links a reference to a referenced expression of a source of law"@en ;
+	rdfs:domain lex:Reference ;
+	# [TODO] range constraint : (frbr:Expression && lex:SourceOfLaw) || lex:Court || ...
+	rdfs:range frbr:Expression .
 	
 ##########
 ## Data Properties
 ########
+
+lex:startPosition a owl:DataTypeProperty;
+  rdfs:label "Poèátek reference ve znìní právního zdroje"@cs, "The start of a reference in an expression of a source of law"@en ;
+  rdfs:comment "Poèátek reference je zaznamenán v podobì poøadí prvního znaku reference (první znak má poøadové èíslo 1)."@cs ;
+  rdfs:comment "The start of a reference is recorded as an order of the first character of the reference (the order of the first character is 1)."@en ;
+  rdfs:domain lex:Reference ;
+  rdfs:range xsd:positiveInteger . 
+  
+lex:endPosition a owl:DataTypeProperty;
+  rdfs:label "Konec reference ve znìní právního zdroje"@cs, "The end of a reference in an expression of a source of law"@en ;
+  rdfs:comment "Poèátek reference je zaznamenán v podobì poøadí prvního znaku reference."@cs ;
+  rdfs:comment "The end of a reference is recorded as an order of the last character of the reference."@en ;
+  rdfs:domain lex:Reference ;
+  rdfs:range xsd:positiveInteger .
 
 
 
