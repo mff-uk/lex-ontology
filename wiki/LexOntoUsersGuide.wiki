@@ -2,5 +2,5 @@
 
 = The LEX Ontology User's Guide =
 
-# LEX Ontology in Depth
-## LexOntoUsersGuideConceptualModel
+ # LEX Ontology in Depth
+  ## LexOntoUsersGuideConceptualModel
