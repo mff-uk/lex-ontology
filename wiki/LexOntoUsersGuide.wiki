@@ -1,0 +1,6 @@
+#summary This document is the starting document of the LEX ontology user's guide.
+
+= The LEX Ontology User's Guide =
+
+# LEX Ontology in Depth
+## LexOntoUsersGuideConceptualModel
