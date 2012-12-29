@@ -1,0 +1,5 @@
+#summary This page describes the conceptual model behind the LEX ontology.
+
+=Conceptual Model behind LEX Ontology=
+
+The goal of the LEX ontology is to enable to represent legislation (written law) in a machine-readable form conforming to Linked Data principles. Data from other data sources can be linked to legislation represented according to the LEX ontology and, therefore, enriched with the legislative information for further processing by machines. Legislation can also be linked to other data sources.
