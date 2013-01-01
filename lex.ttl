@@ -186,7 +186,13 @@ lex:endPosition a owl:DataTypeProperty;
   rdfs:domain lex:Reference ;
   rdfs:range xsd:positiveInteger .
 
-
+lex:title a owl:DataTypeProperty;
+  rdfs:label "Titulek paragrafu"@en, "Title of the section"@en ;
+  rdfs:domain frbr:Expression .
+  
+lex:text a owl:DataTypeProperty;
+  rdfs:label "Text paragrafu"@en, "Text of the section"@en ;
+  rdfs:domain frbr:Expression .
 
 
 
