@@ -38,111 +38,109 @@ lex: a owl:Ontology ;
 ########
 
 lex:SourceOfLaw a owl:Class ;
-	rdfs:label "Právní zdroj"@cs, "Source of law"@en ;
-	rdfs:comment "Instance této tøídy reprezentuje právní zdroj (zákon, vyhláška, judikát). Je komplementární ke slovníku FRBR. Pouívá se pro specifikaci typu dané instance frbr:Work, frbr:Expression èi frbr:Manifestation, která reprezentuje zákon, vyhlášku nebo judikát."@cs ;
-  rdfs:comment "An instance of this class represents a source of law (act, notice, court decision). It is independent on FRBR vocabulary. It is used to specifz a type of a given instance of frbr:Work, frbr:Expression or frbr:Manifestation which represents an act, notice or court decitions."@en .
+	rdfs:label "Pramen práva"@cs, "Source of law"@en ;
+	rdfs:comment "Instance této tøídy reprezentuje pramen práva. Pramen práva je pojem, jen oznaèuje vnìjší formu, kterou jsou sdìlovány právní normy. Bìnì jsou rozlišovány formální (primární) a gnoseologické (sekundární) prameny práva. Ontologie LEX však takové rozlišení explicitnì neimplementuje, ale v budoucnu je moné ji tak rozšíøit. Tøída je podtøídou tøídy Work z ontologie FRBR. Pouívá se pro specifikaci typu dané instance frbr:Work, která reprezentuje pramen práva. Instance musí reprezentovat celı pramen práva, ne jenom jeho èást. Pokud danı zdroj reprezentuje pouze èást nìjakého pramene práva, potom není instancí této tøídy. Je pouze instancí tøídy frbr:Work."@cs ;
+  rdfs:comment "An instance of this class represents a source of law. It is independent on FRBR vocabulary. It is used to specify a type of a given instance of frbr:Work which represents a source of law. The instance must represent the source as a whole and not only its part."@en .
   
 lex:Act a owl:Class ;
   rdfs:label "Zákon"@cs, "Law"@en ;
-  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje zákon, potom je oznaèena i jako instance této tøídy."@cs ;
-  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a law then it is marked also as an instance of this class."@en ;
+  rdfs:comment "Instance této tøídy reprezentuje zákon vydanı zákonodárnım sborem. Zákon je právním pøedpisem."@cs ;
+  rdfs:comment "An instance of this class represents an act. An act is a legal enactment."@en ;
   rdfs:subClassOf lex:SourceOfLaw .
 
 lex:Decision a owl:Class ;
   rdfs:label "Rozhodnutí soudu"@cs, "Court decision"@en ;
-  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje rozhodnutí soudu (napø. judikát), potom je oznaèena i jako instance této tøídy."@cs ;
-  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a court decision then it is marked also as an instance of this class."@en ;
+  rdfs:comment "Instance této tøídy reprezentuje rozhodnutí soudu."@cs ;
+  rdfs:comment "An instance of this class represents a court decision."@en ;
   rdfs:subClassOf lex:SourceOfLaw .
 
-lex:Notice a owl:Class ;
-  rdfs:label "Vyhláška"@cs, "Notice"@en ;
-  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje vyhlášku, potom je oznaèena i jako instance této tøídy."@cs ;
-  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a notice then it is marked also as an instance of this class."@en ;
+lex:Decree a owl:Class ;
+  rdfs:label "Naøízení"@cs, "Decree"@en ;
+  rdfs:comment "Instance této tøídy reprezentuje vládní naøízení nebo naøízení obce nebo kraje. Naøízení je podzákonnım právním pøedpisem."@cs ;
+  rdfs:comment "An instance of this class represents a decree issued by a public body.  A decree is a legal enactment."@en ;
   rdfs:subClassOf lex:SourceOfLaw .
   
-lex:Amendment a owl:Class ;
-  rdfs:label "Novela"@cs, "Amendment"@en ;
-  rdfs:comment "Pokud instance tøídy frbr:Work, frbr:Expression èi frbr:Manifestation reprezentuje novelu, potom je oznaèena i jako instance této tøídy."@cs ;
-  rdfs:comment "If an instance of class frbr:Work, frbr:Expression èi frbr:Manifestation represents a amendment then it is marked also as an instance of this class."@en ;
-  rdfs:subClassOf lex:Act .
-
+lex:Regulation a owl:Class ;
+  rdfs:label "Vyhláška"@cs, "Regulation"@en ;
+  rdfs:comment "Instance této tøídy reprezentuje vyhlášku vydanou ústøedním správním úøadem (obvykle ministerstvem) nebo obecnì závaznou vyhlášku vydanou obcí nebo krajem. Vyhláška je podzákonnım právním pøedpisem."@cs ;
+  rdfs:comment "An instace of this class represents a regulation issued by a public body. A regulation is a legal enactment."@en ;
+  rdfs:subClassOf lex:SourceOfLaw .
+  
 lex:Change a owl:Class ;
-  rdfs:label "Zmìna právního zdroje"@cs, "Change of a source of law"@en ;
-  rdfs:comment "Právní zdroje (pøedevším zákony) mohou bıt novelizovány. Novela specifikuje mnoinu konkrétních jednotlivıch zmìn. Ty jsou reprezentovány jako instance této tøídy. Z pohledu FRBR ontologie jsou úpravy provádìny na úrovni frbr:Expression."@cs ;
-  rdfs:comment "Sources of law (especially acts) can be amended. An amendment specifies a set of concrete particular changes. The changes are represented as instances of this class. From the point of view of FRBR ontology, amendments are made at the level of frbr:Expression."@en .
+  rdfs:label "Zmìna právního pøedpisu"@cs, "Change of a legal enactment"@en ;
+  rdfs:comment "Instance této tøídy reprezentuje jednotkovou zmìnu znìní právního pøedpisu. Proces aplikace zmìn na právní zdroje je obvykle nazıván novelizace. Zmìna je definovana ve znìní jiného právního pøedpisu. Tento právní pøedpis se obvykle nazıvá novela. Z pohledu FRBR ontologie jsou zmìny definovány na úrovni instancí tøídy frbr:Expresion. Zmìna mùe bıt pomocí instance této tøídy vyjádøena na úrovni konkrétních èástí právních pøedpisù, tj. e daná èást znìní právního pøedpisu mìní danou èást znìní jiného právního pøedpisu. Pokud však nejsou k dispozici detailní informace, lze zmìnu popsat na vyšší úrovni. Napø. pouze e znìní právní pøedpis jako celek mìní znìní jiného právní pøedpisu jako celku."@cs ;
+  rdfs:comment "An instance of this class represents a single change of an expression of a legal enactment. The process of applying the changes is usually called amending. A change is defined in an expression of another legal enactment. This legal enactment is usually called amendment. From the point of view of the FRBR ontology, changes are defined at the level of instances of class frbr:Expression. A change may be expressed at the level of of concrete parts of legal enactments, i.e. that an expression of a given part of a legal enactment changes an expression of a given part of another legal enactment. If there is not enough information available, a change can be expressed at the higher level. E.g., that only an expression of a legal enactment as a whole changes an expression of another legal enactment as a whole."@en .
 
 lex:Creation a owl:Class ;
-  rdfs:label "Vytvoøení nové èásti právního zdroje"@cs, "Creation of a new part of a source of law"@en ;
-  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající vytvoøení nové souèásti právního zdroje."@cs ;
-  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying creation of a new part of a source of law."@en ;
-  rdfs:subClassOf lex:Creation .
+  rdfs:label "Vytvoøení nové èásti právního pøedpisu"@cs, "Creation of a new part of a legal enactment"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající vytvoøení nové souèásti právního pøedpisu (nikoliv však vytvoøení právního pøedpisu jako takového)."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying a creation of a new part of a legal enactment (but not a creation a legal enactment as a whole)."@en ;
+  rdfs:subClassOf lex:Change .
 
 lex:Removal a owl:Class ;
-  rdfs:label "Odstranìní existující èásti právního zdroje"@cs, "Removal of an existing part of a source of law"@en ;
-  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající smazání existujícíc souèásti právního zdroje."@cs ;
-  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying removal of an existing part of a source of law."@en ;
-  rdfs:subClassOf lex:Creation .
+  rdfs:label "Odstranìní existující èásti právního pøedpisu"@cs, "Removal of an existing part of a legal enactment"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající odstranìní existující souèásti právního pøedpisu (nikoliv však odstranìní právního pøedpisu jako takového)."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying a removal of an existing part of a legal enactment (but not a legal enactment as a whole)."@en ;
+  rdfs:subClassOf lex:Change .
   
 lex:Update a owl:Class ;
-  rdfs:label "Zmìna existující èásti právního zdroje"@cs, "Update of an existing part of a source of law"@en ;
-  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající zmìnu existující souèásti právního zdroje."@cs ;
-  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying an update of an existing part of a source of law."@en ;
-  rdfs:subClassOf lex:Creation .
-
-lex:Reference a owl:Class ;
-  rdfs:label "Reference mezi dvìma právními zdroji"@cs, "A reference between two sources of law"@en ;
-  rdfs:comment "Instance této tøídy reprezentuje referenci znìní jednoho právního zdroje na znìní jiného právního zdroje. Umoòuje pøesnì specifikovat i místo vıskytu reference v textové reprezentaci odkazujícího se znìní."@cs ;
-  rdfs:comment "An instance of this class represents a reference of an expression of one source of law to an expression of another source of law. It enables to exactly specify the occurrence of the reference in the textual representation of the referencing expression." 
+  rdfs:label "Aktualizace existující èásti právního zdroje"@cs, "Update of an existing part of a source of law"@en ;
+  rdfs:comment "Instance této tøídy je speciálním typem konkrétní jednotlivé zmìny znamenající aktualizaci znìní existující souèásti právního zdroje."@cs ;
+  rdfs:comment "An instance of this class represents a special type of a concrete particular amendment specifying an update of an expression of an existing part of a source of law."@en ;
+  rdfs:subClassOf lex:Change .
 
 ##########
 ## Object Properties
 ########
 
 lex:lastExpression a owl:FunctionalProperty;
-	rdfs:label "Poslední existující znìní právního zdroje"@cs, "Last existing expression of a source of law"@en ;
-	rdfs:comment "An instance of this property links the last existing expression with a source of law. The expression exists but it may be the case that it has not come into force yet."@en ;
-	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:label "Poslední existující znìní právního zdroje nebo jeho èásti"@cs, "Last existing expression of a source of law or its part"@en ;
+	rdfs:comment "Instance této vlastnosti propojuje právní zdroj nebo jeho èást (instanci tøídy frbr:Work) s jejím posledním znìním (instancí tøídy frbr:Expression). Znìní ještì nemuselo vstoupit v platnost. Doména vlastnosti je tvoøena instancemi tøídy frbr:Work, které jsou zároveò instancemi tøídy lex:SourceOfLaw nebo jsou jejich souèástmi. Jinımi slovy, zdroj s touto vlastností je znìním právního zdroje nebo jeho èásti. Vlastnost je speciálním pøípadem vlastnosti frbr:realization."@cs ;
+	rdfs:comment "An instance of this property links a source of law or its part (an instance of frbr:Work) with its last expression (an instance of frbr:Expression). The expression may not has to come into force yet. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization."@en ;
+	# [TODO] domain constraint : frbr:Work && (lex:SourceOfLaw || frbr:partOf (recursive) lex:SourceOfLaw)
 	rdfs:domain frbr:Work ;
-	rdfs:range frbr:Expression .
+	rdfs:range frbr:Expression ;
+	rdfs:subPropertyOf frbr:realization .
 	
 lex:actualExpression a owl:FunctionalProperty;
 	rdfs:label "V souèasnosti platné znìní právního zdroje"@cs, "Currently valid expression of a source of law"@en ;
-	rdfs:comment "An instance of this property links the currently valid expression with a source of law. This expression does not have to be the last expression."@en ;
-	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:comment "Instance této vlastnosti propojuje právní zdroj nebo jeho èást (instanci tøídy frbr:Work) s jejím v souèasnosti platnım znìním (instancí tøídy frbr:Expression). Znìní nemusí bıt posledním existujícím. Doména vlastnosti je tvoøena instancemi tøídy frbr:Work, které jsou zároveò instancemi tøídy lex:SourceOfLaw nebo jsou jejich souèástmi. Jinımi slovy, zdroj s touto vlastností je znìním právního zdroje nebo jeho èásti. Vlastnost je speciálním pøípadem vlastnosti frbr:realization."@cs ;
+	rdfs:comment "An instance of this property links a source of law or its part (an instance of frbr:Work) with its currently valid expression (an instance of frbr:Expression). The expression does not have to be the last expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization."@en ;
+	# [TODO] domain constraint : frbr:Work && (lex:SourceOfLaw || frbr:partOf (recursive) lex:SourceOfLaw)
 	rdfs:domain frbr:Work ;
-	rdfs:range frbr:Expression .
+	rdfs:range frbr:Expression ;
+	rdfs:subPropertyOf frbr:realization .
 	
 lex:originalExpression a owl:FunctionalProperty;
 	rdfs:label "Pùvodní znìní právního zdroje"@cs, "Original expression of a source of law"@en ;
-	rdfs:comment "An instance of this property links the original existing expression with a source of law."@en ;
-	# [TODO] domain constraint : frbr:Work && lex:SourceOfLaw 
+	rdfs:comment "Instance této vlastnosti propojuje právní zdroj nebo jeho èást (instanci tøídy frbr:Work) s jejím pùvodním znìním (instancí tøídy frbr:Expression). Znìní mùe ale nemusí bıt aktuálnì platnım. Doména vlastnosti je tvoøena instancemi tøídy frbr:Work, které jsou zároveò instancemi tøídy lex:SourceOfLaw nebo jsou jejich souèástmi. Jinımi slovy, zdroj s touto vlastností je znìním právního zdroje nebo jeho èásti. Vlastnost je speciálním pøípadem vlastnosti frbr:realization."@cs ;
+	rdfs:comment "An instance of this property links a source of law or its part (an instance of frbr:Work) with its original expression (an instance of frbr:Expression). The expression may be but does not need to be the currently valid expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization."@en ;
+	# [TODO] domain constraint : frbr:Work && (lex:SourceOfLaw || frbr:partOf (recursive) lex:SourceOfLaw)
 	rdfs:domain frbr:Work ;
-	rdfs:range frbr:Expression .
+	rdfs:range frbr:Expression ;
+	rdfs:subPropertyOf frbr:realization .
+	
+frbr:realizationOf a owl:ObjectProperty ;
+  rdfs:label "Právní zdroj nebo jeho èást, která je realizovaná danım znìním."@cs, "A property representing the source of law or its part that has been realized by a given expression."@en ;
+  rdfs:comment "Vlastnost pøevzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi tøídy frbr:Expression. V kontextu LEX ontologie to znamená, e se jedná o znìní právních zdrojù nebo jejich èásti."@cs ;
+  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being an expression. In the context of the LEX ontology that means being an expression of a source of law or its part."@en ;
+  
+frbr:embodimentOf a owl:ObjectProperty ;
+  rdfs:label "Znìní materializované v dané manifestaci."@cs, "A property representing the expression that is embodied by a manifestation."@en ;
+  rdfs:comment "Vlastnost pøevzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi tøídy frbr:Manifestation. V kontextu LEX ontologie to znamená, e se jedná o materializace znìní právních zdrojù nebo jejich èástí."@cs ;
+  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being a manifestation. In the context of the LEX ontology that means being a manifestation of an expression of a source of law or its part."@en ;
 
-lex:definesChange a owl:FunctionalProperty;
-	rdfs:label "Zmìna definovaná novelou"@cs, "A change defined by an amendment"@en ;
+lex:definesChange a owl:ObjectProperty;
+	rdfs:label "Zmìna definovaná právním pøedpisem"@cs, "A change defined by a legal enactment"@en ;
+	rdfs:comment "Instance této vlastnosti propojuje znìní právního pøedpisu nebo jeho èást s jím nebo jí definovanou zmìnou znìní jiného právního zdroje nebo jeho èásti. Zdroje s touto vlastností jsou instancemi tøídy frbr:Expression. V kontextu LEX ontologie to znamená, e se jedná o znìní právního pøedpisu nebo jeho èásti."
 	rdfs:comment "An instance of this property associates an amendment with a particular change defined by the amendment."@en ;
-	# [TODO] domain constraint : frbr:Expression && lex:Amendment
 	rdfs:domain frbr:Expression ;
 	rdfs:range lex:Change .
 
-lex:createsExpression a owl:FunctionalProperty;
-	rdfs:label "Vytvoøená èást právního zdroje"@cs, "A newly created part of a source of law"@en ;
-	rdfs:comment "An instance of this property associates a creation change with the created part of a source of law."@en ;
-	rdfs:domain lex:Removal ;
-	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
-	rdfs:range frbr:Expression .
-	
-lex:removesExpression a owl:FunctionalProperty;
-	rdfs:label "Vyjmutá èást právního zdroje"@cs, "A removed part of a source of law"@en ;
-	rdfs:comment "An instance of this property associates a removal change with the removed part of a source of law."@en ;
-	rdfs:domain lex:Removal ;
-	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
-	rdfs:range frbr:Expression .
-	
-lex:updatesSourceExpression a owl:FunctionalProperty;
-	rdfs:label "Znìní upravované èásti právního zdroje pøed úpravou"@cs, "An expression of an updated part of a source of law before the update"@en ;
-	rdfs:comment "An instance of this property associates an update change with the updated part of a source of law before the udpate itself."@en ;
+lex:changeResult a owl:FunctionalProperty;
+	rdfs:label "Vısledné znìní mìnìného právního zdroje nebo jeho èásti"@cs, "A newly created part of a source of law"@en ;
+	rdfs:comment "Instance této vlastnosti propojuje zmìnu s novım znìním mìnìného právního zdroje nebo jeho èásti. Zmìnou mùe bıt buï vytvoøení (potom je zmìna navázána na znìní vytvoøené èásti právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti èi na nové znìní právního zdroje jako celku) nebo aktualizace (potom je zmìna navázána na nové znìní aktualizované èástí právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti nebo na nové znìní právního zdroje jako celku). Zmìnou nemùe bıt odstranìní, nebo odstranìní nevede k novému znìní mìnìné (odstraòované) èásti právního zdroje"@cs ;
+	rdfs:comment "An instance of this property links a change to a new expression of a changed source of law or its part. A change can be either a creation () or update (). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law."@en ;
 	rdfs:domain lex:Removal ;
 	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
 	rdfs:range frbr:Expression .
