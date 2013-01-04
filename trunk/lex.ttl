@@ -124,20 +124,20 @@ lex:originalExpression a owl:FunctionalProperty;
 	rdfs:domain frbr:Work ;
 	rdfs:range frbr:Expression ;
 	rdfs:subPropertyOf frbr:realization .
-	   
+  
 frbr:realizationOf a owl:ObjectProperty ;
   rdfs:label "Právní zdroj nebo jeho část, která je realizovaná daným zněním."@cs, "A property representing the source of law or its part that has been realized by a given expression."@en ;
   rdfs:comment "Vlastnost převzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi třídy frbr:Expression. V kontextu LEX ontologie to znamená, že se jedná o znění právních zdrojů nebo jejich části."@cs ;
-  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being an expression. In the context of the LEX ontology that means being an expression of a source of law or its part."@en ;
+  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being an expression. In the context of the LEX ontology that means being an expression of a source of law or its part."@en .
   
 frbr:embodimentOf a owl:ObjectProperty ;
   rdfs:label "Znění materializované v dané manifestaci."@cs, "A property representing the expression that is embodied by a manifestation."@en ;
   rdfs:comment "Vlastnost převzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi třídy frbr:Manifestation. V kontextu LEX ontologie to znamená, že se jedná o materializace znění právních zdrojů nebo jejich částí."@cs ;
-  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being a manifestation. In the context of the LEX ontology that means being a manifestation of an expression of a source of law or its part."@en ;
+  rdfs:comment "This property is reused from the FRBR ontology. Having this property implies being a manifestation. In the context of the LEX ontology that means being a manifestation of an expression of a source of law or its part."@en .
 
 lex:definesChange a owl:ObjectProperty;
 	rdfs:label "Změna definovaná právním předpisem"@cs, "A change defined by a legal enactment"@en ;
-	rdfs:comment "Instance této vlastnosti propojuje znění právního předpisu nebo jeho část s jím nebo jí definovanou změnou znění jiného právního zdroje nebo jeho části. Zdroje s touto vlastností jsou instancemi třídy frbr:Expression. V kontextu LEX ontologie to znamená, že se jedná o znění právního předpisu nebo jeho části."
+	rdfs:comment "Instance této vlastnosti propojuje znění právního předpisu nebo jeho část s jím nebo jí definovanou změnou znění jiného právního zdroje nebo jeho části. Zdroje s touto vlastností jsou instancemi třídy frbr:Expression. V kontextu LEX ontologie to znamená, že se jedná o znění právního předpisu nebo jeho části."@cs ;
 	rdfs:comment "An instance of this property associates an amendment with a particular change defined by the amendment."@en ;
 	rdfs:domain frbr:Expression ;
 	rdfs:range lex:Change .
@@ -167,7 +167,7 @@ lex:amends a owl:ObjectProperty ;
   rdfs:label "Novelizovaný právní předpis"@cs, "Amended source of law"@en ;
   rdfs:comment "Instance této vlastnosti propojuje novelizující právní předpis (novelu či právní předpis obsahující novelizační část) s novelizovaným právním předpisem. Právní předpis s touto vlastností je instancí třídy lex:SourceOfLaw. Hodnotou je právní předpis, který je taktéž instancí této třídy. Jinými slovy tato vlastnost propojuje pouze celé právní předpisy. Neumožňuje detailněji specifikovat jaká část jednoho právního předpisu novelizuje jakou část jiného právního předpisu. To je specifikováno pomocí instancí třídy lex:Change."@cs ;
   rdfs:comment "An instance of this property links an amending legal enactment (an amendment or a legal enactment containing an amending part) with an amended legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source amends which part of another. This can be specified using instances of class lex:Change."@en ;
-  rdsf:domain lex:SourceOfLaw ;
+  rdfs:domain lex:SourceOfLaw ;
   rdfs:range lex:SourceOfLaw .
 
 cito:cites a owl:ObjectProperty ;
