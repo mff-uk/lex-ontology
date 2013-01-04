@@ -12,6 +12,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix cito: <http://purl.org/spar/cito/> .
 
 # --- Own namespaces ------------------------------------------
 
@@ -20,6 +21,10 @@
 @prefix lexdt:        <http://purl.org/lex/datatypes#> .
 @prefix lexissuertypes: <http://purl.org/lex/lex-issuer-types#> .
 #@prefix lexsoltypes: <http://purl.org/lex/lex-sol-types#> .
+
+#TODOs
+# Removal -> Cancellation
+# Právní zdroj -> Pramen práva
 
 # --- Ontology metadata ---------------------------------------
 
@@ -119,7 +124,7 @@ lex:originalExpression a owl:FunctionalProperty;
 	rdfs:domain frbr:Work ;
 	rdfs:range frbr:Expression ;
 	rdfs:subPropertyOf frbr:realization .
-	
+	   
 frbr:realizationOf a owl:ObjectProperty ;
   rdfs:label "Právní zdroj nebo jeho èást, která je realizovaná danım znìním."@cs, "A property representing the source of law or its part that has been realized by a given expression."@en ;
   rdfs:comment "Vlastnost pøevzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi tøídy frbr:Expression. V kontextu LEX ontologie to znamená, e se jedná o znìní právních zdrojù nebo jejich èásti."@cs ;
@@ -140,58 +145,54 @@ lex:definesChange a owl:ObjectProperty;
 lex:changeResult a owl:FunctionalProperty;
 	rdfs:label "Vısledné znìní mìnìného právního zdroje nebo jeho èásti"@cs, "A newly created part of a source of law"@en ;
 	rdfs:comment "Instance této vlastnosti propojuje zmìnu s novım znìním mìnìného právního zdroje nebo jeho èásti. Zmìnou mùe bıt buï vytvoøení (potom je zmìna navázána na znìní vytvoøené èásti právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti èi na nové znìní právního zdroje jako celku) nebo aktualizace (potom je zmìna navázána na nové znìní aktualizované èástí právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti nebo na nové znìní právního zdroje jako celku). Zmìnou nemùe bıt odstranìní, nebo odstranìní nevede k novému znìní mìnìné (odstraòované) èásti právního zdroje"@cs ;
-	rdfs:comment "An instance of this property links a change to a new expression of a changed source of law or its part. A change can be either a creation () or update (). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law."@en ;
-	rdfs:domain lex:Removal ;
-	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
-	rdfs:range frbr:Expression .
-	
-lex:updatesTargetExpression a owl:FunctionalProperty;
-	rdfs:label "Znìní upravované èásti právního zdroje po úpravì"@cs, "An expression of an updated part of a source of law after the update"@en ;
-	rdfs:comment "An instance of this property associates an update change with the updated part of a source of law after the udpate."@en ;
-	rdfs:domain lex:Removal ;
-	# [TODO] range constraint : frbr:Expression && lex:Act && lex:Notice
+	rdfs:comment "An instance of this property links a change to a new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law itself) or update (in that case the change is linked to a new expression of the changed part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law."@en ;
+	rdfs:domain lex:Change ;
 	rdfs:range frbr:Expression .
 
-lex:referencingExpression a owl:ObjectProperty;
-	rdfs:label "Odkazující se znìní právního zdroje"@cs, "A referencing expression of a source of law"@en ;
-	rdfs:comment "An instance of this property links a reference to a referencing expression of a source of law"@en ;
-	rdfs:domain lex:Reference;
-	# [TODO] range constraint : frbr:Expression && lex:SourceOfLaw
+lex:changeResult a owl:FunctionalProperty;
+	rdfs:label "Vısledné znìní mìnìného právního zdroje nebo jeho èásti"@cs, "The new expression of a changed source of law or its part"@en ;
+	rdfs:comment "Instance této vlastnosti propojuje zmìnu s novım znìním mìnìného právního zdroje nebo jeho èásti. Zmìnou mùe bıt buï vytvoøení (potom je zmìna navázána na znìní vytvoøené èásti právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti èi na nové znìní právního zdroje jako celku) nebo aktualizace (potom je zmìna navázána na nové znìní aktualizované èástí právního zdroje nebo na nové znìní nìkteré jeho nadøazené èásti nebo na nové znìní právního zdroje jako celku). Zmìnou nemùe bıt odstranìní, nebo odstranìní nevede k novému znìní mìnìné (odstraòované) èásti právního zdroje"@cs ;
+	rdfs:comment "An instance of this property links a change to the new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law itself) or update (in that case the change is linked to the new expression of the changed part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law."@en ;
+	rdfs:domain lex:Change ;
+	rdfs:range frbr:Expression .	
+
+lex:changedOriginal a owl:FunctionalProperty;
+	rdfs:label "Pøedchozí znìní mìnìného právního zdroje nebo jeho èásti"@cs, "The previous expression of a changed source of law or its part"@en ;
+	rdfs:comment "Instance této vlastnosti propojuje zmìnu s pøedchozím znìním mìnìného právního zdroje nebo jeho èásti. Zmìnou mùe bıt buï smazání (potom je zmìna navázána na poslední znìní odstraòované èásti právního zdroje nebo na pøedchozí znìní nìkteré jeho nadøazené èásti èi na pøedchozí znìní právního zdroje jako celku) nebo aktualizace (potom je zmìna navázána na pøedchozí znìní aktualizované èástí právního zdroje nebo na pøedchozí znìní nìkteré jeho nadøazené èásti nebo na pøedchozí znìní právního zdroje jako celku). Zmìnou nemùe bıt vytvoøení, nebo vytvoøená èást právního zdroje nemá ádné pøedchozí znìní."@cs ;
+	rdfs:comment "An instance of this property links a change to the previous expression of a changed source of law or its part. A change can be either a removal (in that case the change is linked to the previos expression of the removed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law itself) or update (in that case the change is linked to the previous expression of the changed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law iselft). The change cannot be a creation because a newly created part of a source of law does not have any previous expression."@en ;
+	rdfs:domain lex:Change ;
 	rdfs:range frbr:Expression .
 	
-lex:referencedExpression a owl:ObjectProperty;
-	rdfs:label "Odkazované znìní právního zdroje"@cs, "A referenced expression of a source of law"@en ;
-	rdfs:comment "An instance of this property links a reference to a referenced expression of a source of law"@en ;
-	rdfs:domain lex:Reference ;
-	# [TODO] range constraint : (frbr:Expression && lex:SourceOfLaw) || lex:Court || ...
-	rdfs:range frbr:Expression .
+lex:amends a owl:ObjectProperty ;
+  rdfs:label "Novelizovanı právní pøedpis"@cs, "Amended source of law"@en ;
+  rdfs:comment "Instance této vlastnosti propojuje novelizující právní pøedpis (novelu èi právní pøedpis obsahující novelizaèní èást) s novelizovanım právním pøedpisem. Právní pøedpis s touto vlastností je instancí tøídy lex:SourceOfLaw. Hodnotou je právní pøedpis, kterı je takté instancí této tøídy. Jinımi slovy tato vlastnost propojuje pouze celé právní pøedpisy. Neumoòuje detailnìji specifikovat jaká èást jednoho právního pøedpisu novelizuje jakou èást jiného právního pøedpisu. To je specifikováno pomocí instancí tøídy lex:Change."@cs ;
+  rdfs:comment "An instance of this property links an amending legal enactment (an amendment or a legal enactment containing an amending part) with an amended legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source amends which part of another. This can be specified using instances of class lex:Change."@en ;
+  rdsf:domain lex:SourceOfLaw ;
+  rdfs:range lex:SourceOfLaw .
+
+cito:cites a owl:ObjectProperty ;
+  rdfs:label "Reference mezi dvìma prameny práva"@cs, "Reference between two sources of law"@en ;
+  rdfs:comment "Vlastnost pøevzatá z CiTO ontologie. Instance této vlastnosti specifikuje, e znìní pramene práva nebo jeho èást se odkazuje znìní jiného nebo stejného pramene práva nebo jeho èásti. Pokud má tuto vlastnost èást znìní, potom to znamená, e v obsahu této èásti se vyskytuje reference. Èím je èást pøesnìjší, o tím pøesnìjší specifikaci umístìní reference se jedná. Není však umonìno explicitnì vyjádøit umístìní v textu znìní, napø. pomocí pozic v textu. K tomu doporuèujeme vyuít non-RDF prostøedkù, konkrétnì vyjádøit pøesné umístìní v textu pomocí prostøedkù jazyka RDFa. Hodnotou vlastnosti je potom vdy pøesnì to znìní, které je odkazováno. CiTO ontologie zavádí øadu speciálních podtypù této vlastnosti pro pøesnìjší vyjádøení sémantiky reference."@cs ;
+  rdfs:comment "The property is reused from the CiTO ontology. An instance of this property specifies that an expression of a source of law or its part references an expression of another or the same source of law or its part. If an expression has this property then the content of the expression contains the reference. The more exact the part is the more specific location of the reference is expressed. However, it is not possible to specify the exact location in the textual content of the expression, e.g., using the start and end position in the text. For this, we recommend to use non-RDF tools, concretely to express the exact location in the text using RDFa. The value of the property is always the expression which is being referenced. The CiTO ontology introduces a set of special subtypes of this property for more explicit specification of the semantics of the reference."@en .
+
+#dc:creator
 	
 ##########
 ## Data Properties
 ########
 
-lex:startPosition a owl:DataTypeProperty;
-  rdfs:label "Poèátek reference ve znìní právního zdroje"@cs, "The start of a reference in an expression of a source of law"@en ;
-  rdfs:comment "Poèátek reference je zaznamenán v podobì poøadí prvního znaku reference (první znak má poøadové èíslo 1)."@cs ;
-  rdfs:comment "The start of a reference is recorded as an order of the first character of the reference (the order of the first character is 1)."@en ;
-  rdfs:domain lex:Reference ;
-  rdfs:range xsd:positiveInteger . 
-  
-lex:endPosition a owl:DataTypeProperty;
-  rdfs:label "Konec reference ve znìní právního zdroje"@cs, "The end of a reference in an expression of a source of law"@en ;
-  rdfs:comment "Poèátek reference je zaznamenán v podobì poøadí prvního znaku reference."@cs ;
-  rdfs:comment "The end of a reference is recorded as an order of the last character of the reference."@en ;
-  rdfs:domain lex:Reference ;
-  rdfs:range xsd:positiveInteger .
+#dc:title
 
-lex:title a owl:DataTypeProperty;
-  rdfs:label "Titulek paragrafu"@en, "Title of the section"@en ;
-  rdfs:domain frbr:Expression .
-  
-lex:text a owl:DataTypeProperty;
-  rdfs:label "Text paragrafu"@en, "Text of the section"@en ;
-  rdfs:domain frbr:Expression .
+#dc:description
 
+#dc:identifier
 
+#dc:issued
+
+#dc:modified
+
+#dc:valid
+
+#dc:language
 
 
