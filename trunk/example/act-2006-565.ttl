@@ -1,0 +1,73 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://prov4j.org/w3p/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix opmo:   <http://openprovenance.org/model/opmo#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+
+@prefix lex:        <http://purl.org/lex#> .
+
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> a lex:Decree ;
+  dcterms:identifier "565/2006" ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:issued "2006-12-22"^^xsd:date ;
+  dcterms:creator <http://linked.opendata.cz/resource/cz/authority/government> ;
+  lex:originalExpression <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2007-01-01> ;
+  lex:lastExpression <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2011-03-01> ;
+  lex:actualExpression <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2011-03-01> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2007-01-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2007-01-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20070101> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2008-01-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2008-01-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20080101> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2009-06-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2009-06-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20090601> .
+  
+#NOTE THAT THERE ARE TWO DIFFERENT EXPRESSIONS <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2009-07-01>
+#1st is created by http://www.psp.cz/sqw/sbirka.sqw?cz=134&r=2009
+#However, http://www.psp.cz/sqw/sbirka.sqw?cz=200&r=2009 cancels http://www.psp.cz/sqw/sbirka.sqw?cz=134&r=2009 and creates new expression valid from 2009-07-01.
+#Therefore <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2009-07-01> is created again
+#From our point of view, it will be a single expression. That's why we have only one resource <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2009-07-01>
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2009-07-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2009-07-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20090701> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2011-01-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2011-01-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20110101> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/decree/2006/565/version/cz/2011-03-01> a frbr:Expression ;
+  dcterms:title "Naøízení vlády o platových pomìrech vojákù z povolání" ;
+  dcterms:valid "2011-03-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/decree/2006/565> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2006-565/zneni-20110301> .
