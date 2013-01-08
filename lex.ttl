@@ -170,29 +170,59 @@ lex:amends a owl:ObjectProperty ;
   rdfs:domain lex:SourceOfLaw ;
   rdfs:range lex:SourceOfLaw .
 
+#TODO
+lex:cancels a owl:ObjectProperty ;
+  rdfs:label "Novelizovaný právní předpis"@cs, "Amended source of law"@en ;
+  rdfs:comment "Instance této vlastnosti propojuje novelizující právní předpis (novelu či právní předpis obsahující novelizační část) s novelizovaným právním předpisem. Právní předpis s touto vlastností je instancí třídy lex:SourceOfLaw. Hodnotou je právní předpis, který je taktéž instancí této třídy. Jinými slovy tato vlastnost propojuje pouze celé právní předpisy. Neumožňuje detailněji specifikovat jaká část jednoho právního předpisu novelizuje jakou část jiného právního předpisu. To je specifikováno pomocí instancí třídy lex:Change."@cs ;
+  rdfs:comment "An instance of this property links an amending legal enactment (an amendment or a legal enactment containing an amending part) with an amended legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source amends which part of another. This can be specified using instances of class lex:Change."@en ;
+  rdfs:domain lex:SourceOfLaw ;
+  rdfs:range lex:SourceOfLaw .
+
 cito:cites a owl:ObjectProperty ;
   rdfs:label "Reference mezi dvěma prameny práva"@cs, "Reference between two sources of law"@en ;
   rdfs:comment "Vlastnost převzatá z CiTO ontologie. Instance této vlastnosti specifikuje, že znění pramene práva nebo jeho část se odkazuje znění jiného nebo stejného pramene práva nebo jeho části. Pokud má tuto vlastnost část znění, potom to znamená, že v obsahu této části se vyskytuje reference. Čím je část přesnější, o tím přesnější specifikaci umístění reference se jedná. Není však umožněno explicitně vyjádřit umístění v textu znění, např. pomocí pozic v textu. K tomu doporučujeme využít non-RDF prostředků, konkrétně vyjádřit přesné umístění v textu pomocí prostředků jazyka RDFa. Hodnotou vlastnosti je potom vždy přesně to znění, které je odkazováno. CiTO ontologie zavádí řadu speciálních podtypů této vlastnosti pro přesnější vyjádření sémantiky reference."@cs ;
   rdfs:comment "The property is reused from the CiTO ontology. An instance of this property specifies that an expression of a source of law or its part references an expression of another or the same source of law or its part. If an expression has this property then the content of the expression contains the reference. The more exact the part is the more specific location of the reference is expressed. However, it is not possible to specify the exact location in the textual content of the expression, e.g., using the start and end position in the text. For this, we recommend to use non-RDF tools, concretely to express the exact location in the text using RDFa. The value of the property is always the expression which is being referenced. The CiTO ontology introduces a set of special subtypes of this property for more explicit specification of the semantics of the reference."@en .
 
-#dc:creator
+dc:creator
+  rdfs:label "Instituce, která pramen práva vydala"@cs, "Institution which issued the source of law"@en ;
+  rdfs:comment "Vlastnost převzatá z Dublin Core ontologie. Instance této vlastnosti specifikuje instituci, která oficiálně pramen práva vydala. U zákonů je to typicky parlament, u vyhlášky to může být ministerstvo či jiná instituce vydávající výhlášky, atd."@cs ;
+  rdfs:comment "The property is reused from the Dublin Core ontology. An instance of this property specifies an institution that issued the source of law. For acts, it is typically a parliament. For regulations, it can be a ministry or another instution approved to issue regulations, etc."@en ;
 	
 ##########
 ## Data Properties
 ########
 
-#dc:title
+dc:title a owl:DataTypeProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:description
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:identifier
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:issued
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:modified
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:valid
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
 
 #dc:language
-
-
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;

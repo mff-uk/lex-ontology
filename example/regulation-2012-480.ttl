@@ -1,0 +1,47 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://prov4j.org/w3p/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix opmo:   <http://openprovenance.org/model/opmo#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+
+@prefix lex:        <http://purl.org/lex#> .
+
+<http://linked.opendata.cz/resource/legislation/cz/regulation/2012/480> a lex:Regulation ;
+  dcterms:identifier "480/2012" ;
+  dcterms:title "Vyhláška o energetickém auditu a energetickém posudku" ;
+  dcterms:issued "2012-12-31"^^xsd:date ;
+  # dcterms:creator is not present at http://www.psp.cz/sqw/sbirka.sqw?r=2012&cz=480
+  lex:originalExpression <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> ;
+  lex:actualExpression <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> ;
+  lex:lastExpression <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> a frbr:Expression ;
+  dcterms:title "Vyhláška o energetickém auditu a energetickém posudku" ;
+  dcterms:valid "2013-01-01"^^xsd:date ;
+  dcterms:language "cz" ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/regulation/2012/480> ;
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01/change/1>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01/change/2> ;
+  owl:sameAs <http://www.zakonyprolidi.cz/cs/2012-480/zneni-20130101> .
+  
+<http://aplikace.mvcr.cz/sbirka-zakonu/ViewFile.aspx?type=c&id=6334> a frbr:Manifestation ;
+  frbr:embodimentOf <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> .
+  
+<http://www.zakonyprolidi.cz/cs/2012-480/zneni-20130101.pdf> a frbr:Manifestation ;
+  frbr:embodimentOf <http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01/change/1> a lex:Cancellation ;
+  lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/2001/213/version/cz/2004-08-01> .
+  
+<http://linked.opendata.cz/resource/legislation/cz/act/2012/480/version/cz/2013-01-01/change/2> a lex:Cancellation ;
+  lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/2004/425/version/cz/2004-08-01> .
