@@ -12,13 +12,13 @@
 <http://ld.opendata.cz/resource/lex/has_obligation> a rdf:Property ;
 	rdfs:label "Má povinnost"@cs ; 
 	rdfs:domain lex:ActorOccurrence ;
-	rdfs:range lex:ActionOccurrence ;
+	rdfs:range lex:ActionOccurrence 
 	.
 
 <http://ld.opendata.cz/resource/lex/has_expressed_obligation> a rdf:Property ;
 	rdfs:label "Má povinnost"@cs ; 
 	rdfs:domain lex:ActorOccurrenceExpression ;
-	rdfs:range lex:ActionOccurrenceExpression ;
+	rdfs:range lex:ActionOccurrenceExpression
 	.
 
 <http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> a lex:ActorOccurrence ;
