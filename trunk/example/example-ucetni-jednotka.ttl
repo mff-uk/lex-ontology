@@ -1,0 +1,40 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix lex: <http://purl.org/lex#>.
+# Povinnost sestavit konsolidovanou účetní závěrku má, za podmínek stanovených tímto zákonem a prováděcími právními předpisy, účetní jednotka, která je obchodní společností a je ovládající osobou20), s výjimkou ovládajících osob, které vykonávají společný vliv podle odstavce 4 (dále jen „konsolidující účetní jednotka“).
+# Povinnost sestavit konsolidovanou účetní závěrku má účetní jednotka.
+
+<http://ld.opendata.cz/resource/lex/actor/konsolidující-účetní-jednotka> a lex:Actor .
+
+<http://ld.opendata.cz/resource/lex/action/sestavit-konsolidovanou-účetní-uzávěrku> a lex:Action .
+
+<http://ld.opendata.cz/resource/lex/has_obligation> a rdf:Property ;
+	rdfs:label "Má povinnost"@cs ; 
+	rdfs:domain lex:ActorOccurrence ;
+	rdfs:range lex:ActionOccurrence ;
+	.
+
+<http://ld.opendata.cz/resource/lex/has_expressed_obligation> a rdf:Property ;
+	rdfs:label "Má povinnost"@cs ; 
+	rdfs:domain lex:ActorOccurrenceExpression ;
+	rdfs:range lex:ActionOccurrenceExpression ;
+	.
+
+<http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> a lex:ActorOccurrence ;
+	lex:represents <http://ld.opendata.cz/resource/lex/actor/konsolidující-účetní-jednotka> ;
+	lex:has_obligation <http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> .
+
+<http://linked.opendata.cz/resource/legislation/cz/act/1991/563> lex:defines <http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> .
+
+<http://ld.opendata.cz/resource/lex/actor-occurrence-expression/1991/563/1/konsolidující-účetní-jednotka> a lex:ActorOccurrenceExpression ;
+	lex:realizationOf <http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> ;
+	lex:has_expressed_obligation <http://ld.opendata.cz/resource/lex/action-occurrence-expression/1991/563/1/sestavit-konsolidovanou-účetní-uzávěrku> .
+
+<http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> a lex:ActionOccurrence ;
+	lex:represents <http://ld.opendata.cz/resource/lex/action/sestavit-konsolidovanou-účetní-uzávěrku> ;
+	lex:occursIn <http://linked.opendata.cz/resource/legislation/cz/act/1991/563> .
+
+<http://ld.opendata.cz/resource/lex/action-occurrence-expression/1991/563/1/sestavit-konsolidovanou-účetní-uzávěrku> a lex:ActionOccurrenceExpression ;
+	lex:realizationOf <http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> .
+
