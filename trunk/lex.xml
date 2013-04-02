@@ -1,205 +1,210 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<!-- OUTPUT FORMAT: RDF/XML (mimeTypes=application/rdf+xml, application/xml; ext=rdf, rdfs, owl, xml) -->
-<!-- BEGIN: ExtractionContext(urn:x-any23:rdf-turtle:root-extraction-result-id:http://any23.org/tmp/) -->
-
-<rdf:Description rdf:about="http://purl.org/lex#">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<title xmlns="http://purl.org/dc/terms/" xml:lang="en">LEX ontology</title>
-	<description xmlns="http://purl.org/dc/terms/" xml:lang="en">LEX ontology models various kinds of sources of law. It is based on various FRBR concepts, namely frbr:Work, frbr:Expression and frbr:Manifestation. </description>
-	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-28</modified>
-	<preferredNamespaceUri xmlns="http://purl.org/vocab/vann/">http://purl.org/lex#</preferredNamespaceUri>
-	<preferredNamespacePrefix xmlns="http://purl.org/vocab/vann/">lex</preferredNamespacePrefix>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/knap#me"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/necasky#me"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://purl.org/klimek#me"/>
-	<seeAlso xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://prefix.cc/lex"/>
-	<rights xmlns="http://purl.org/dc/terms/" rdf:resource="http://creativecommons.org/licenses/by/3.0/cz/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#SourceOfLaw">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Pramen prÃ¡va</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje pramen prÃ¡va. Pramen prÃ¡va je pojem, jenÅ¾ oznaÄuje vnÄjÅ¡Ã­ formu, kterou jsou sdÄlovÃ¡ny prÃ¡vnÃ­ normy. BÄÅ¾nÄ jsou rozliÅ¡ovÃ¡ny formÃ¡lnÃ­ (primÃ¡rnÃ­) a gnoseologickÃ© (sekundÃ¡rnÃ­) prameny prÃ¡va. Ontologie LEX vÅ¡ak takovÃ© rozliÅ¡enÃ­ explicitnÄ neimplementuje, ale v budoucnu je moÅ¾nÃ© ji tak rozÅ¡Ã­Åit. TÅÃ­da je podtÅÃ­dou tÅÃ­dy Work z ontologie FRBR. PouÅ¾Ã­vÃ¡ se pro specifikaci typu danÃ© instance frbr:Work, kterÃ¡ reprezentuje pramen prÃ¡va. Instance musÃ­ reprezentovat celÃ½ pramen prÃ¡va, ne jenom jeho ÄÃ¡st. Pokud danÃ½ zdroj reprezentuje pouze ÄÃ¡st nÄjakÃ©ho pramene prÃ¡va, potom nenÃ­ instancÃ­ tÃ©to tÅÃ­dy. Je pouze instancÃ­ tÅÃ­dy frbr:Work.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a source of law. It is independent on FRBR vocabulary. It is used to specify a type of a given instance of frbr:Work which represents a source of law. The instance must represent the source as a whole and not only its part.</comment>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Act">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">ZÃ¡kon</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje zÃ¡kon vydanÃ½ zÃ¡konodÃ¡rnÃ½m sborem. ZÃ¡kon je prÃ¡vnÃ­m pÅedpisem.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents an act. An act is a legal enactment.</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Decision">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">RozhodnutÃ­ soudu</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Court decision</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje rozhodnutÃ­ soudu.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a court decision.</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Decree">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">NaÅÃ­zenÃ­</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Decree</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje vlÃ¡dnÃ­ naÅÃ­zenÃ­ nebo naÅÃ­zenÃ­ obce nebo kraje. NaÅÃ­zenÃ­ je podzÃ¡konnÃ½m prÃ¡vnÃ­m pÅedpisem.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a decree issued by a public body.  A decree is a legal enactment.</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Regulation">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">VyhlÃ¡Å¡ka</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Regulation</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje vyhlÃ¡Å¡ku vydanou ÃºstÅednÃ­m sprÃ¡vnÃ­m ÃºÅadem (obvykle ministerstvem) nebo obecnÄ zÃ¡vaznou vyhlÃ¡Å¡ku vydanou obcÃ­ nebo krajem. VyhlÃ¡Å¡ka je podzÃ¡konnÃ½m prÃ¡vnÃ­m pÅedpisem.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instace of this class represents a regulation issued by a public body. A regulation is a legal enactment.</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Change">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">ZmÄna prÃ¡vnÃ­ho pÅedpisu</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Change of a legal enactment</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy reprezentuje jednotkovou zmÄnu znÄnÃ­ prÃ¡vnÃ­ho pÅedpisu. Proces aplikace zmÄn na prÃ¡vnÃ­ zdroje je obvykle nazÃ½vÃ¡n novelizace. ZmÄna je definovana ve znÄnÃ­ jinÃ©ho prÃ¡vnÃ­ho pÅedpisu. Tento prÃ¡vnÃ­ pÅedpis se obvykle nazÃ½vÃ¡ novela. Z pohledu FRBR ontologie jsou zmÄny definovÃ¡ny na Ãºrovni instancÃ­ tÅÃ­dy frbr:Expresion. ZmÄna mÅ¯Å¾e bÃ½t pomocÃ­ instance tÃ©to tÅÃ­dy vyjÃ¡dÅena na Ãºrovni konkrÃ©tnÃ­ch ÄÃ¡stÃ­ prÃ¡vnÃ­ch pÅedpisÅ¯, tj. Å¾e danÃ¡ ÄÃ¡st znÄnÃ­ prÃ¡vnÃ­ho pÅedpisu mÄnÃ­ danou ÄÃ¡st znÄnÃ­ jinÃ©ho prÃ¡vnÃ­ho pÅedpisu. Pokud vÅ¡ak nejsou k dispozici detailnÃ­ informace, lze zmÄnu popsat na vyÅ¡Å¡Ã­ Ãºrovni. NapÅ. pouze Å¾e znÄnÃ­ prÃ¡vnÃ­ pÅedpis jako celek mÄnÃ­ znÄnÃ­ jinÃ©ho prÃ¡vnÃ­ pÅedpisu jako celku.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a single change of an expression of a legal enactment. The process of applying the changes is usually called amending. A change is defined in an expression of another legal enactment. This legal enactment is usually called amendment. From the point of view of the FRBR ontology, changes are defined at the level of instances of class frbr:Expression. A change may be expressed at the level of of concrete parts of legal enactments, i.e. that an expression of a given part of a legal enactment changes an expression of a given part of another legal enactment. If there is not enough information available, a change can be expressed at the higher level. E.g., that only an expression of a legal enactment as a whole changes an expression of another legal enactment as a whole.</comment>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Creation">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">VytvoÅenÃ­ novÃ© ÄÃ¡sti prÃ¡vnÃ­ho pÅedpisu</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Creation of a new part of a legal enactment</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy je speciÃ¡lnÃ­m typem konkrÃ©tnÃ­ jednotlivÃ© zmÄny znamenajÃ­cÃ­ vytvoÅenÃ­ novÃ© souÄÃ¡sti prÃ¡vnÃ­ho pÅedpisu (nikoliv vÅ¡ak vytvoÅenÃ­ prÃ¡vnÃ­ho pÅedpisu jako takovÃ©ho).</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying a creation of a new part of a legal enactment (but not a creation a legal enactment as a whole).</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Removal">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">OdstranÄnÃ­ existujÃ­cÃ­ ÄÃ¡sti prÃ¡vnÃ­ho pÅedpisu</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Removal of an existing part of a legal enactment</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy je speciÃ¡lnÃ­m typem konkrÃ©tnÃ­ jednotlivÃ© zmÄny znamenajÃ­cÃ­ odstranÄnÃ­ existujÃ­cÃ­ souÄÃ¡sti prÃ¡vnÃ­ho pÅedpisu (nikoliv vÅ¡ak odstranÄnÃ­ prÃ¡vnÃ­ho pÅedpisu jako takovÃ©ho).</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying a removal of an existing part of a legal enactment (but not a legal enactment as a whole).</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#Update">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Aktualizace existujÃ­cÃ­ ÄÃ¡sti prÃ¡vnÃ­ho zdroje</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Update of an existing part of a source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to tÅÃ­dy je speciÃ¡lnÃ­m typem konkrÃ©tnÃ­ jednotlivÃ© zmÄny znamenajÃ­cÃ­ aktualizaci znÄnÃ­ existujÃ­cÃ­ souÄÃ¡sti prÃ¡vnÃ­ho zdroje.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying an update of an expression of an existing part of a source of law.</comment>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#lastExpression">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">PoslednÃ­ existujÃ­cÃ­ znÄnÃ­ prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Last existing expression of a source of law or its part</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje prÃ¡vnÃ­ zdroj nebo jeho ÄÃ¡st (instanci tÅÃ­dy frbr:Work) s jejÃ­m poslednÃ­m znÄnÃ­m (instancÃ­ tÅÃ­dy frbr:Expression). ZnÄnÃ­ jeÅ¡tÄ nemuselo vstoupit v platnost. DomÃ©na vlastnosti je tvoÅena instancemi tÅÃ­dy frbr:Work, kterÃ© jsou zÃ¡roveÅ instancemi tÅÃ­dy lex:SourceOfLaw nebo jsou jejich souÄÃ¡stmi. JinÃ½mi slovy, zdroj s touto vlastnostÃ­ je znÄnÃ­m prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. Vlastnost je speciÃ¡lnÃ­m pÅÃ­padem vlastnosti frbr:realization.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its last expression (an instance of frbr:Expression). The expression may not has to come into force yet. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#actualExpression">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">V souÄasnosti platnÃ© znÄnÃ­ prÃ¡vnÃ­ho zdroje</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Currently valid expression of a source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje prÃ¡vnÃ­ zdroj nebo jeho ÄÃ¡st (instanci tÅÃ­dy frbr:Work) s jejÃ­m v souÄasnosti platnÃ½m znÄnÃ­m (instancÃ­ tÅÃ­dy frbr:Expression). ZnÄnÃ­ nemusÃ­ bÃ½t poslednÃ­m existujÃ­cÃ­m. DomÃ©na vlastnosti je tvoÅena instancemi tÅÃ­dy frbr:Work, kterÃ© jsou zÃ¡roveÅ instancemi tÅÃ­dy lex:SourceOfLaw nebo jsou jejich souÄÃ¡stmi. JinÃ½mi slovy, zdroj s touto vlastnostÃ­ je znÄnÃ­m prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. Vlastnost je speciÃ¡lnÃ­m pÅÃ­padem vlastnosti frbr:realization.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its currently valid expression (an instance of frbr:Expression). The expression does not have to be the last expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#originalExpression">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">PÅ¯vodnÃ­ znÄnÃ­ prÃ¡vnÃ­ho zdroje</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Original expression of a source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje prÃ¡vnÃ­ zdroj nebo jeho ÄÃ¡st (instanci tÅÃ­dy frbr:Work) s jejÃ­m pÅ¯vodnÃ­m znÄnÃ­m (instancÃ­ tÅÃ­dy frbr:Expression). ZnÄnÃ­ mÅ¯Å¾e ale nemusÃ­ bÃ½t aktuÃ¡lnÄ platnÃ½m. DomÃ©na vlastnosti je tvoÅena instancemi tÅÃ­dy frbr:Work, kterÃ© jsou zÃ¡roveÅ instancemi tÅÃ­dy lex:SourceOfLaw nebo jsou jejich souÄÃ¡stmi. JinÃ½mi slovy, zdroj s touto vlastnostÃ­ je znÄnÃ­m prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. Vlastnost je speciÃ¡lnÃ­m pÅÃ­padem vlastnosti frbr:realization.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its original expression (an instance of frbr:Expression). The expression may be but does not need to be the currently valid expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/vocab/frbr/core#realizationOf">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">PrÃ¡vnÃ­ zdroj nebo jeho ÄÃ¡st, kterÃ¡ je realizovanÃ¡ danÃ½m znÄnÃ­m.</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">A property representing the source of law or its part that has been realized by a given expression.</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Vlastnost pÅevzatÃ¡ z FRBR ontologie. Zdroje s touto vlastnostÃ­ jsou instancemi tÅÃ­dy frbr:Expression. V kontextu LEX ontologie to znamenÃ¡, Å¾e se jednÃ¡ o znÄnÃ­ prÃ¡vnÃ­ch zdrojÅ¯ nebo jejich ÄÃ¡sti.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">This property is reused from the FRBR ontology. Having this property implies being an expression. In the context of the LEX ontology that means being an expression of a source of law or its part.</comment>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/vocab/frbr/core#embodimentOf">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">ZnÄnÃ­ materializovanÃ© v danÃ© manifestaci.</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">A property representing the expression that is embodied by a manifestation.</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Vlastnost pÅevzatÃ¡ z FRBR ontologie. Zdroje s touto vlastnostÃ­ jsou instancemi tÅÃ­dy frbr:Manifestation. V kontextu LEX ontologie to znamenÃ¡, Å¾e se jednÃ¡ o materializace znÄnÃ­ prÃ¡vnÃ­ch zdrojÅ¯ nebo jejich ÄÃ¡stÃ­.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">This property is reused from the FRBR ontology. Having this property implies being a manifestation. In the context of the LEX ontology that means being a manifestation of an expression of a source of law or its part.</comment>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#definesChange">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">ZmÄna definovanÃ¡ prÃ¡vnÃ­m pÅedpisem</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">A change defined by a legal enactment</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje znÄnÃ­ prÃ¡vnÃ­ho pÅedpisu nebo jeho ÄÃ¡st s jÃ­m nebo jÃ­ definovanou zmÄnou znÄnÃ­ jinÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. Zdroje s touto vlastnostÃ­ jsou instancemi tÅÃ­dy frbr:Expression. V kontextu LEX ontologie to znamenÃ¡, Å¾e se jednÃ¡ o znÄnÃ­ prÃ¡vnÃ­ho pÅedpisu nebo jeho ÄÃ¡sti.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property associates an amendment with a particular change defined by the amendment.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#changeResult">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">VÃ½slednÃ© znÄnÃ­ mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">A newly created part of a source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje zmÄnu s novÃ½m znÄnÃ­m mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. ZmÄnou mÅ¯Å¾e bÃ½t buÄ vytvoÅenÃ­ (potom je zmÄna navÃ¡zÃ¡na na znÄnÃ­ vytvoÅenÃ© ÄÃ¡sti prÃ¡vnÃ­ho zdroje nebo na novÃ© znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti Äi na novÃ© znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku) nebo aktualizace (potom je zmÄna navÃ¡zÃ¡na na novÃ© znÄnÃ­ aktualizovanÃ© ÄÃ¡stÃ­ prÃ¡vnÃ­ho zdroje nebo na novÃ© znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti nebo na novÃ© znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku). ZmÄnou nemÅ¯Å¾e bÃ½t odstranÄnÃ­, neboÅ¥ odstranÄnÃ­ nevede k novÃ©mu znÄnÃ­ mÄnÄnÃ© (odstraÅovanÃ©) ÄÃ¡sti prÃ¡vnÃ­ho zdroje</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a change to a new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law itself) or update (in that case the change is linked to a new expression of the changed part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">VÃ½slednÃ© znÄnÃ­ mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The new expression of a changed source of law or its part</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje zmÄnu s novÃ½m znÄnÃ­m mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. ZmÄnou mÅ¯Å¾e bÃ½t buÄ vytvoÅenÃ­ (potom je zmÄna navÃ¡zÃ¡na na znÄnÃ­ vytvoÅenÃ© ÄÃ¡sti prÃ¡vnÃ­ho zdroje nebo na novÃ© znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti Äi na novÃ© znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku) nebo aktualizace (potom je zmÄna navÃ¡zÃ¡na na novÃ© znÄnÃ­ aktualizovanÃ© ÄÃ¡stÃ­ prÃ¡vnÃ­ho zdroje nebo na novÃ© znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti nebo na novÃ© znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku). ZmÄnou nemÅ¯Å¾e bÃ½t odstranÄnÃ­, neboÅ¥ odstranÄnÃ­ nevede k novÃ©mu znÄnÃ­ mÄnÄnÃ© (odstraÅovanÃ©) ÄÃ¡sti prÃ¡vnÃ­ho zdroje</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a change to the new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law itself) or update (in that case the change is linked to the new expression of the changed part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#changedOriginal">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">PÅedchozÃ­ znÄnÃ­ mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The previous expression of a changed source of law or its part</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje zmÄnu s pÅedchozÃ­m znÄnÃ­m mÄnÄnÃ©ho prÃ¡vnÃ­ho zdroje nebo jeho ÄÃ¡sti. ZmÄnou mÅ¯Å¾e bÃ½t buÄ smazÃ¡nÃ­ (potom je zmÄna navÃ¡zÃ¡na na poslednÃ­ znÄnÃ­ odstraÅovanÃ© ÄÃ¡sti prÃ¡vnÃ­ho zdroje nebo na pÅedchozÃ­ znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti Äi na pÅedchozÃ­ znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku) nebo aktualizace (potom je zmÄna navÃ¡zÃ¡na na pÅedchozÃ­ znÄnÃ­ aktualizovanÃ© ÄÃ¡stÃ­ prÃ¡vnÃ­ho zdroje nebo na pÅedchozÃ­ znÄnÃ­ nÄkterÃ© jeho nadÅazenÃ© ÄÃ¡sti nebo na pÅedchozÃ­ znÄnÃ­ prÃ¡vnÃ­ho zdroje jako celku). ZmÄnou nemÅ¯Å¾e bÃ½t vytvoÅenÃ­, neboÅ¥ vytvoÅenÃ¡ ÄÃ¡st prÃ¡vnÃ­ho zdroje nemÃ¡ Å¾Ã¡dnÃ© pÅedchozÃ­ znÄnÃ­.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links a change to the previous expression of a changed source of law or its part. A change can be either a removal (in that case the change is linked to the previos expression of the removed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law itself) or update (in that case the change is linked to the previous expression of the changed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law iselft). The change cannot be a creation because a newly created part of a source of law does not have any previous expression.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#Change"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/lex#amends">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">NovelizovanÃ½ prÃ¡vnÃ­ pÅedpis</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Amended source of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Instance tÃ©to vlastnosti propojuje novelizujÃ­cÃ­ prÃ¡vnÃ­ pÅedpis (novelu Äi prÃ¡vnÃ­ pÅedpis obsahujÃ­cÃ­ novelizaÄnÃ­ ÄÃ¡st) s novelizovanÃ½m prÃ¡vnÃ­m pÅedpisem. PrÃ¡vnÃ­ pÅedpis s touto vlastnostÃ­ je instancÃ­ tÅÃ­dy lex:SourceOfLaw. Hodnotou je prÃ¡vnÃ­ pÅedpis, kterÃ½ je taktÃ©Å¾ instancÃ­ tÃ©to tÅÃ­dy. JinÃ½mi slovy tato vlastnost propojuje pouze celÃ© prÃ¡vnÃ­ pÅedpisy. NeumoÅ¾Åuje detailnÄji specifikovat jakÃ¡ ÄÃ¡st jednoho prÃ¡vnÃ­ho pÅedpisu novelizuje jakou ÄÃ¡st jinÃ©ho prÃ¡vnÃ­ho pÅedpisu. To je specifikovÃ¡no pomocÃ­ instancÃ­ tÅÃ­dy lex:Change.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An instance of this property links an amending legal enactment (an amendment or a legal enactment containing an amending part) with an amended legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source amends which part of another. This can be specified using instances of class lex:Change.</comment>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.org/lex#SourceOfLaw"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/spar/cito/cites">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Reference mezi dvÄma prameny prÃ¡va</label>
-	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Reference between two sources of law</label>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Vlastnost pÅevzatÃ¡ z CiTO ontologie. Instance tÃ©to vlastnosti specifikuje, Å¾e znÄnÃ­ pramene prÃ¡va nebo jeho ÄÃ¡st se odkazuje znÄnÃ­ jinÃ©ho nebo stejnÃ©ho pramene prÃ¡va nebo jeho ÄÃ¡sti. Pokud mÃ¡ tuto vlastnost ÄÃ¡st znÄnÃ­, potom to znamenÃ¡, Å¾e v obsahu tÃ©to ÄÃ¡sti se vyskytuje reference. ÄÃ­m je ÄÃ¡st pÅesnÄjÅ¡Ã­, o tÃ­m pÅesnÄjÅ¡Ã­ specifikaci umÃ­stÄnÃ­ reference se jednÃ¡. NenÃ­ vÅ¡ak umoÅ¾nÄno explicitnÄ vyjÃ¡dÅit umÃ­stÄnÃ­ v textu znÄnÃ­, napÅ. pomocÃ­ pozic v textu. K tomu doporuÄujeme vyuÅ¾Ã­t non-RDF prostÅedkÅ¯, konkrÃ©tnÄ vyjÃ¡dÅit pÅesnÃ© umÃ­stÄnÃ­ v textu pomocÃ­ prostÅedkÅ¯ jazyka RDFa. Hodnotou vlastnosti je potom vÅ¾dy pÅesnÄ to znÄnÃ­, kterÃ© je odkazovÃ¡no. CiTO ontologie zavÃ¡dÃ­ Åadu speciÃ¡lnÃ­ch podtypÅ¯ tÃ©to vlastnosti pro pÅesnÄjÅ¡Ã­ vyjÃ¡dÅenÃ­ sÃ©mantiky reference.</comment>
-	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The property is reused from the CiTO ontology. An instance of this property specifies that an expression of a source of law or its part references an expression of another or the same source of law or its part. If an expression has this property then the content of the expression contains the reference. The more exact the part is the more specific location of the reference is expressed. However, it is not possible to specify the exact location in the textual content of the expression, e.g., using the start and end position in the text. For this, we recommend to use non-RDF tools, concretely to express the exact location in the text using RDFa. The value of the property is always the expression which is being referenced. The CiTO ontology introduces a set of special subtypes of this property for more explicit specification of the semantics of the reference.</comment>
-</rdf:Description>
-<!-- END: ExtractionContext(urn:x-any23:rdf-turtle:root-extraction-result-id:http://any23.org/tmp/) -->
-
+<?xml version="1.0"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:lex="http://purl.org/lex#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cito="http://purl.org/spar/cito/">
+	<owl:Ontology rdf:about="http://purl.org/lex#">
+		<dcterms:title xml:lang="en">LEX ontology</dcterms:title>
+		<dcterms:description xml:lang="en">LEX ontology models various kinds of sources of law. It is based on various FRBR concepts, namely frbr:Work, frbr:Expression and frbr:Manifestation. </dcterms:description>
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-28</dcterms:modified>
+		<vann:preferredNamespaceUri>http://purl.org/lex#</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>lex</vann:preferredNamespacePrefix>
+		<dcterms:creator rdf:resource="http://purl.org/knap#me" />
+		<dcterms:creator rdf:resource="http://purl.org/necasky#me" />
+		<dcterms:creator rdf:resource="http://purl.org/klimek#me" />
+		<rdfs:seeAlso rdf:resource="http://prefix.cc/lex" />
+		<dcterms:rights rdf:resource="http://creativecommons.org/licenses/by/3.0/cz/" />
+	</owl:Ontology>
+	<owl:Class rdf:about="http://purl.org/lex#SourceOfLaw">
+		<rdfs:label xml:lang="cs">Pramen práva</rdfs:label>
+		<rdfs:label xml:lang="en">Source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje pramen práva. Pramen práva je pojem, jenž označuje vnější formu, kterou jsou sdělovány právní normy. Běžně jsou rozlišovány formální (primární) a gnoseologické (sekundární) prameny práva. Ontologie LEX však takové rozlišení explicitně neimplementuje, ale v budoucnu je možné ji tak rozšířit. Třída je podtřídou třídy Work z ontologie FRBR. Používá se pro specifikaci typu dané instance frbr:Work, která reprezentuje pramen práva. Instance musí reprezentovat celý pramen práva, ne jenom jeho část. Pokud daný zdroj reprezentuje pouze část nějakého pramene práva, potom není instancí této třídy. Je pouze instancí třídy frbr:Work.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a source of law. It is independent on FRBR vocabulary. It is used to specify a type of a given instance of frbr:Work which represents a source of law. The instance must represent the source as a whole and not only its part.</rdfs:comment>
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Act">
+		<rdfs:label xml:lang="cs">Zákon</rdfs:label>
+		<rdfs:label xml:lang="en">Law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje zákon vydaný zákonodárným sborem. Zákon je právním předpisem.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents an act. An act is a legal enactment.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Decision">
+		<rdfs:label xml:lang="cs">Rozhodnutí soudu</rdfs:label>
+		<rdfs:label xml:lang="en">Court decision</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje rozhodnutí soudu.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a court decision.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Decree">
+		<rdfs:label xml:lang="cs">Nařízení</rdfs:label>
+		<rdfs:label xml:lang="en">Decree</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje vládní nařízení nebo nařízení obce nebo kraje. Nařízení je podzákonným právním předpisem.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a decree issued by a public body.  A decree is a legal enactment.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Regulation">
+		<rdfs:label xml:lang="cs">Vyhláška</rdfs:label>
+		<rdfs:label xml:lang="en">Regulation</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje vyhlášku vydanou ústředním správním úřadem (obvykle ministerstvem) nebo obecně závaznou vyhlášku vydanou obcí nebo krajem. Vyhláška je podzákonným právním předpisem.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instace of this class represents a regulation issued by a public body. A regulation is a legal enactment.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Change">
+		<rdfs:label xml:lang="cs">Změna právního předpisu</rdfs:label>
+		<rdfs:label xml:lang="en">Change of a legal enactment</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy reprezentuje jednotkovou změnu znění právního předpisu. Proces aplikace změn na právní zdroje je obvykle nazýván novelizace. Změna je definovana ve znění jiného právního předpisu. Tento právní předpis se obvykle nazývá novela. Z pohledu FRBR ontologie jsou změny definovány na úrovni instancí třídy frbr:Expresion. Změna může být pomocí instance této třídy vyjádřena na úrovni konkrétních částí právních předpisů, tj. že daná část znění právního předpisu mění danou část znění jiného právního předpisu. Pokud však nejsou k dispozici detailní informace, lze změnu popsat na vyšší úrovni. Např. pouze že znění právní předpis jako celek mění znění jiného právní předpisu jako celku.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a single change of an expression of a legal enactment. The process of applying the changes is usually called amending. A change is defined in an expression of another legal enactment. This legal enactment is usually called amendment. From the point of view of the FRBR ontology, changes are defined at the level of instances of class frbr:Expression. A change may be expressed at the level of of concrete parts of legal enactments, i.e. that an expression of a given part of a legal enactment changes an expression of a given part of another legal enactment. If there is not enough information available, a change can be expressed at the higher level. E.g., that only an expression of a legal enactment as a whole changes an expression of another legal enactment as a whole.</rdfs:comment>
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Creation">
+		<rdfs:label xml:lang="cs">Vytvoření nové části právního předpisu</rdfs:label>
+		<rdfs:label xml:lang="en">Creation of a new part of a legal enactment</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy je speciálním typem konkrétní jednotlivé změny znamenající vytvoření nové součásti právního předpisu (nikoliv však vytvoření právního předpisu jako takového).</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying a creation of a new part of a legal enactment (but not a creation a legal enactment as a whole).</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#Change" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Cancellation">
+		<rdfs:label xml:lang="cs">Zrušení existující části právního předpisu</rdfs:label>
+		<rdfs:label xml:lang="en">Cancellation of an existing part of a legal enactment</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy je speciálním typem konkrétní jednotlivé změny znamenající zrušení existující součásti právního předpisu (nikoliv však zrušení právního předpisu jako takového).</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying a removal of an existing part of a legal enactment (but not a legal enactment as a whole).</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#Change" />
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.org/lex#Update">
+		<rdfs:label xml:lang="cs">Aktualizace existující části právního zdroje</rdfs:label>
+		<rdfs:label xml:lang="en">Update of an existing part of a source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této třídy je speciálním typem konkrétní jednotlivé změny znamenající aktualizaci znění existující součásti právního zdroje.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this class represents a special type of a concrete particular amendment specifying an update of an expression of an existing part of a source of law.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://purl.org/lex#Change" />
+	</owl:Class>
+	<owl:FunctionalProperty rdf:about="http://purl.org/lex#lastExpression">
+		<rdfs:label xml:lang="cs">Poslední existující znění právního zdroje nebo jeho části</rdfs:label>
+		<rdfs:label xml:lang="en">Last existing expression of a source of law or its part</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje právní zdroj nebo jeho část (instanci třídy frbr:Work) s jejím posledním zněním (instancí třídy frbr:Expression). Znění ještě nemuselo vstoupit v platnost. Doména vlastnosti je tvořena instancemi třídy frbr:Work, které jsou zároveň instancemi třídy lex:SourceOfLaw nebo jsou jejich součástmi. Jinými slovy, zdroj s touto vlastností je zněním právního zdroje nebo jeho části. Vlastnost je speciálním případem vlastnosti frbr:realization.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its last expression (an instance of frbr:Expression). The expression may not has to come into force yet. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Work" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#realization" />
+	</owl:FunctionalProperty>
+	<owl:FunctionalProperty rdf:about="http://purl.org/lex#actualExpression">
+		<rdfs:label xml:lang="cs">V současnosti platné znění právního zdroje</rdfs:label>
+		<rdfs:label xml:lang="en">Currently valid expression of a source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje právní zdroj nebo jeho část (instanci třídy frbr:Work) s jejím v současnosti platným zněním (instancí třídy frbr:Expression). Znění nemusí být posledním existujícím. Doména vlastnosti je tvořena instancemi třídy frbr:Work, které jsou zároveň instancemi třídy lex:SourceOfLaw nebo jsou jejich součástmi. Jinými slovy, zdroj s touto vlastností je zněním právního zdroje nebo jeho části. Vlastnost je speciálním případem vlastnosti frbr:realization.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its currently valid expression (an instance of frbr:Expression). The expression does not have to be the last expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Work" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#realization" />
+	</owl:FunctionalProperty>
+	<owl:FunctionalProperty rdf:about="http://purl.org/lex#originalExpression">
+		<rdfs:label xml:lang="cs">Původní znění právního zdroje</rdfs:label>
+		<rdfs:label xml:lang="en">Original expression of a source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje právní zdroj nebo jeho část (instanci třídy frbr:Work) s jejím původním zněním (instancí třídy frbr:Expression). Znění může ale nemusí být aktuálně platným. Doména vlastnosti je tvořena instancemi třídy frbr:Work, které jsou zároveň instancemi třídy lex:SourceOfLaw nebo jsou jejich součástmi. Jinými slovy, zdroj s touto vlastností je zněním právního zdroje nebo jeho části. Vlastnost je speciálním případem vlastnosti frbr:realization.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a source of law or its part (an instance of frbr:Work) with its original expression (an instance of frbr:Expression). The expression may be but does not need to be the currently valid expression. The domain of the property is the set of instances of frbr:Work which are also instances of lex:SourceOfLaw or are parts of such instances. In other words, having this property implies being an expression which realizes a source of law or its part. The property is a sub-property of frbr:realization.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Work" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#realization" />
+	</owl:FunctionalProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realizationOf">
+		<rdfs:label xml:lang="cs">Právní zdroj nebo jeho část, která je realizovaná daným zněním.</rdfs:label>
+		<rdfs:label xml:lang="en">A property representing the source of law or its part that has been realized by a given expression.</rdfs:label>
+		<rdfs:comment xml:lang="cs">Vlastnost převzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi třídy frbr:Expression. V kontextu LEX ontologie to znamená, že se jedná o znění právních zdrojů nebo jejich části.</rdfs:comment>
+		<rdfs:comment xml:lang="en">This property is reused from the FRBR ontology. Having this property implies being an expression. In the context of the LEX ontology that means being an expression of a source of law or its part.</rdfs:comment>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#embodimentOf">
+		<rdfs:label xml:lang="cs">Znění materializované v dané manifestaci.</rdfs:label>
+		<rdfs:label xml:lang="en">A property representing the expression that is embodied by a manifestation.</rdfs:label>
+		<rdfs:comment xml:lang="cs">Vlastnost převzatá z FRBR ontologie. Zdroje s touto vlastností jsou instancemi třídy frbr:Manifestation. V kontextu LEX ontologie to znamená, že se jedná o materializace znění právních zdrojů nebo jejich částí.</rdfs:comment>
+		<rdfs:comment xml:lang="en">This property is reused from the FRBR ontology. Having this property implies being a manifestation. In the context of the LEX ontology that means being a manifestation of an expression of a source of law or its part.</rdfs:comment>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/lex#definesChange">
+		<rdfs:label xml:lang="cs">Změna definovaná právním předpisem</rdfs:label>
+		<rdfs:label xml:lang="en">A change defined by a legal enactment</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje znění právního předpisu nebo jeho část s jím nebo jí definovanou změnou znění jiného právního zdroje nebo jeho části. Zdroje s touto vlastností jsou instancemi třídy frbr:Expression. V kontextu LEX ontologie to znamená, že se jedná o znění právního předpisu nebo jeho části.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property associates an amendment with a particular change defined by the amendment.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+		<rdfs:range rdf:resource="http://purl.org/lex#Change" />
+	</owl:ObjectProperty>
+	<owl:FunctionalProperty rdf:about="http://purl.org/lex#changeResult">
+		<rdfs:label xml:lang="cs">Výsledné znění měněného právního zdroje nebo jeho části</rdfs:label>
+		<rdfs:label xml:lang="en">A newly created part of a source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje změnu s novým zněním měněného právního zdroje nebo jeho části. Změnou může být buď vytvoření (potom je změna navázána na znění vytvořené části právního zdroje nebo na nové znění některé jeho nadřazené části či na nové znění právního zdroje jako celku) nebo aktualizace (potom je změna navázána na nové znění aktualizované částí právního zdroje nebo na nové znění některé jeho nadřazené části nebo na nové znění právního zdroje jako celku). Změnou nemůže být odstranění, neboť odstranění nevede k novému znění měněné (odstraňované) části právního zdroje</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a change to a new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law itself) or update (in that case the change is linked to a new expression of the changed part of the source of law or to a new expression of one of its superior parts or to a new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/lex#Change" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+		<rdfs:label xml:lang="cs">Výsledné znění měněného právního zdroje nebo jeho části</rdfs:label>
+		<rdfs:label xml:lang="en">The new expression of a changed source of law or its part</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje změnu s novým zněním měněného právního zdroje nebo jeho části. Změnou může být buď vytvoření (potom je změna navázána na znění vytvořené části právního zdroje nebo na nové znění některé jeho nadřazené části či na nové znění právního zdroje jako celku) nebo aktualizace (potom je změna navázána na nové znění aktualizované částí právního zdroje nebo na nové znění některé jeho nadřazené části nebo na nové znění právního zdroje jako celku). Změnou nemůže být odstranění, neboť odstranění nevede k novému znění měněné (odstraňované) části právního zdroje</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a change to the new expression of a changed source of law or its part. A change can be either a creation (in that case the change is linked to the new expression of the created part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law itself) or update (in that case the change is linked to the new expression of the changed part of the source of law or to the new expression of one of its superior parts or to the new expression of the source of law iselft). The change cannot be a removal because a removal does not result into a new expression of the changed (removed) part of the soure of law.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/lex#Change" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+	</owl:FunctionalProperty>
+	<owl:FunctionalProperty rdf:about="http://purl.org/lex#changedOriginal">
+		<rdfs:label xml:lang="cs">Předchozí znění měněného právního zdroje nebo jeho části</rdfs:label>
+		<rdfs:label xml:lang="en">The previous expression of a changed source of law or its part</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje změnu s předchozím zněním měněného právního zdroje nebo jeho části. Změnou může být buď smazání (potom je změna navázána na poslední znění odstraňované části právního zdroje nebo na předchozí znění některé jeho nadřazené části či na předchozí znění právního zdroje jako celku) nebo aktualizace (potom je změna navázána na předchozí znění aktualizované částí právního zdroje nebo na předchozí znění některé jeho nadřazené části nebo na předchozí znění právního zdroje jako celku). Změnou nemůže být vytvoření, neboť vytvořená část právního zdroje nemá žádné předchozí znění.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a change to the previous expression of a changed source of law or its part. A change can be either a removal (in that case the change is linked to the previos expression of the removed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law itself) or update (in that case the change is linked to the previous expression of the changed part of the source of law or to the previous expression of one of its superior parts or to the previous expression of the source of law iselft). The change cannot be a creation because a newly created part of a source of law does not have any previous expression.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/lex#Change" />
+		<rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression" />
+	</owl:FunctionalProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/lex#amends">
+		<rdfs:label xml:lang="cs">Novelizovaný právní předpis</rdfs:label>
+		<rdfs:label xml:lang="en">Amended source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje novelizující právní předpis (novelu či právní předpis obsahující novelizační část) s novelizovaným právním předpisem. Právní předpis s touto vlastností je instancí třídy lex:SourceOfLaw. Hodnotou je právní předpis, který je taktéž instancí této třídy. Jinými slovy tato vlastnost propojuje pouze celé právní předpisy. Neumožňuje detailněji specifikovat jaká část jednoho právního předpisu novelizuje jakou část jiného právního předpisu. To je specifikováno pomocí instancí třídy lex:Change.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links an amending legal enactment (an amendment or a legal enactment containing an amending part) with an amended legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source amends which part of another. This can be specified using instances of class lex:Change.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/lex#SourceOfLaw" />
+		<rdfs:range rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/lex#cancels">
+		<rdfs:label xml:lang="cs">Zrušený právní předpis</rdfs:label>
+		<rdfs:label xml:lang="en">Cancelled source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Instance této vlastnosti propojuje rušící právní předpis s rušeným právním předpisem. Právní předpis s touto vlastností je instancí třídy lex:SourceOfLaw. Hodnotou je právní předpis, který je taktéž instancí této třídy. Jinými slovy tato vlastnost propojuje pouze celé právní předpisy. Neumožňuje detailněji specifikovat jaká část jednoho právního předpisu ruší jakou část jiného právního předpisu. To je specifikováno pomocí instancí třídy lex:Change.</rdfs:comment>
+		<rdfs:comment xml:lang="en">An instance of this property links a cancelling legal enactment (an amendment or a legal enactment containing an amending part) with a cancelled legal enactment. A resource with this property is an instance of class lex:sourceOfLaw. The value is a resource which is also an instance of this class. In other words, this property links only whole legal enactments. It does not enable to explicitly specify which part of one source cancels which part of another. This can be specified using instances of class lex:Change.</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/lex#SourceOfLaw" />
+		<rdfs:range rdf:resource="http://purl.org/lex#SourceOfLaw" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.org/spar/cito/cites">
+		<rdfs:label xml:lang="cs">Reference mezi dvěma prameny práva</rdfs:label>
+		<rdfs:label xml:lang="en">Reference between two sources of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Vlastnost převzatá z CiTO ontologie. Instance této vlastnosti specifikuje, že znění pramene práva nebo jeho část se odkazuje znění jiného nebo stejného pramene práva nebo jeho části. Pokud má tuto vlastnost část znění, potom to znamená, že v obsahu této části se vyskytuje reference. Čím je část přesnější, o tím přesnější specifikaci umístění reference se jedná. Není však umožněno explicitně vyjádřit umístění v textu znění, např. pomocí pozic v textu. K tomu doporučujeme využít non-RDF prostředků, konkrétně vyjádřit přesné umístění v textu pomocí prostředků jazyka RDFa. Hodnotou vlastnosti je potom vždy přesně to znění, které je odkazováno. CiTO ontologie zavádí řadu speciálních podtypů této vlastnosti pro přesnější vyjádření sémantiky reference.</rdfs:comment>
+		<rdfs:comment xml:lang="en">The property is reused from the CiTO ontology. An instance of this property specifies that an expression of a source of law or its part references an expression of another or the same source of law or its part. If an expression has this property then the content of the expression contains the reference. The more exact the part is the more specific location of the reference is expressed. However, it is not possible to specify the exact location in the textual content of the expression, e.g., using the start and end position in the text. For this, we recommend to use non-RDF tools, concretely to express the exact location in the text using RDFa. The value of the property is always the expression which is being referenced. The CiTO ontology introduces a set of special subtypes of this property for more explicit specification of the semantics of the reference.</rdfs:comment>
+	</owl:ObjectProperty>
+	<rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+		<rdfs:label xml:lang="cs">Instituce, která pramen práva vydala</rdfs:label>
+		<rdfs:label xml:lang="en">Institution which issued the source of law</rdfs:label>
+		<rdfs:comment xml:lang="cs">Vlastnost převzatá z Dublin Core ontologie. Instance této vlastnosti specifikuje instituci, která oficiálně pramen práva vydala. U zákonů je to typicky parlament, u vyhlášky to může být ministerstvo či jiná instituce vydávající výhlášky, atd.</rdfs:comment>
+		<rdfs:comment xml:lang="en">The property is reused from the Dublin Core ontology. An instance of this property specifies an institution that issued the source of law. For acts, it is typically a parliament. For regulations, it can be a ministry or another instution approved to issue regulations, etc.</rdfs:comment>
+	</rdf:Description>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/title">
+		<rdfs:label xml:lang="cs">Titulek</rdfs:label>
+		<rdfs:label xml:lang="en">Title</rdfs:label>
+		<rdfs:comment xml:lang="cs">Pojmenování zdroje. V kontextu LEX ontologie je používán pro specifikaci názvu právního předpisu a titulku části právního předpisu.</rdfs:comment>
+		<rdfs:comment xml:lang="en">A name given to the resource. In the context of the LEX ontology it is used to specify the title of a source of law or the title of its part.</rdfs:comment>
+	</owl:DataTypeProperty>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/description">
+		<rdfs:label xml:lang="cs">Popis</rdfs:label>
+		<rdfs:label xml:lang="en">Description</rdfs:label>
+		<rdfs:comment xml:lang="cs">Popis může obsahovat např. abstrakt, obsah, grafickou reprezentaci nebo textový popisek zdroje. V kontextu LEX ontologie je používán pro specifikaci textového obsahu dané části znění právního zdroje.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. In the context of the LEX ontologz it is used to specify a textual content of a part of an expression of a source of law.</rdfs:comment>
+	</owl:DataTypeProperty>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+		<rdfs:label xml:lang="cs">Identifikátor</rdfs:label>
+		<rdfs:label xml:lang="en">Identifier</rdfs:label>
+		<rdfs:comment xml:lang="cs">Doporučenou praxí je identifikovat zdroj pomocí řetězce odpovídajícího danému formálnímu identifikačnímu systému. V případě LEX ontologie to jsou čísla právních předpisů tak jak jsou uvedeny ve sbírce zákonů a spisové značky předpisů, které nejsou publikovány ve sbírce (např. rozhodnutí soudů kromě Ústavního soudu, atd.).</rdfs:comment>
+		<rdfs:comment xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. In case of the LEX ontology this means the numbers of sources of law from the Code of Law and other official nomenclatures of sources of law not published in the Code of Law (e.g. court decisions, etc.).</rdfs:comment>
+	</owl:DataTypeProperty>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/issued">
+		<rdfs:label xml:lang="cs">Datum vydání</rdfs:label>
+		<rdfs:label xml:lang="en">Date Issued</rdfs:label>
+		<rdfs:comment xml:lang="cs">Datum formálního vydání (např. publikace) zdroje. V kontextu LEX ontologie se jedná o datum oficiálního vydání (publikace) právního zdroje ve Sbírce zákonů či jiným oficiálním způsobem. Je používán pouze pro instance třídy lex:SourceOfLaw.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Date of formal issuance (e.g., publication) of the resource. In the context of the LEX ontology it means the date of official publication of the source of law in the Code of Law or in any other official way. It is used only for instances of lex:SourceOfLaw class.</rdfs:comment>
+	</owl:DataTypeProperty>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/valid">
+		<rdfs:label xml:lang="cs">Datum platnosti</rdfs:label>
+		<rdfs:label xml:lang="en">Date Valid</rdfs:label>
+		<rdfs:comment xml:lang="cs">Datum (často rozsah) platnosti zdroje. V kontextu LEX ontologie se jedná of datum, od kterého platí znění daného právního předpisu nebo znění některé jeho části.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Date (often a range) of validity of a resource. In the context of the LEX ontology it is date from which an expression of a source of law or a part of the expression is valid.</rdfs:comment>
+	</owl:DataTypeProperty>
+	<owl:DataTypeProperty rdf:about="http://purl.org/dc/terms/language">
+		<rdfs:label xml:lang="cs">Jazyk</rdfs:label>
+		<rdfs:label xml:lang="en">Language</rdfs:label>
+		<rdfs:comment xml:lang="cs">Jazyk zdroje. V kontextu LEX ontologie se jedná o jazyk znění právního zdroje nebo jeho části.</rdfs:comment>
+		<rdfs:comment xml:lang="en">A language of a resource. In the context of the LEX ontology it is a language of an expression of a source of law or its part.</rdfs:comment>
+	</owl:DataTypeProperty>
 </rdf:RDF>
