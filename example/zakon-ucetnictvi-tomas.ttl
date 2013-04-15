@@ -1,0 +1,225 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix lex: <http://purl.org/lex#>.
+
+
+Multiple inheritance, multi-dim hierarachies
+Ministerstvo financi, dale jen ministerstvo (pokazde kdyz se objevi ministertvo je tim mysleno mf)
+
+ucetni jednotka uctuje o a, b, c -> roztrhnout?
+(uj) povinny dodrzovat smernou uctovou osnovu, usporadani a oznacovani polozek ucetni zaverky, ucetni metody, ... (4/8)
+
+tahat definice pojmu viz 3/1, ucetni obdobi, definovano dale v 3/2, viz take 3/3 premena spolecnosti
+ucetni zaznamem se rozumi 4/10, skutečnosti, které jsou
+   předmětem účetnictví, (dále jen "účetní případy") (6/1)
+Muze byt skryte, viz 7/2, "Zobrazení je věrné, jestliže … "
+Účetnictví  účetní  jednotky  je správné, jestliže … (8/1)
+Drzet si rozsah platnosti terminu? Napr. od 6/1 dal.
+
+problem -> podminena povinnost (7/2), Tam, kde … je ucetni jednotka povinna zvolit neco)
+Tohle nebude fungovat automatizovane hezky
+
+(uj) jsou povinny vest uc v plnem rozsahu (pokud nestanovi zakon jinak)
+
+problem je rada privlastku (7/3), co specifikuji actora, activitu, … to pujde blbe deduplikovat 
+
+(ucetni jednotka [ktera neni org slozka statu, …] || (ucetni jednotka do 30 dnu od vzniku)) (zadafinuje se zvlastni trida ucetnich jednotek, ktera vychazi z 3/5 a 3/6)
+uj [+ ostatní osoby, o kterých tak stanoví tento zákon
+   nebo  jiný  právní  předpis] (6/5)
+
+souslednost aktivit, viz 3/5 mohou uplatnit hosp rok, ale jen pokud predtim oznamili zamer
+
+!hodne podminek, vyjimek, je treba zvolit rozumnou miru abstrakce, jak to udelat jednotne?
+
+########################### actors:
+ucetni jednotka <- pravnicka-osoba-sidlo-cr
+		<- zahranicni osoba podnikajici
+		<- organizacni slozka statu
+		<- fyzicka-osoba-podnikajici (v rejstriku, dle 1/2/d)
+		<- fyzicka-osoba-ostatni (dle 1/2/e)
+		<- fyzicka-osoba-vede-ucetnictvi
+		<- #1/2/g
+		<- #1/2/h
+		<- zahranicni-osoba-podnikajici (v rejstirku, dle 1/2/d)
+
+#odvodi se: 
+pravnicka-osoba <- pravnicka-osoba-sidlo-cr              
+fyzicka-osoba <- fyzi …, fyz …, 
+zahranicni-osoba <- zahranicni-osoba-podnikajici
+
+ucetni jednotka <- vybrana-ucetni-jednotka (1/3)
+		<- nastupnicka-ucetni-jednotka (3/6)
+		<- rozdelovana odstepenim (3/6)
+		<- prejimajici spolecnikem... (3/6)
+
+bytove druzstvo, prispevkova organizace, 
+ostatni ucetni jednotky, o nich to stanovi zvlastni zakon (to je super definice)
+
+ucetni jednotka <- konsolidovana ucetni jednotka 
+
+
+######################### activity - prava:
+
+(ucetni jednotka [ktera neni org slozka statu, …]) muze uplatnit hosporadsky rok (3/5)
+(ucetni jednotka [ktera neni org slozka statu, …] || (ucetni jednotka do 30 dnu od vzniku)) mohou oznamit zamer zmenit hospodarsky rok, jen jednou (3/5)
+(ucetni jednotka [1/2/d-h]) mohou ukoncit vedeni ucetnictvi, ale nejdrive po uplynuti 5ti po sobe jdoucich 
+obdobich (4/7)
+
+(uj) mohou vest ucetni doklady v cizi mene jen pokud splnena podminka srozumitelnost 8/5 (4/13)
+
+(uj) mohou poverit vedenim uc i jinou osobu (5/1)
+
+(uj) mohou zmenit usporadani polozek rozvahy a vykazu zisku a ztrat mezi obdobimi (7/4)
+
+(obcanska sdruzeni, ktera ..; bytova druzstva, ktera … prispevkove org, ktere …; ty z 1/2d - h ktere nemaji povinnost mit ucetni zaverku overenou auditorem ) mohou vest ucetnictvi ve zjednodusenem rozsahu (9/3)
+
+
+
+######################## activity - povinnosti
+(?) zjišťování účetních záznamů (1/3) <- (ministerstvo fin) zjišťování účetních záznamů za CR (1/4)
+
+(ministertsvo fin) spravuje centralni system ucetnich informaci statu (1/4)
+
+(ucetni jednotka) uctuje o stavu a pohybu majetku a jinych aktiv (2)
+(ucetni jednotka) uctuje o stavu a pohybu zavazku a jinych pasiv
+(ucetni jednotka) uctuje o stavu a a pohyby …
+
+(uj) uctuje podvojnymi zapisy do ucetniho obdobi se kterym souvisi nebo do jineho obdobi (3/1)
+(uj) uctuji v souladu s ucentimi metodami (4/8) (3/1)
+
+
+ucetni jednotka [1/2/a - 1/2/c] vedou ucetnictvi ode dne sveho vzniku az do sveho zaniku (4/1)
+fyzicka-osoba-podnikajici vedou ucetnictvi od dne zapisu do or az do vymazu, pokud … (4/2)
+… (4/3), 4/4
+
+(uj) povinny dodrzovat smernou uctovou osnovu, usporadani a oznacovani polozek ucetni zaverky, ucetni metody, ... (4/8)
+
+(uj) jsou povinny vest jedno ucetnictvi za ucetni jednotku jako celek 4/9
+(uj) jsou povinny vest jedno ucetnictvi jako soustavu ucetnich zaznamu
+(uj) jsou povinny vest ucetni zaznamy nejmene v rozsahu stanovenem zakonem 4/11
+(uj) jsou povinny vest ucetnictvi v CZ 4/12
+(uj) pokud jsou to cenne papiry a derivaty v cizi mene, pak je treba vyjadriv v CZ i puvodni mene.
+(uj) jsou povinny vest ucetnictvi v CZ (4/13)
+
+(uj) jsou povinny zachycovat ucetni pripady doklady (6/1)
+(uj) jsou povinny zaznamenávat účetní případy v účetních knihách (6/2)
+(uj) jsou povinny inventarizovat majetek a závazky podle
+   § 29 a 30 (6/3)
+(uj) jsou povinny sestavovat účetní závěrku (6/4)
+(uj [+ ostatní osoby, o kterých tak stanoví tento zákon
+   nebo  jiný  právní  předpis]) jsou povinny predavat ucetni zaznamy do centralniho systemu/prebirat zaznamy, … (6/5) 
+
+(uj) je povinna vest ucetnictvi, aby zaverka podavala verny a poctivy obraz (7/1)
+(uj) je povinna pouzit ucetni metod způsobem, který
+   vychází z předpokladu, že bude nepřetržitě pokračovat ve své činnosti a
+   že  u  ní  nenastává  žádná  skutečnost,  která by ji omezovala nebo ji
+   zabraňovala  v  této  činnosti  pokračovat  i v dohledné budoucnosti. (7/3)
+ 
+
+(uj) nesmi zmenit usporadani polozek rozvahy a vykazu zisku a ztrat v jednom obdobi  (7/4)
+(uj) povinny uvest v priloze info o pouzitych ucetnich metodach. (7/5)
+(uj) jsou povinny účtovat o aktivech a pasivech, jakož i
+   o  finančních  prostředcích státního rozpočtu a finančních prostředcích
+   rozpočtů  územních samosprávných celků, nákladech a výnosech v účetních
+   knihách  a  zobrazovat  je  v  účetní  závěrce  samostatně  bez  jejich
+   vzájemného  zúčtování (7/6)
+
+(uj) jsou  povinny  vést  účetnictví  správné, úplné,
+   průkazné,  srozumitelné,  přehledné  a  způsobem  zaručujícím  trvalost
+   účetních záznamů (8/1)
+
+(uj) jsou povinny vest uc v plnem rozsahu (pokud nestanovi zakon jinak)
+
+
+(uj) sestavuji ucetni zaverku (18/1)
+
+(kuj) sestavuje konsolidovanou ucetni zaveruku (22/2)
+(kuj) sestavuje konsolidovanou vyrocni zpravu (22b/2)
+
+
+
+
+
+
+
+#1/2
+<http://ld.opendata.cz/resource/lex/actor/ucetni-jednotka> a lex:Actor .
+
+<http://ld.opendata.cz/resource/lex/actor/pravnicka-osoba> a lex:Actor .
+# právnické osoby, které mají sídlo na území České republiky,<http://ld.opendata.cz/resource/lex/actor/pravnicka-osoba-sidlo-cr> a lex:Actor .
+
+# b)  zahraniční  osoby,  pokud  na  území České republiky podnikají nebo provozují jinou činnost podle zvláštních právních předpisů,
+<http://ld.opendata.cz/resource/lex/actor/zahranicni-osoba-podnikajici> a lex:Actor .
+
+#organizační složky státu podle zvláštního právního předpisu
+<http://ld.opendata.cz/resource/lex/actor/organizacni-slozka-statu> a lex:Actor .
+
+
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba> a lex:Actor .
+# d)  fyzické  osoby,  které  jsou  jako  podnikatelé zapsány v obchodním rejstříku,
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba-podikajici> a lex:Actor .
+
+# e)  ostatní  fyzické  osoby, které jsou podnikateli, pokud jejich obrat
+   podle zákona o dani z přidané hodnoty,1a) včetně plnění osvobozených od
+   této  daně,  jež  nejsou  součástí obratu, v rámci jejich podnikatelské
+   činnosti  přesáhl  za bezprostředně předcházející kalendářní rok částku
+   25 000 000 Kč, a to od prvního dne kalendářního roku.
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba-ostatni-...> a lex:Actor .
+
+#1/2/f
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba-vede-ucetnictvi> a lex:Actor .
+#1/2/g
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba-ostatni-...> a lex:Actor .
+#1/2/h
+<http://ld.opendata.cz/resource/lex/actor/fyzicka-osoba-ostatni-...> a lex:Actor .
+
+#1/3
+<http://ld.opendata.cz/resource/lex/actor/ucetni-jednotka-vybrana> a lex:Actor .
+# -> organizacni-slozka-statu, statni-fond, uzemni-samospravni-celek, dobrovolne-svazky-obci
+# -> regionalni-rada-regionu-soudrznosti, prispevkova-organizace, zdravotni-pojistovna
+# kde jsou tyhle agenti definovani?
+
+<http://ld.opendata.cz/resource/lex/actor/zahranicni-osoba-podnikajici> a lex:Actor .
+<http://ld.opendata.cz/resource/lex/actor/zahranicni-osoba-podnikajici> a lex:Actor .
+<http://ld.opendata.cz/resource/lex/actor/zahranicni-osoba-podnikajici> a lex:Actor .
+<http://ld.opendata.cz/resource/lex/actor/zahranicni-osoba-podnikajici> a lex:Actor .
+
+
+
+# Povinnost sestavit konsolidovanou účetní závěrku má, za podmínek stanovených tímto zákonem a prováděcími právními předpisy, účetní jednotka, která je obchodní společností a je ovládající osobou20), s výjimkou ovládajících osob, které vykonávají společný vliv podle odstavce 4 (dále jen „konsolidující účetní jednotka“).
+# Povinnost sestavit konsolidovanou účetní závěrku má účetní jednotka.
+
+<http://ld.opendata.cz/resource/lex/actor/konsolidující-účetní-jednotka> a lex:Actor .
+
+<http://ld.opendata.cz/resource/lex/action/sestavit-konsolidovanou-účetní-uzávěrku> a lex:Action .
+
+<http://ld.opendata.cz/resource/lex/has_obligation> a rdf:Property ;
+	rdfs:label "Má povinnost"@cs ; 
+	rdfs:domain lex:ActorOccurrence ;
+	rdfs:range lex:ActionOccurrence 
+	.
+
+<http://ld.opendata.cz/resource/lex/has_expressed_obligation> a rdf:Property ;
+	rdfs:label "Má povinnost"@cs ; 
+	rdfs:domain lex:ActorOccurrenceExpression ;
+	rdfs:range lex:ActionOccurrenceExpression
+	.
+
+<http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> a lex:ActorOccurrence ;
+	lex:represents <http://ld.opendata.cz/resource/lex/actor/konsolidující-účetní-jednotka> ;
+	lex:has_obligation <http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> .
+
+<http://linked.opendata.cz/resource/legislation/cz/act/1991/563> lex:defines <http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> .
+
+<http://ld.opendata.cz/resource/lex/actor-occurrence-expression/1991/563/1/konsolidující-účetní-jednotka> a lex:ActorOccurrenceExpression ;
+	lex:realizationOf <http://ld.opendata.cz/resource/lex/actor-occurrence/1991/563/konsolidující-účetní-jednotka> ;
+	lex:has_expressed_obligation <http://ld.opendata.cz/resource/lex/action-occurrence-expression/1991/563/1/sestavit-konsolidovanou-účetní-uzávěrku> .
+
+<http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> a lex:ActionOccurrence ;
+	lex:represents <http://ld.opendata.cz/resource/lex/action/sestavit-konsolidovanou-účetní-uzávěrku> ;
+	lex:occursIn <http://linked.opendata.cz/resource/legislation/cz/act/1991/563> .
+
+<http://ld.opendata.cz/resource/lex/action-occurrence-expression/1991/563/1/sestavit-konsolidovanou-účetní-uzávěrku> a lex:ActionOccurrenceExpression ;
+	lex:realizationOf <http://ld.opendata.cz/resource/lex/action-occurrence/1991/563/sestavit-konsolidovanou-účetní-uzávěrku> .
+
