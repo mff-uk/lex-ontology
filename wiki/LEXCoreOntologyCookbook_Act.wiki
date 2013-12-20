@@ -80,7 +80,6 @@ Each version is linked to its act by property `frbr:realizationOf`. Moreover, th
 Moreover, we consider the following metadata for each version:
 
   * `dcterms:title` - act title
-  * `dcterms:issued` - date of issue of the amendment which created the version in the code of laws
   * `dcterms:valid` - date of the start of the validity of the new version
 
 Here is an example of the first version of our sample act:
@@ -90,8 +89,30 @@ Here is an example of the first version of our sample act:
   a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> ;
   dcterms:title "Zákon o svobodném přístupu k informacím" ;
-  dcterms:issued "1999-06-08"^^xsd:date ;
   dcterms:valid "2000-01-01"^^xsd:date .
 }}}
 
-The amendment is always represented as a regular act. Moreover, we represent the fact that the amendment created the new version.
+And, here is an example of the second version:
+
+{{{
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression/101-2000>
+  a frbr:Expression ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> ;
+  dcterms:title "Zákon o svobodném přístupu k informacím" ;
+  dcterms:valid "2000-06-01"^^xsd:date .
+}}}
+
+The amendment is always represented as a regular act. Moreover, we represent the fact that the amendment created the new version. For this, we have class `lex:Update` which enables us to express that a version of the act changed to a new version. The amendment is linked to the change by property `lex:definesChange`. The change is linked to the changed version by property `lex:changedOriginal` and to the resulting version by property `lex:changeResult`.
+
+We use a HTTP URI scheme for resources representing updates which combines the HTTP URI of the resulting version with the number of the amendment.
+
+{{{
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/version/cz/101-2000/change/101-2000>
+  a lex:Update ;
+  lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression> ;
+  lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression/101-2000> .
+
+<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz/expression> a frbr:Expression ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz> ;
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/version/cz/101-2000/change/101-2000> .
+}}}
