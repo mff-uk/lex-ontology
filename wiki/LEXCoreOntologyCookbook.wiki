@@ -18,3 +18,8 @@ We use the following prefixes in the cookbook:
 == LEX Core Ontology Diagram ==
 
 http://lex-ontology.googlecode.com/svn/trunk/lex-ontology-core.png
+
+== Types of legal documents covered ==
+
+[LEXCoreOntologyCookbook_Act Act]
+[LEXCoreOntologyCookbook_Decision Decision]
