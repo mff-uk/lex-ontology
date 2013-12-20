@@ -30,5 +30,37 @@ Here is an example of the resource representing the Public Sector Information Ac
     a lex:Act .
 }}}
 
+For the act, we consider the following metadata:
+
+  * `dcterms:title` - act title
+  * `dcterms:identifier` - act number (in Czech republic it is NUMBER/YEAR)
+  * `dcterms:issued` - date of issue of the act in the code of laws
+  * `dcterms:language` - act language
+  * `dcterms:creator` - an entity who created the act, instance of `dcterms:Agent`
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999>
+    dcterms:title "Zákon o svobodném přístupu k informacím" ;
+    dcterms:identifier "106/1999" ;
+    dcterms:issued "1999-06-08"^^xsd:date ;
+    dcterms:language "cs" ;
+    dcterms:creator <http://linked.opendata.cz/resource/cz/authority/parliament> .
+}}}
+
+Note that we use HTTP URI `http://linked.opendata.cz/resource/cz/authority/parliament` to identify the resource representing Czech Parliament who issues acts in Czech Republic as the only entity.
+
+Each act is structured to sections. Each section can be further structured to its subsections and so on. During the lifecycle of the act, new versions of the act can create new sections and can also remove existing sections. For the act, we represent all historical sections. Each section of the act is represented as an entity of class `frbr:Work` and it is linked to its parent (section or act itself) by property `frbr:partOf`.
+
+We use the following HTTP URI pattern for sections of acts in Czech Republic:
+
+{{{<ACT-URI>/section/<PARENT-PATH>/<NUMBER>}}}
+
+where `ACT-URI` is the HTTP URI of the act, `PARENT-PATH` is the a part of the HTTP URI created for the parent section (if any) recursivelly and `NUMBER` is the identifier of the section. For example, our sample act has 23 sections. The first section has identifier `1`. It is represented  in RDF as follows
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/section/1> a frbr:Work ;
+    dcterms:identifier "1" ;
+    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> .
+}}}
 
 It has one or more versions. The content of the act can be found in these versions. Each particular version is represented as an instance of class `frbr:Work`.
