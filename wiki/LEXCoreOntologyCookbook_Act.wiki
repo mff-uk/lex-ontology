@@ -63,4 +63,35 @@ where `ACT-URI` is the HTTP URI of the act, `PARENT-PATH` is the a part of the H
     frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> .
 }}}
 
-It has one or more versions. The content of the act can be found in these versions. Each particular version is represented as an instance of class `frbr:Work`.
+Each act has one or more versions. Only when we speak about a concrete version of the act, we can speak about its textual content. The act itself is only an abstract entity without a textual content as we said above. Each particular version is represented as an instance of class `frbr:Expression`. For example, our sample act has 15 versions. There is always one original version, actual version and last version. The actual version is the one which is now in effect. It can differ from the last version which will be in effect sometimes in the future. A version of an act is always created by some other act which is called amendment.
+
+The HTTP URI scheme we use for the original versions of acts in Czech Republic is
+
+{{{<ACT-URI>/cz/expression}}}
+
+The HTTP URI scheme we use for all following versions is
+
+{{{<ACT-URI>/cz/expression/<NUMBER>-<YEAR>}}}
+
+where `NUMBER` and `YEAR` are the number and issue year of the amendment which created the version.
+
+Each version is linked to its act by property `frbr:realizationOf`. Moreover, the act is linked to its original, actual and last version by properties `lex:originalExpression`, `lex:actualExpression` and `lex:lastExpression`, respectivelly.
+
+Moreover, we consider the following metadata for each version:
+
+  * `dcterms:title` - act title
+  * `dcterms:issued` - date of issue of the amendment which created the version in the code of laws
+  * `dcterms:valid` - date of the start of the validity of the new version
+
+Here is an example of the first version of our sample act:
+
+{{{
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression>
+  a frbr:Expression ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> ;
+  dcterms:title "Zákon o svobodném přístupu k informacím" ;
+  dcterms:issued "1999-06-08"^^xsd:date ;
+  dcterms:valid "2000-01-01"^^xsd:date .
+}}}
+
+The amendment is always represented as a regular act. Moreover, we represent the fact that the amendment created the new version.
