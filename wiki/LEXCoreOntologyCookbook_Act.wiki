@@ -1,6 +1,6 @@
 #summary A cookbook entry for modeling legal acts.
 
-= Cookbook: Legal Act
+= Cookbook: Legal Act =
 
 == Resource type ==
 
@@ -16,12 +16,12 @@
 
 For HTTP URIs of acts issued in Czech Republic, we use the following HTTP URI scheme:
 
-{{{http://linked.opendata.cz/resource/legislation/cz/act/[YEAR]/[NUMBER]-[YEAR]}}}
+{{{http://linked.opendata.cz/resource/legislation/cz/act/<YEAR>/<NUMBER>-<YEAR>}}}
 
 where
 
-  * \[YEAR\] is the year of issue of the act in the code of laws
-  * [NUMBER] is the number assigned to the act in the code of law. It is unique in the [YEAR]
+  * <YEAR> is the year of issue of the act in the code of laws
+  * <NUMBER> is the number assigned to the act in the code of law. It is unique in the <YEAR>
 
 Here is an example of the resource representing the Public Sector Information Act of Czech Republic
 
