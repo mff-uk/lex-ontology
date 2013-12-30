@@ -12,7 +12,7 @@
 
 == Description ==
 
-`lex:Act` is a class for describing an act as an item of legislation. The act is an abstract entity which does not have any content on its own. Each act is represented as an instance of `lex:Act` class. It is a resource with own unique HTTP URI.
+`lex:Act` is a class for describing an act as an item of legislation. The act is an abstract entity which does not have any content on its own. Only particular versions of the act have a content. However, versions are represented as instances of class `frbr:Expression` (which is described later on this page). Each act is represented as an instance of `lex:Act` class. It is a resource with own unique HTTP URI.
 
 For HTTP URIs of acts issued in Czech Republic, we use the following HTTP URI scheme:
 
