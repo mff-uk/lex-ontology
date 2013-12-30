@@ -30,6 +30,8 @@ Here is an example of the resource representing the Public Sector Information Ac
     a lex:Act .
 }}}
 
+=== Act Metadata ===
+
 For the act, we consider the following metadata:
 
   * `dcterms:title` - act title
@@ -51,19 +53,23 @@ The following example shows RDF representation of the metadata of the Public Sec
 
 Note that we use HTTP URI `http://linked.opendata.cz/resource/cz/authority/parliament` to identify the resource representing Czech Parliament who issues acts in Czech Republic as the only entity.
 
-Each act is structured to sections. Each section can be further structured to its subsections and so on. During the lifecycle of the act, new versions of the act can create new sections and can also remove existing sections. For the act, we represent all historical sections. Each section of the act is represented as an entity of class `frbr:Work` and it is linked to its parent (section or act itself) by property `frbr:partOf`.
+=== Sections of Act ===
+
+Each act is structured to sections. Each section can be further structured to its subsections and so on. During the lifecycle of the act, new versions of the act can create new sections and can also remove existing sections. For the act, we represent all sections which existed in the history of the act. Each section is represented as an entity of class `frbr:Work` and it is linked to its parent (section or act itself) by property `frbr:partOf`.
 
 We use the following HTTP URI pattern for sections of acts in Czech Republic:
 
 {{{<ACT-URI>/section/<PARENT-PATH>/<NUMBER>}}}
 
-where `ACT-URI` is the HTTP URI of the act, `PARENT-PATH` is the a part of the HTTP URI created for the parent section (if any) recursivelly and `NUMBER` is the identifier of the section. For example, our sample act has 23 sections. The first section has identifier `1`. It is represented  in RDF as follows
+where `ACT-URI` is the HTTP URI of the act, `PARENT-PATH` is the part of the HTTP URI created for the parent section (if any) recursivelly and `NUMBER` is the identifier of the section. For example, our sample act has 23 sections. The first section has identifier `1`. It is represented  in RDF as follows
 
 {{{
   <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/section/1> a frbr:Work ;
     dcterms:identifier "1" ;
     frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> .
 }}}
+
+=== Versions of Act ===
 
 Each act has one or more versions. Only when we speak about a concrete version of the act, we can speak about its textual content. The act itself is only an abstract entity without a textual content as we said above. Each particular version is represented as an instance of class `frbr:Expression`. For example, our sample act has 15 versions. There is always one original version, actual version and last version. The actual version is the one which is now in effect. It can differ from the last version which will be in effect sometimes in the future. A version of an act is always created by some other act which is called amendment.
 
@@ -103,6 +109,8 @@ And, here is an example of the second version:
   dcterms:title "Zákon o svobodném přístupu k informacím" ;
   dcterms:valid "2000-06-01"^^xsd:date .
 }}}
+
+=== Act Amendments ===
 
 The amendment is always represented as a regular act. Moreover, we represent the fact that the amendment created the new version. For this, we have class `lex:Update` which enables us to express that a version of the act changed to a new version. The amendment is linked to the change by property `lex:definesChange`. The change is linked to the changed version by property `lex:changedOriginal` and to the resulting version by property `lex:changeResult`.
 
