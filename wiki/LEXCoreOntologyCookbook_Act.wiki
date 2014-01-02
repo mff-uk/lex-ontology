@@ -16,12 +16,14 @@
 
 For HTTP URIs of acts issued in Czech Republic, we use the following HTTP URI scheme:
 
-{{{http://linked.opendata.cz/resource/legislation/cz/act/<YEAR>/<NUMBER>-<YEAR>}}}
+{{{<LEX-URI-BASE>/<ACT-URI>}}}
 
 where
-
-  * YEAR is the year of issue of the act in the code of laws,
-  * NUMBER is the number assigned to the act in the code of law. It is unique in the YEAR.
+  
+  * `<LEX-URI-BASE>` is `http://linked.opendata.cz/resource/legislation/`
+  * `<ACT-URI>` is `cz/act/<YEAR>/<NUMBER>-<YEAR>`  
+  * `<YEAR>` is the year of issue of the act in the code of laws,
+  * `<NUMBER>` is the number assigned to the act in the code of law. It is unique in the <YEAR>.
 
 Here is an example of the resource representing the Public Sector Information Act of Czech Republic
 
@@ -75,7 +77,7 @@ Each act has one or more versions. Only when we speak about a concrete version o
 
 The HTTP URI scheme we use for the original versions of acts in Czech Republic is
 
-{{{<ACT-URI>/cz/expression}}}
+{{{<ACT-URI>/expression/<ACT-URI>}}}
 
 The HTTP URI scheme we use for all following versions is
 
