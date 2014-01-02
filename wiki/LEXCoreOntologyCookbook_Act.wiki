@@ -61,7 +61,7 @@ Each act is structured to sections. Each section can be further structured to it
 
 We use the following HTTP URI pattern for sections of acts in Czech Republic:
 
-{{{<ACT-URI>/section/<PARENT-PATH>/<NUMBER>}}}
+{{{<LEX-URI-BASE>/<ACT-URI>/section/<PARENT-PATH>/<NUMBER>}}}
 
 where `ACT-URI` is the HTTP URI of the act, `PARENT-PATH` is the part of the HTTP URI created for the parent section (if any) recursivelly and `NUMBER` is the identifier of the section. For example, our sample act has 23 sections. The first section has identifier `1`. It is represented  in RDF as follows
 
@@ -77,13 +77,13 @@ Each act has one or more versions. Only when we speak about a concrete version o
 
 The HTTP URI scheme we use for the original versions of acts in Czech Republic is
 
-{{{<ACT-URI>/expression/<ACT-URI>}}}
+{{{<LEX-URI-BASE>/<ACT-URI>/expression/<ACT-URI>/cs}}}
 
 The HTTP URI scheme we use for all following versions is
 
-{{{<ACT-URI>/cz/expression/<NUMBER>-<YEAR>}}}
+{{{<LEX-URI-BASE>/<ACT-URI>/expression/<AMENDMENT-URI>/cs}}}
 
-where `NUMBER` and `YEAR` are the number and issue year of the amendment which created the version.
+where `<AMENDMENT-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the URI of the amendment which created the version. For all versions (the first and all following ones), we also append `/cs` which denotes the language of the expression. This is necessary because in certain cases (e.g., EU legislation), there exist several language versions.
 
 Each version is linked to its act by property `frbr:realizationOf`. Moreover, the act is linked to its original, actual and last version by properties `lex:originalExpression`, `lex:actualExpression` and `lex:lastExpression`, respectivelly.
 
@@ -95,7 +95,7 @@ Moreover, we consider the following metadata for each version:
 Here is an example of the first version of our sample act:
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression>
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/1999/106-1999/cs>
   a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> ;
   dcterms:title "Zákon o svobodném přístupu k informacím" ;
@@ -105,7 +105,7 @@ Here is an example of the first version of our sample act:
 And, here is an example of the second version:
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression/101-2000>
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs>
   a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999> ;
   dcterms:title "Zákon o svobodném přístupu k informacím" ;
@@ -114,17 +114,26 @@ And, here is an example of the second version:
 
 === Act Amendments ===
 
-The amendment is always represented as a regular act. Moreover, we represent the fact that the amendment created the new version. For this, we have class `lex:Update` which enables us to express that a version of the act changed to a new version. The amendment is linked to the change by property `lex:definesChange`. The change is linked to the changed version by property `lex:changedOriginal` and to the resulting version by property `lex:changeResult`.
+An amendment is an act and, therefore, its HTTP URI is constructed according to the same pattern. Moreover, we represent the fact that the amendment created a new version of the act. For this, we have class `lex:Update` which enables us to express the fact that the current version of the act was changed to the new version. The amendment is linked to the change by property `lex:definesChange`. The change is linked to the changed version by property `lex:changedOriginal` and to the new version by property `lex:changeResult`.
 
-We use a HTTP URI scheme for resources representing updates which combines the HTTP URI of the resulting version with the number of the amendment.
+We use the following HTTP URI scheme for resources representing updates:
+
+{{{<LEX-URI-BASE>/change/<CHANGED-ACT-EXPRESSION-URI>/<AMENDMENT-EXPRESSION-URI>/cs}}}
+
+where
+
+  * `<CHANGED-ACT-EXPRESSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the changed version
+  * `<AMENDMENT-EXPRESSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the version of the amendment which defined the change. Usually, it is the first version of the amendment. However, when an amendment has been amended, we may also need some other version of the amendment.
+
+The following example demonstrates a change which creates a new version of our Public Sector Information act.
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/version/cz/101-2000/change/101-2000>
+<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/1999/106-1999/expression/cz/act/2000/101-2000/cs>
   a lex:Update ;
-  lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression> ;
-  lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/cz/expression/101-2000> .
+  lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/1999/106-1999/cs> ;
+  lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
 
 <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz/expression> a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz> ;
-  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/version/cz/101-2000/change/101-2000> .
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
 }}}
