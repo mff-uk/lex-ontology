@@ -118,22 +118,22 @@ An amendment is an act and, therefore, its HTTP URI is constructed according to 
 
 We use the following HTTP URI scheme for resources representing updates:
 
-{{{<LEX-URI-BASE>/change/<CHANGED-ACT-EXPRESSION-URI>/<AMENDMENT-EXPRESSION-URI>/cs}}}
+{{{<LEX-URI-BASE>/<CHANGED-ACT-EXPRESSION-URI>/change/<AMENDMENT-URI>/cs}}}
 
 where
 
   * `<CHANGED-ACT-EXPRESSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the changed version
-  * `<AMENDMENT-EXPRESSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the version of the amendment which defined the change. Usually, it is the first version of the amendment. However, when an amendment has been amended, we may also need some other version of the amendment.
+  * `<AMENDMENT-URI>` is the suffix (after `<LEX-URI-BASE>/cz/act/<YEAR>`) of the amendment which defined the change
 
 The following example demonstrates a change which creates a new version of our Public Sector Information act.
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/act/2000/101-2000/expression/cz/act/2000/101-2000/cs>
+<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/change/101-2000>
   a lex:Update ;
   lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/1999/106-1999/cs> ;
   lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
 
 <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000> ;
-  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> .
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/change/101-2000> .
 }}}
