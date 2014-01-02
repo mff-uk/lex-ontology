@@ -137,3 +137,5 @@ The following example demonstrates a change which creates a new version of our P
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000> ;
   lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/change/101-2000> .
 }}}
+
+We use the rules above to represent the fact that the amendement changes the current version of the act. However, the amendement itself defines several changes of particular parts of the current version. We also represent these particular changes in a similar way. The HTTP URI scheme for these more detailed changes is similar to the previous one. Only instead of the URI of the changed expression 
