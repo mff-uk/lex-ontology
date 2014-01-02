@@ -118,24 +118,40 @@ An amendment is an act and, therefore, its HTTP URI is constructed according to 
 
 We use the following HTTP URI scheme for resources representing updates:
 
-{{{<LEX-URI-BASE>/<CHANGED-ACT-EXPRESSION-URI>/change/<AMENDMENT-URI>/cs}}}
+{{{<LEX-URI-BASE>/<NEW-VERSION-URI>/change/<AMENDMENT-EXPRESSION-URI>}}}
 
 where
 
-  * `<CHANGED-ACT-EXPRESSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the changed version
-  * `<AMENDMENT-URI>` is the suffix (after `<LEX-URI-BASE>/cz/act/<YEAR>`) of the amendment which defined the change
+  * `<NEW-VERSION-URI>` is the suffix (after `<LEX-URI-BASE>/`) of the new version
+  * `<AMENDMENT-URI>` is the suffix (after `<LEX-URI-BASE>`) of the version of the amendment which defined the change. Usually, it is the first version since amendments usually do not have amendments.
 
-The following example demonstrates a change which creates a new version of our Public Sector Information act.
+The following example demonstrates a change which creates a new version of our Public Sector Information act. The change is defined by amendment no. 101/2000.
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/change/101-2000>
-  a lex:Update ;
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs/change/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs>
+  a lex:Change ;
   lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/1999/106-1999/cs> ;
   lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
 
-<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> a frbr:Expression ;
+<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs>
+  a frbr:Expression ;
   frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000> ;
-  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/change/101-2000> .
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs/change/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> .
 }}}
 
-We use the rules above to represent the fact that the amendement changes the current version of the act. However, the amendement itself defines several changes of particular parts of the current version. We also represent these particular changes in a similar way. The HTTP URI scheme for these more detailed changes is similar to the previous one. Only instead of the URI of the changed expression 
+We use the rules above to represent the fact that the amendment changes the current version of the act. However, the amendment itself defines several changes of particular parts of the current version. We represent these particular changes in a similar way. The HTTP URI scheme for these more detailed changes is similar to the previous one. Only instead of the URI of the changed expression (`<CHANGED-ACT-EXPRESSION-URI>`) we use the URI of the changed section of the expression. Instead of the URI of the amendment, we use the URI of its particular section.
+
+The following example shows a change which creates a new section in the Public Sector Information Act.
+
+{{{
+<http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs/section/2/3/change/cz/act/2000/101-2000/cz/expression/2000/101-2000/cs/section/50/1>
+  a lex:Change ;
+  lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs/section/2/3> .
+
+<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz/expression/2000/101-2000/cs/section/50/1>
+  a frbr:Expression ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/section/50/1> ;
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs/section/2/3/change/cz/act/2000/101-2000/cz/expression/2000/101-2000/cs/section/50/1> .
+}}}
+
+Note that in the example above, only `lex:changeResult` property is present for the change. The property `lex:changedOriginal` is missing. This is because the change creates a new section which was not present in the amended version.
