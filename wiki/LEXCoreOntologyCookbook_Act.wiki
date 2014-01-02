@@ -128,12 +128,12 @@ where
 The following example demonstrates a change which creates a new version of our Public Sector Information act.
 
 {{{
-<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/1999/106-1999/expression/cz/act/2000/101-2000/cs>
+<http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/act/2000/101-2000/expression/cz/act/2000/101-2000/cs>
   a lex:Update ;
   lex:changedOriginal <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/1999/106-1999/cs> ;
   lex:changeResult <http://linked.opendata.cz/resource/legislation/cz/act/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
 
-<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz/expression> a frbr:Expression ;
-  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/cz> ;
-  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/1999/106-1999/expression/cz/act/2000/101-2000/cs> .
+<http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> a frbr:Expression ;
+  frbr:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/2000/101-2000> ;
+  lex:definesChange <http://linked.opendata.cz/resource/legislation/cz/change/act/1999/106-1999/expression/cz/act/1999/106-1999/cs/act/2000/101-2000/expression/cz/act/2000/101-2000/cs> .
 }}}
