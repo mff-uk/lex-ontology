@@ -1,13 +1,97 @@
-#summary One-sentence summary of this page.
+#summary A cookbook entry for modeling concepts extracted from legal documents.
 
-= Introduction =
+= Cookbook: Legal Concept =
 
-Add your content here.
+== Resource types ==
 
+  * `lexc:Concept`
+  * `lexc:ConceptVersion`
+  * `lexc:MetaConcept`
 
-= Details =
+== Description ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+First of all, we need to represent concepts extracted from legal documents (e.g., acts, regulations). A legal document, e.g., act, defines a set of concepts. We represent each such concept as an instance of class `lexc:Concept`. A concept defined by an act exists independently of particular versions of the act. It is defined by the act. Sometimes, we need to speak about a particular version of the concept defined by a particular version of the act. Therefore, for each version of the act which speaks about the concept, we also create an instance of class `lexc:ConceptVersion`. This instance represents a particular version of the concept defined by the respective version of the act.
+
+=== Legal Concepts HTTP URI pattern and metadata ===
+
+The HTTP URI pattern for a concept defined by an act has the following form:
+
+{{{<ACT-URI>/concept/<CONCEPT-LABEL>}}}
+
+where
+  
+  * `<ACT-URI>` is the HTTP URI of the act which defines the concept,
+  * `<CONCEPT-LABEL>` are hyphen-delimited words from the label of the concept.
+
+For example, Accounting Act in the Czech Republic defines the concept of _Accounting Entity_. Therefore, we represent _Accounting Entity_ as an instance of `lexc:Concept` with the following HTTP URI:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    a lexc:Concept .
+}}}
+
+Each concept has the following metadata:
+
+  * `skos:prefLabel` - prefered label of the concept
+  * `dcterms:issued` - the date when the concept has been firstly defined. Usually, it is the date of issue of the respective act
+  * `frbr:partOf` - the act which defines the concept
+
+Our sample concept has the following metadata values:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    a lexc:Concept ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1991-12-31"^^xsd:date ;
+    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991> .
+}}}
+
+=== Versions of Legal Concepts ===
+
+As we have already noted, a concept defined by an act has versions. These versions are defined by particular versions of the act. The HTTP URI pattern for a version of a concept has the following form:
+
+{{{<ACT-VERSION-URI>/concept-version/<CONCEPT-LABEL>}}}
+
+where
+  
+  * `<ACT-VERSION-URI>` is the HTTP URI of the respective version of the act,
+  * `<CONCEPT-LABEL>` are hyphen-delimited words from the label of the concept.
+
+For example, the first and second versions of the _Accounting Entity_ concept are both instances of `lexc:ConceptVersion` with the following HTTP URIs:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion .
+}}}
+
+Each concept version has the following metadata:
+
+  * `skos:prefLabel` - prefered label of the concept version (should be the same as the prefered label of the respective concept)
+  * `dcterms:issued` - the date when the concept version has been firstly defined. The first version is issued at the same date as the respective concept. The other versions are issued at the date of issue of the respective amendement.
+  * `dcterms:valid` - the date when the concept version has become valid. It is the date of validity of the respective version of the act which defined the concept version.
+  * `frbr:partOf` - the act version which defines the concept version
+  * `lexc:hasConcept` - the respective concept
+
+Our two sample versions of the _Accounting Entity_ have following metadata:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1991-12-31"^^xsd:date ;
+    dcterms:valid "1992-01-01"^^xsd:date ;
+    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs> ;
+    lexc:hasConcept <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1994-06-08"^^xsd:date ;
+    dcterms:valid "1994-07-01"^^xsd:date ;
+    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs> ;
+    lexc:hasConcept <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
+
+}}}
