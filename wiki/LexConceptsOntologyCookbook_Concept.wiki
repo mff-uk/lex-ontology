@@ -12,6 +12,8 @@
 
 First of all, we need to represent concepts extracted from legal documents (e.g., acts, regulations). A legal document, e.g., act, defines a set of concepts. We represent each such concept as an instance of class `lexc:Concept`. A concept defined by an act exists independently of particular versions of the act. It is defined by the act. Sometimes, we need to speak about a particular version of the concept defined by a particular version of the act. Therefore, for each version of the act which speaks about the concept, we also create an instance of class `lexc:ConceptVersion`. This instance represents a particular version of the concept defined by the respective version of the act.
 
+Both `lexc:Concept` and `lexc:ConceptVersion` are subclasses of `skos:Concept`. Therefore, both concepts and concept versions are special cases of SKOS concepts.
+
 === Legal Concepts HTTP URI pattern and metadata ===
 
 The HTTP URI pattern for a concept defined by an act has the following form:
@@ -93,5 +95,8 @@ Our two sample versions of the _Accounting Entity_ have following metadata:
     dcterms:valid "1994-07-01"^^xsd:date ;
     frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs> ;
     lexc:hasConcept <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
-
 }}}
+
+=== Types of Legal Concepts ===
+
+Legal concepts extracted from legal documents in a given domain can be grouped according to more general kinds. For example, in the accounting domain, it is meaningful to distinguish concepts which are accounting documents from concepts which are accounting methods or concepts which denote accounting periods. It is not possible to define those kinds a priory. They have meaning only in a certain domain and can evolve in time. Therefore, we do not predefine them in the ontology. Instead, we represent them as generic SKOS concepts. Anyone can define own SKOS concept scheme with own kinds of concepts. We introduce a property `lexs:hasKind` which enables to associate a given legal concept with a generic SKOS concept which denotes a generic kind of the legal concept.
