@@ -15,6 +15,7 @@ We use the following prefixes in the cookbook:
 {{{
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix lexc: <http://purl.org/lex/concepts-ontology/> .
 }}}
 
-== LEX Core Ontology Diagram ==
+== LEX Concepts Ontology Diagram ==
