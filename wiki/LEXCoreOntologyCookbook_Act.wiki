@@ -118,7 +118,7 @@ An amendment is an act and, therefore, its HTTP URI is constructed according to 
 
 We use the following HTTP URI scheme for resources representing updates:
 
-{{{<LEX-URI-BASE>/<NEW-VERSION-URI>/change/<AMENDMENT-EXPRESSION-URI>}}}
+{{{<LEX-URI-BASE>/<NEW-VERSION-URI>/change/<AMENDMENT-URI>}}}
 
 where
 
