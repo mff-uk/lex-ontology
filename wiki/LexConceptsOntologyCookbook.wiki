@@ -1,0 +1,20 @@
+#summary Modeling legal concepts and relationships with the LEX Concepts ontology.
+
+= The LEX Concepts Ontology Cookbook =
+
+The cookbook shows how to model legal concepts and relationships with the LEX Concepts Ontology and related RDF vocabularies and ontologies.
+
+LEX Concepts Ontology is intended for modeling legal concepts and relationships between them defined in legal documents (currently, we consider acts and regulations but any type of legal documents can be considered in the same way).
+
+Definitions of legal concepts and relationshps are encoded in textual content of legal documents. Therefore, we first need to extract them from the text before representing them as Linked Data. Instead of manual extraction we use NLP methods (NLP = Natural Language Processing). We process each sentence in a legal document, parse it to a tree which represents the grammatical structure of the sentence and on the base of manually created rules we extract concepts and relationships.
+
+== Prefixes ==
+
+We use the following prefixes in the cookbook:
+
+{{{
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+}}}
+
+== LEX Core Ontology Diagram ==
