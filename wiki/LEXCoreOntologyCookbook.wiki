@@ -13,7 +13,7 @@ We use the following prefixes in the cookbook:
 {{{
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
-@prefix lex: <purl.org/lex/ontology> .
+@prefix lex: <http://purl.org/lex/ontology> .
 }}}
 
 Prefix `lex:` is for this ontology, i.e. LEX Core Ontology.
