@@ -10,7 +10,7 @@
 
 == Description ==
 
-First of all, we need to represent concepts extracted from legal documents (e.g., acts, regulations). A legal document, e.g., act, defines a set of concepts. We represent each such concept as an instance of class `lexc:Concept`. A concept defined by an act exists independently of particular versions of the act. It is defined by the act. Sometimes, we need to speak about a particular version of the concept defined by a particular version of the act. Therefore, for each version of the act which speaks about the concept, we also create an instance of class `lexc:ConceptVersion`. This instance represents a particular version of the concept defined by the respective version of the act.
+Each legal document, e.g., an act or regulation, defines a set of concepts. We represent each such concept as an instance of class `lexc:Concept`. A concept defined by an act exists independently of particular versions of the act. However, because the act exists in one or more versions, there are also respective versions of concepts defined by the act. There is a version in which the act defines a concept for the first time. The concept then exists in the following versions of the act until it is cancelled. For each such following version of the act, there is a respective version of the concept. Therefore, for each version of the act which speaks about the concept, we also create an instance of class `lexc:ConceptVersion`. This instance represents a particular version of the concept defined by the respective version of the act.
 
 Both `lexc:Concept` and `lexc:ConceptVersion` are subclasses of `skos:Concept`. Therefore, both concepts and concept versions are special cases of SKOS concepts.
 
