@@ -2,12 +2,10 @@
 
 = Cookbook: Legal Concept =
 
-== Resource types and properties ==
+== Resource types ==
 
   * `lexc:Concept`
   * `lexc:ConceptVersion`
-  * `lexc:LiteralProperty`
-  * `lexc:ConceptProperty`
 
 == Description ==
 
