@@ -135,7 +135,7 @@ Relations between two legal concepts are modeled with subproperties of our gener
 
 Similarly to literal properties, we will probably extend these 4 properties with additional ones. Other authors can provide their own, often domain specific, properties as well. 
 
-As an example, consider a concept of _Fiscal Period_ and another concept of _Business Year_ in terms of the Accounting Act of Czech Republic. The act defines the concept of _Business Year_ using the concept of _Fiscal Period_. In other words, the concept of _Fiscal Period_ is contained in the definition of the concept of_Business Year_. This is expressed with the LEX ontology as follows:
+As an example, consider a concept of _Fiscal Period_ and another concept of _Business Year_ in terms of the Accounting Act of Czech Republic. The act defines the concept of _Business Year_ using the concept of _Fiscal Period_. In other words, the concept of _Fiscal Period_ is contained in the definition of the concept of _Business Year_. This is expressed with the LEX ontology as follows:
 
 {{{
   <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period>
