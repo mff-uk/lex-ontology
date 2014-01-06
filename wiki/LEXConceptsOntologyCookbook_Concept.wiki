@@ -1,0 +1,162 @@
+#summary A cookbook entry for modeling concepts extracted from legal documents.
+
+= Cookbook: Legal Concept =
+
+== Resource types ==
+
+  * `lexc:Concept`
+  * `lexc:ConceptVersion`
+
+== Description ==
+
+Each legal document, e.g., an act or regulation, defines a set of concepts. We represent each such concept as an instance of class `lexc:Concept`. A concept defined by an act exists independently of particular versions of the act. However, because the act exists in one or more versions, there are also respective versions of concepts defined by the act. There is a version in which the act defines a concept for the first time. The concept then exists in the following versions of the act until it is cancelled. For each such following version of the act, there is a respective version of the concept. Therefore, for each version of the act which speaks about the concept, we also create an instance of class `lexc:ConceptVersion`. This instance represents a particular version of the concept defined by the respective version of the act.
+
+Both `lexc:Concept` and `lexc:ConceptVersion` are subclasses of `skos:Concept`. Therefore, both concepts and concept versions are special cases of SKOS concepts.
+
+=== Legal Concepts HTTP URI pattern and metadata ===
+
+The HTTP URI pattern for a concept defined by an act has the following form:
+
+{{{<ACT-URI>/concept/<CONCEPT-LABEL>}}}
+
+where
+  
+  * `<ACT-URI>` is the HTTP URI of the act which defines the concept,
+  * `<CONCEPT-LABEL>` are hyphen-delimited words from the label of the concept.
+
+For example, Accounting Act in the Czech Republic defines the concept of _Accounting Entity_. Therefore, we represent _Accounting Entity_ as an instance of `lexc:Concept` with the following HTTP URI:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    a lexc:Concept .
+}}}
+
+Each concept has the following metadata:
+
+  * `skos:prefLabel` - prefered label of the concept
+  * `dcterms:issued` - the date when the concept has been firstly defined. Usually, it is the date of issue of the respective act
+  * `lexc:partOf` - the act which defines the concept
+
+Our sample concept has the following metadata values:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    a lexc:Concept ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1991-12-31"^^xsd:date ;
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991> .
+}}}
+
+=== Versions of Legal Concepts ===
+
+As we have already noted, a concept defined by an act has versions. These versions are defined by particular versions of the act. The HTTP URI pattern for a version of a concept has the following form:
+
+{{{<ACT-VERSION-URI>/concept-version/<CONCEPT-LABEL>}}}
+
+where
+  
+  * `<ACT-VERSION-URI>` is the HTTP URI of the respective version of the act,
+  * `<CONCEPT-LABEL>` are hyphen-delimited words from the label of the concept.
+
+For example, the first and second versions of the _Accounting Entity_ concept are both instances of `lexc:ConceptVersion` with the following HTTP URIs:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion .
+}}}
+
+Each concept version has the following metadata:
+
+  * `skos:prefLabel` - prefered label of the concept version (should be the same as the prefered label of the respective concept)
+  * `dcterms:issued` - the date when the concept version has been firstly defined. The first version is issued at the same date as the respective concept. The other versions are issued at the date of issue of the respective amendement.
+  * `dcterms:valid` - the date when the concept version has become valid. It is the date of validity of the respective version of the act which defined the concept version.
+  * `lexc:partOf` - the act version which defines the concept version
+  * `lexc:realizationOf` - the respective concept
+
+Our two sample versions of the concept of _Accounting Entity_ have following metadata:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1991-12-31"^^xsd:date ;
+    dcterms:valid "1992-01-01"^^xsd:date ;
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs> ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs/concept-version/accounting-entity>
+    a lexc:ConceptVersion ;
+    skos:prefLabel "Účetní jednotka"@cs ;
+    dcterms:issued "1994-06-08"^^xsd:date ;
+    dcterms:valid "1994-07-01"^^xsd:date ;
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs> ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
+}}}
+
+=== Kinds of Legal Concepts ===
+
+Legal concepts extracted from legal documents in a given domain can be grouped according to more general kinds. For example, in the accounting domain, it is meaningful to distinguish concepts which are accounting documents from concepts which are accounting methods or concepts which denote accounting periods. It is not possible to define those kinds a priory. They have meaning only in a certain domain and can evolve in time. Therefore, we do not predefine them in the ontology. Instead, we represent them as generic SKOS concepts. Anyone can define own SKOS concept scheme with own kinds of concepts. We introduce a property `lexs:hasKind` which enables to associate a given legal concept with a generic SKOS concept which denotes a generic kind of the legal concept.
+
+=== Legal Concepts from Different Legal Documents ===
+
+A legal concept, as described above, is dependent on the defining legal document. However, a concept is often specified by more different legal documents. On the other hand, when recognizing the concepts automatically (which is our case), it is hard to algorithmically decide whether two recognized concepts from two different documents are the same concept in the real-world. We can employ various metrics which heuristically measure similarities among both concepts. However, they are only heuristics and, finally, an expert has to make a decision. Therefore, we consider concepts valid only in the scope of a legal document which defines the concept. If there are two concepts from two different legal documents and an expert states that they represent the same real-world concept we link both concepts with `owl:sameAs` property.
+
+=== Properties of Legal Concepts ===
+
+Besides concepts, we can also identify various properties. There can be literal properties of a concepts (e.g., its literal definition) or a relation between two identified concepts (e.g., that a concept is contained in the definition of another concept). For literal properties we introduce property `lexc:LiteralProperty`. Its domain is `lexc:Concept`. Its range is `rdfs:Literal`. Particular literal properties are derived (by sub-properting) from this property. For example, the definition of the concept of _Accounting Entity_ is represented with a property `lexc:hasDefinition` (which is sub-property of `lexc:LiteralProperty`) as shown on the following example.
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    lexc:hasDefinition """a) právnické osoby, které mají sídlo na území České republiky,
+b) zahraniční právnické osoby a zahraniční jednotky, které jsou podle právního řádu, podle kterého jsou založeny nebo zřízeny, účetní jednotkou nebo jsou povinny vést účetnictví, pokud na území České republiky podnikají nebo provozují jinou činnost podle zvláštních právních předpisů,
+c) organizační složky státu,
+d) fyzické osoby, které jsou jako podnikatelé zapsány v obchodním rejstříku,
+e) ostatní fyzické osoby, které jsou podnikateli, pokud jejich obrat podle zákona o dani z přidané hodnoty,1a) včetně plnění osvobozených od této daně, jež nejsou součástí obratu, v rámci jejich podnikatelské činnosti přesáhl za bezprostředně předcházející kalendářní rok částku 25 000 000 Kč, a to od prvního dne kalendářního roku.
+f) ostatní fyzické osoby, které vedou účetnictví na základě svého rozhodnutí,
+g) ostatní fyzické osoby, které jsou podnikateli a jsou společníky sdruženými ve společnosti, pokud alespoň jeden ze společníků sdružených v této společnosti je osobou uvedenou v písmenech a) až f) nebo h) až l),
+h) ostatní fyzické osoby, kterým povinnost vedení účetnictví ukládá zvláštní právní předpis,
+i) svěřenské fondy podle občanského zákoníku,
+j) fondy obhospodařované penzijní společností podle zákona upravujícího důchodové spoření a podle zákona upravujícího doplňkové penzijní spoření,
+k) investiční fondy bez právní osobnosti podle zákona upravujícího investiční společnosti a investiční fondy, nebo
+l) ty, kterým povinnost sestavení účetní závěrky stanoví zvláštní právní předpis nebo které jsou účetní jednotkou podle zvláštního právního předpisu."""^^xsd:string .
+}}}
+
+There can be differnt literal properties of legal concepts. So far, we consider only the above mentioned literal property in our project. It is possible that we will introduce other literal properties in the future. It is also possible that other authors will introduce new literal properties in their extensions of the LEX ontology. It is possible, that specifications of the LEX ontology for particular legal domains (e.g., accounting, medicine, etc.) will require their own specific literal properties.
+
+Relations between two legal concepts are modeled with subproperties of our generic property `lexc:ConceptProperty`. Both its domain and range are `lexc:Concept`. In the current version of the LEX ontology, we consider the following 4 sub-properties of `lexc:ConceptProperty` (both A and B are hypothetical instances of `lexc:Concept`):
+
+  * A `lexc:inDefinitionOf` B  - A is contained in a definition of B
+  * A `lexc:hasRight` B  - A is a legal entity which has a right B
+  * A `lexc:hasObligation` B  - A is a legal entity which has an obligation B
+  * A `lexc:contains` B  - A consists of other concepts and B is one of these concepts
+
+Similarly to literal properties, we will probably extend these 4 properties with additional ones. Other authors can provide their own, often domain specific, properties as well. 
+
+As an example, consider a concept of _Fiscal Period_ and another concept of _Business Year_ in terms of the Accounting Act of Czech Republic. The act defines the concept of _Business Year_ using the concept of _Fiscal Period_. In other words, the concept of _Fiscal Period_ is contained in the definition of the concept of _Business Year_. This is expressed with the LEX ontology as follows:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period>
+    a lexc:Concept ;
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year>
+    a lexc:Concept .
+}}}
+
+=== Version of Properties of Legal Concepts ===
+
+The above described constructs for representing literal properties of legal concepts and relations between legal concepts represent the properties and relations independently of particular versions of legal documents. This is given by the fact that properties and relationships are specified for instances of `lexc:Concept`. However, the LEX ontology also allows for expressing those properties and relationships for instances of `lexc:ConceptVersion`. In other words, a triple `A lexc:ConceptProperty B`, where `A` and `B` are instances of `lexc:Concept` and instead of `lexc:ConceptProperty` a particular sub-property of `lexc:ConceptProperty` is present, specifies that `A` and `B` are in the given relation independently of a particular version of the respective legal document which defines the relation. On the other hand, a triple `An lexc:ConceptProperty Bn`, where `An` and `Bn` are instances of `lexc:ConceptVersion` specifies that `An` and `Bn` are in the given relation in the context of a given version of the legal document. This is only meaningful when both `An` and `Bn` belong the same version of the same legal document. In other words, there exist triples `An lexc:partOf Dn` and `Bn lexc:partOf Dn` where `Dn` is a resource representing a particular version of some legal document. For example, we can express that the version of _Fiscal Period_ concept given by a particular version of the Accounting Act is contained in the definition of the same version of _Business Year_ by the following triples:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/fiscal-period>
+    a lexc:ConceptVersion ;
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year> ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period> .
+  
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year>
+    a lexc:ConceptVersion ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+}}}
