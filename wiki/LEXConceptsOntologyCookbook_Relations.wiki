@@ -1,0 +1,56 @@
+=== Properties of Legal Concepts ===
+
+Besides concepts, we can also identify various properties. There can be literal properties of a concepts (e.g., its literal definition) or a relation between two identified concepts (e.g., that a concept is contained in the definition of another concept). For literal properties we introduce property `lexc:LiteralProperty`. Its domain is `lexc:Concept`. Its range is `rdfs:Literal`. Particular literal properties are derived (by sub-properting) from this property. For example, the definition of the concept of _Accounting Entity_ is represented with a property `lexc:hasDefinition` (which is sub-property of `lexc:LiteralProperty`) as shown on the following example.
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity>
+    lexc:hasDefinition """a) právnické osoby, které mají sídlo na území České republiky,
+b) zahraniční právnické osoby a zahraniční jednotky, které jsou podle právního řádu, podle kterého jsou založeny nebo zřízeny, účetní jednotkou nebo jsou povinny vést účetnictví, pokud na území České republiky podnikají nebo provozují jinou činnost podle zvláštních právních předpisů,
+c) organizační složky státu,
+d) fyzické osoby, které jsou jako podnikatelé zapsány v obchodním rejstříku,
+e) ostatní fyzické osoby, které jsou podnikateli, pokud jejich obrat podle zákona o dani z přidané hodnoty,1a) včetně plnění osvobozených od této daně, jež nejsou součástí obratu, v rámci jejich podnikatelské činnosti přesáhl za bezprostředně předcházející kalendářní rok částku 25 000 000 Kč, a to od prvního dne kalendářního roku.
+f) ostatní fyzické osoby, které vedou účetnictví na základě svého rozhodnutí,
+g) ostatní fyzické osoby, které jsou podnikateli a jsou společníky sdruženými ve společnosti, pokud alespoň jeden ze společníků sdružených v této společnosti je osobou uvedenou v písmenech a) až f) nebo h) až l),
+h) ostatní fyzické osoby, kterým povinnost vedení účetnictví ukládá zvláštní právní předpis,
+i) svěřenské fondy podle občanského zákoníku,
+j) fondy obhospodařované penzijní společností podle zákona upravujícího důchodové spoření a podle zákona upravujícího doplňkové penzijní spoření,
+k) investiční fondy bez právní osobnosti podle zákona upravujícího investiční společnosti a investiční fondy, nebo
+l) ty, kterým povinnost sestavení účetní závěrky stanoví zvláštní právní předpis nebo které jsou účetní jednotkou podle zvláštního právního předpisu."""^^xsd:string .
+}}}
+
+There can be differnt literal properties of legal concepts. So far, we consider only the above mentioned literal property in our project. It is possible that we will introduce other literal properties in the future. It is also possible that other authors will introduce new literal properties in their extensions of the LEX ontology. It is possible, that specifications of the LEX ontology for particular legal domains (e.g., accounting, medicine, etc.) will require their own specific literal properties.
+
+Relations between two legal concepts are modeled with subproperties of our generic property `lexc:ConceptProperty`. Both its domain and range are `lexc:Concept`. In the current version of the LEX ontology, we consider the following 4 sub-properties of `lexc:ConceptProperty` (both A and B are hypothetical instances of `lexc:Concept`):
+
+  * A `lexc:inDefinitionOf` B  - A is contained in a definition of B
+  * A `lexc:hasRight` B  - A is a legal entity which has a right B
+  * A `lexc:hasObligation` B  - A is a legal entity which has an obligation B
+  * A `lexc:contains` B  - A consists of other concepts and B is one of these concepts
+
+Similarly to literal properties, we will probably extend these 4 properties with additional ones. Other authors can provide their own, often domain specific, properties as well. 
+
+As an example, consider a concept of _Fiscal Period_ and another concept of _Business Year_ in terms of the Accounting Act of Czech Republic. The act defines the concept of _Business Year_ using the concept of _Fiscal Period_. In other words, the concept of _Fiscal Period_ is contained in the definition of the concept of _Business Year_. This is expressed with the LEX ontology as follows:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period>
+    a lexc:Concept ;
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year>
+    a lexc:Concept .
+}}}
+
+=== Version of Properties of Legal Concepts ===
+
+The above described constructs for representing literal properties of legal concepts and relations between legal concepts represent the properties and relations independently of particular versions of legal documents. This is given by the fact that properties and relationships are specified for instances of `lexc:Concept`. However, the LEX ontology also allows for expressing those properties and relationships for instances of `lexc:ConceptVersion`. In other words, a triple `A lexc:ConceptProperty B`, where `A` and `B` are instances of `lexc:Concept` and instead of `lexc:ConceptProperty` a particular sub-property of `lexc:ConceptProperty` is present, specifies that `A` and `B` are in the given relation independently of a particular version of the respective legal document which defines the relation. On the other hand, a triple `An lexc:ConceptProperty Bn`, where `An` and `Bn` are instances of `lexc:ConceptVersion` specifies that `An` and `Bn` are in the given relation in the context of a given version of the legal document. This is only meaningful when both `An` and `Bn` belong the same version of the same legal document. In other words, there exist triples `An lexc:partOf Dn` and `Bn lexc:partOf Dn` where `Dn` is a resource representing a particular version of some legal document. For example, we can express that the version of _Fiscal Period_ concept given by a particular version of the Accounting Act is contained in the definition of the same version of _Business Year_ by the following triples:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/fiscal-period>
+    a lexc:ConceptVersion ;
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year> ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period> .
+  
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year>
+    a lexc:ConceptVersion ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+}}}
