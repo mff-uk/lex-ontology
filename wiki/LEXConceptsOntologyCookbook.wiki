@@ -29,3 +29,4 @@ http://lex-ontology.googlecode.com/svn/trunk/lex-ontology-concepts.png
 
   * [LEXConceptsOntologyCookbook_Concept Legal concept]
   * [LEXConceptsOntologyCookbook_ConceptKind  Kind of legal concept]
+  * [LEXConceptsOntologyCookbook_Relations Properties of legal concepts and relations among them]
