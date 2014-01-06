@@ -35,7 +35,7 @@ Each concept has the following metadata:
 
   * `skos:prefLabel` - prefered label of the concept
   * `dcterms:issued` - the date when the concept has been firstly defined. Usually, it is the date of issue of the respective act
-  * `frbr:partOf` - the act which defines the concept
+  * `lexc:partOf` - the act which defines the concept
 
 Our sample concept has the following metadata values:
 
@@ -44,7 +44,7 @@ Our sample concept has the following metadata values:
     a lexc:Concept ;
     skos:prefLabel "Účetní jednotka"@cs ;
     dcterms:issued "1991-12-31"^^xsd:date ;
-    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991> .
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991> .
 }}}
 
 === Versions of Legal Concepts ===
@@ -73,7 +73,7 @@ Each concept version has the following metadata:
   * `skos:prefLabel` - prefered label of the concept version (should be the same as the prefered label of the respective concept)
   * `dcterms:issued` - the date when the concept version has been firstly defined. The first version is issued at the same date as the respective concept. The other versions are issued at the date of issue of the respective amendement.
   * `dcterms:valid` - the date when the concept version has become valid. It is the date of validity of the respective version of the act which defined the concept version.
-  * `frbr:partOf` - the act version which defines the concept version
+  * `lexc:partOf` - the act version which defines the concept version
   * `lexc:realizationOf` - the respective concept
 
 Our two sample versions of the concept of _Accounting Entity_ have following metadata:
@@ -84,7 +84,7 @@ Our two sample versions of the concept of _Accounting Entity_ have following met
     skos:prefLabel "Účetní jednotka"@cs ;
     dcterms:issued "1991-12-31"^^xsd:date ;
     dcterms:valid "1992-01-01"^^xsd:date ;
-    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs> ;
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs> ;
     lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
 
   <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs/concept-version/accounting-entity>
@@ -92,7 +92,7 @@ Our two sample versions of the concept of _Accounting Entity_ have following met
     skos:prefLabel "Účetní jednotka"@cs ;
     dcterms:issued "1994-06-08"^^xsd:date ;
     dcterms:valid "1994-07-01"^^xsd:date ;
-    frbr:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs> ;
+    lexc:partOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1994/117-1994/cs> ;
     lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/accounting-entity> .
 }}}
 
@@ -139,5 +139,24 @@ As an example, consider a concept of _Fiscal Period_ and another concept of _Bus
 
 {{{
   <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period>
+    a lexc:Concept ;
     lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year>
+    a lexc:Concept .
+}}}
+
+=== Version of Properties of Legal Concepts ===
+
+The above described constructs for representing literal properties of legal concepts and relations between legal concepts represent the properties and relations independently of particular versions of legal documents. This is given by the fact that properties and relationships are specified for instances of `lexc:Concept`. However, the LEX ontology also allows for expressing those properties and relationships for instances of `lexc:ConceptVersion`. In other words, a triple `A lexc:ConceptProperty B`, where `A` and `B` are instances of `lexc:Concept` and instead of `lexc:ConceptProperty` a particular sub-property of `lexc:ConceptProperty` is present, specifies that `A` and `B` are in the given relation independently of a particular version of the respective legal document which defines the relation. On the other hand, a triple `An lexc:ConceptProperty Bn`, where `An` and `Bn` are instances of `lexc:ConceptVersion` specifies that `An` and `Bn` are in the given relation in the context of a given version of the legal document. This is only meaningful when both `An` and `Bn` belong the same version of the same legal document. In other words, there exist triples `An lexc:partOf Dn` and `Bn lexc:partOf Dn` where `Dn` is a resource representing a particular version of some legal document. For example, we can express that the version of _Fiscal Period_ concept given by a particular version of the Accounting Act is contained in the definition of the same version of _Business Year_ by the following triples:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/fiscal-period>
+    a lexc:ConceptVersion ;
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year> ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period> .
+  
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/expression/cz/act/1991/563-1991/cs/concept-version/business-year>
+    a lexc:ConceptVersion ;
+    lexc:realizationOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
 }}}
