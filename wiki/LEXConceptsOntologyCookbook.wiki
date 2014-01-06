@@ -27,4 +27,5 @@ http://lex-ontology.googlecode.com/svn/trunk/lex-ontology-concepts.png
 
 == Types of covered ==
 
-  * [LEXConceptsOntologyCookbook_Concept Legal Concept]
+  * [LEXConceptsOntologyCookbook_Concept Legal concept]
+  * [LEXConceptsOntologyCookbook_ConceptKind  Kind of legal concept]
