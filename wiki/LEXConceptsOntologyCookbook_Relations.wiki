@@ -1,3 +1,14 @@
+#summary A cookbook entry for modeling properties of legal concepts and relations among them.
+
+= Cookbook: Properties of legal concepts and relations among them =
+
+== Resource types and properties ==
+
+  * `lexc:LiteralProperty`
+  * `lexc:ConceptProperty`
+
+== Description ==
+
 === Properties of Legal Concepts ===
 
 Besides concepts, we can also identify various properties. There can be literal properties of a concepts (e.g., its literal definition) or a relation between two identified concepts (e.g., that a concept is contained in the definition of another concept). For literal properties we introduce property `lexc:LiteralProperty`. Its domain is `lexc:Concept`. Its range is `rdfs:Literal`. Particular literal properties are derived (by sub-properting) from this property. For example, the definition of the concept of _Accounting Entity_ is represented with a property `lexc:hasDefinition` (which is sub-property of `lexc:LiteralProperty`) as shown on the following example.
