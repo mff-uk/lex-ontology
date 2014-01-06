@@ -6,7 +6,6 @@
 
   * `lexc:Concept`
   * `lexc:ConceptVersion`
-  * `lexc:MetaConcept`
 
 == Description ==
 
@@ -100,3 +99,7 @@ Our two sample versions of the _Accounting Entity_ have following metadata:
 === Kinds of Legal Concepts ===
 
 Legal concepts extracted from legal documents in a given domain can be grouped according to more general kinds. For example, in the accounting domain, it is meaningful to distinguish concepts which are accounting documents from concepts which are accounting methods or concepts which denote accounting periods. It is not possible to define those kinds a priory. They have meaning only in a certain domain and can evolve in time. Therefore, we do not predefine them in the ontology. Instead, we represent them as generic SKOS concepts. Anyone can define own SKOS concept scheme with own kinds of concepts. We introduce a property `lexs:hasKind` which enables to associate a given legal concept with a generic SKOS concept which denotes a generic kind of the legal concept.
+
+=== Legal Concepts from Different Legal Documents ===
+
+A legal concept, as described above, is dependent on the defining legal document. However, a concept is often specified by more different legal documents. On the other hand, when recognizing the concepts automatically (which is our case), it is hard to algorithmically decide whether two recognized concepts from two different documents are the same concept in the real-world. We can employ various metrics which heuristically measure similarities among both concepts. However, they are only heuristics and, finally, an expert has to make a decision. Therefore, we consider concepts valid only in the scope of a legal document which defines the concept. If there are two concepts from two different legal documents and an expert states that they represent the same real-world concept we link both concepts with `owl:sameAs` property.
