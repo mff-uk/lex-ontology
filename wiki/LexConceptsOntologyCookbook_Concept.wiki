@@ -123,3 +123,21 @@ j) fondy obhospodařované penzijní společností podle zákona upravujícího 
 k) investiční fondy bez právní osobnosti podle zákona upravujícího investiční společnosti a investiční fondy, nebo
 l) ty, kterým povinnost sestavení účetní závěrky stanoví zvláštní právní předpis nebo které jsou účetní jednotkou podle zvláštního právního předpisu."""^^xsd:string .
 }}}
+
+There can be differnt literal properties of legal concepts. So far, we consider only the above mentioned literal property in our project. It is possible that we will introduce other literal properties in the future. It is also possible that other authors will introduce new literal properties in their extensions of the LEX ontology. It is possible, that specifications of the LEX ontology for particular legal domains (e.g., accounting, medicine, etc.) will require their own specific literal properties.
+
+Relations between two legal concepts are modeled with subproperties of our generic property `lexc:ConceptProperty`. Both its domain and range are `lexc:Concept`. In the current version of the LEX ontology, we consider the following 4 sub-properties of `lexc:ConceptProperty` (both A and B are hypothetical instances of `lexc:Concept`):
+
+  * A `lexc:inDefinitionOf` B  - A is contained in a definition of B
+  * A `lexc:hasRight` B  - A is a legal entity which has a right B
+  * A `lexc:hasObligation` B  - A is a legal entity which has an obligation B
+  * A `lexc:contains` B  - A consists of other concepts and B is one of these concepts
+
+Similarly to literal properties, we will probably extend these 4 properties with additional ones. Other authors can provide their own, often domain specific, properties as well. 
+
+As an example, consider a concept of _Fiscal Period_ and another concept of _Business Year_ in terms of the Accounting Act of Czech Republic. The act defines the concept of _Business Year_ using the concept of _Fiscal Period_. In other words, the concept of _Fiscal Period_ is contained in the definition of the concept of_Business Year_. This is expressed with the LEX ontology as follows:
+
+{{{
+  <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/fiscal-period>
+    lexc:inDefinitionOf <http://linked.opendata.cz/resource/legislation/cz/act/1991/563-1991/concept/business-year> .
+}}}
