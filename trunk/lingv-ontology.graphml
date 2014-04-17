@@ -54,7 +54,7 @@
           <y:Geometry height="20.0" width="119.49479685017684" x="580.2526015749115" y="350.7659381912105"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="117.390625" x="1.0520859250884769" y="0.6494140625">skos:ConceptVersion<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="114.056640625" x="2.719078112588477" y="0.6494140625">lexc:ConceptVersion<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -68,23 +68,6 @@
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="136.51539474835113" x="931.7423026258244" y="592.563752764842"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="128.705078125" x="3.9051583116755637" y="0.6494140625">lingv:NamedEntityForm<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n4">
-      <data key="d6">
-        <y:ShapeNode>
           <y:Geometry height="40.0" width="100.0" x="730.0" y="612.563752764842"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
@@ -94,24 +77,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n5">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="20.0" width="112.28627829977427" x="943.8568608501129" y="682.563752764842"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="100.708984375" x="5.7886469623871335" y="0.6494140625">lingv:NamedEntity<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n6">
+    <node id="n4">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="136.51539474835113" x="711.7423026258244" y="460.0"/>
@@ -128,7 +94,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n7">
+    <node id="n5">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="154.51539474835113" x="702.7423026258244" y="520.0"/>
@@ -145,7 +111,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n8">
+    <node id="n6">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="25.1275055296841" width="154.51539474835113" x="702.7423026258244" y="537.4362472351579"/>
@@ -156,7 +122,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n9">
+    <node id="n7">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="100.0" x="730.0" y="592.563752764842"/>
@@ -173,7 +139,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n10">
+    <node id="n8">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="40.0" width="100.0" x="730.0" y="702.563752764842"/>
@@ -185,7 +151,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n11">
+    <node id="n9">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="100.0" x="730.0" y="682.563752764842"/>
@@ -202,7 +168,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n12">
+    <node id="n10">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="105.51539474835113" x="727.2423026258244" y="360.0"/>
@@ -219,7 +185,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n13">
+    <node id="n11">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="43.063752764842064" width="105.51539474835124" x="727.2423026258243" y="380.0"/>
@@ -231,7 +197,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n14">
+    <node id="n12">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="140.0" x="450.0" y="460.0"/>
@@ -248,41 +214,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n15">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="20.0" width="112.28627829977427" x="463.85686085011287" y="592.563752764842"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="104.037109375" x="4.1245844623871335" y="0.6494140625">lingv:RelationForm<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n16">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="20.0" width="112.28627829977427" x="463.85686085011287" y="682.563752764842"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="76.041015625" x="18.122631337387133" y="0.6494140625">lingv:Relation<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n17">
+    <node id="n13">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="140.0" x="450.0" y="391.53187638242105"/>
@@ -299,7 +231,7 @@ dcterms:language</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n18">
+    <node id="n14">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="20.0" width="85.09479685017698" x="537.4526015749115" y="320.3829690956053"/>
@@ -328,31 +260,21 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n0" target="n3">
+    <edge id="e1" source="n0" target="n7">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1000.0" y="602.563752764842"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="ttail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="73.07763671875" x="2.0" y="84.96267854609198">lingv:hasForm<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="ttail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="73.07763671875" x="-159.875" y="124.56375276484198">lingv:hasForm<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n3" target="n5">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="ttail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="84.09375" x="2.0" y="42.39889680781073">lingv:hasLemma<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e3" source="n13" target="n6">
+    <edge id="e2" source="n11" target="n4">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -364,7 +286,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e4" source="n7" target="n6">
+    <edge id="e3" source="n5" target="n4">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -376,7 +298,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e5" source="n7" target="n8">
+    <edge id="e4" source="n5" target="n6">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="33.0" sy="0.0" tx="32.88000000000034" ty="0.0">
@@ -391,7 +313,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e6" source="n8" target="n9">
+    <edge id="e5" source="n6" target="n7">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -403,17 +325,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e7" source="n3" target="n9">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e8" source="n4" target="n11">
+    <edge id="e6" source="n3" target="n9">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -425,17 +337,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n5" target="n11">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e10" source="n0" target="n13">
+    <edge id="e7" source="n0" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-63.383833135750024" sy="-10.007279494747877" tx="52.777999999999906" ty="-1.5318763824210464">
@@ -447,31 +349,21 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e11" source="n14" target="n15">
+    <edge id="e8" source="n12" target="n7">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="0.0" sy="0.0" tx="-23.479999999999905" ty="0.37624723515807545">
+            <y:Point x="520.0" y="602.94"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="thead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="73.07763671875" x="-75.07763671875" y="84.96267854609198">lingv:hasForm<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="thead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="73.07763671875" x="126.79736328125" y="103.46392578125005">lingv:hasForm<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e12" source="n15" target="n16">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="six_pos" modelPosition="thead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="84.09375" x="-86.09375" y="42.39889680781073">lingv:hasLemma<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e13" source="n14" target="n13">
+    <edge id="e9" source="n12" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="43.75290756576396" sy="-9.990686241590936" tx="-52.722000000000094" ty="-1.5318763824210464">
@@ -483,54 +375,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e14" source="n16" target="n11">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e15" source="n15" target="n9">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e16" source="n14" target="n6">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="60.0" sy="1.387200000000007" tx="-60.0" ty="-1.0704000000000065">
-            <y:Point x="580.0" y="500.0"/>
-            <y:Point x="720.0" y="500.0"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="101.82373046875" x="28.688134765625023" y="1.5406311035156364">lingv:hasObjectTree<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e17" source="n14" target="n6">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="21.953599999999824" sy="-0.25120000000003984" tx="4.436799999999835" ty="-0.25120000000003984"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.47607421875" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="106.72216796875" x="13.844531250000045" y="-22.58684692382809">lingv:hasSubjectTree<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e18" source="n7" target="n8">
+    <edge id="e10" source="n5" target="n6">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-60.2800000000002" sy="0.0" tx="-57.0" ty="0.0">
@@ -545,7 +390,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e19" source="n1" target="n12">
+    <edge id="e11" source="n1" target="n10">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -557,7 +402,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e20" source="n14" target="n17">
+    <edge id="e12" source="n12" target="n13">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -569,7 +414,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e21" source="n17" target="n0">
+    <edge id="e13" source="n13" target="n0">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.0" sy="-1.8740843824209605" tx="-49.511273700891365" ty="-10.01025404277948">
@@ -584,7 +429,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e22" source="n17" target="n0">
+    <edge id="e14" source="n13" target="n0">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-10.0" sy="-1.8740843824209605" tx="30.0" ty="1.3600000000000705">
@@ -599,7 +444,7 @@ dcterms:language</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e23" source="n1" target="n18">
+    <edge id="e15" source="n1" target="n14">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
